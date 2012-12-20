@@ -1,0 +1,57 @@
+/*
+  Style Sheet File for ICP Gen Web App
+  By PAT or JK
+*/
+
+body {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+#container {
+  margin: 0 auto;
+  width: 800px;
+  text-align:left;
+	font-family: Verdana, arial, helvetica, sans-serif;
+	font-size:14px;
+}
+
+
+#cfig-header {
+  padding: 4px;
+}
+
+h1 {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Verdana, arial, helvetica, sans-serif;
+	font-size:22px;
+	font-weight:bold;
+	padding: 0px;
+	margin: 0px;
+}
+
+h2 {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Verdana, arial, helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	padding: 4px;
+	margin: 0px;
+}
+
+h3 {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Verdana, arial, helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	padding: 4px;
+	margin: 0px;
+}
+
+.controlsStyle {
+	font-family: Verdana, arial, helvetica, sans-serif;
+	font-size:14px;
+}

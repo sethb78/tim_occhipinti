@@ -33,7 +33,7 @@ guard 'rspec', :version => 2, :cli => "--drb", :all_on_start => true, :all_after
   watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/requests/#{m[1]}_spec.rb" }
 end
 
-guard 'livereload' do
+guard :livereload do
   watch(%r{app/views/.+\.(erb|haml|slim)$})
   watch(%r{app/helpers/.+\.rb})
   watch(%r{public/.+\.(css|js|html)})
