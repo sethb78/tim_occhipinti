@@ -1,0 +1,19 @@
+<% provide(:title, "Sign In") %>
+<div id="signin-page">
+	<%= form_tag sessions_path do  %>
+		<fieldset>
+			<legend>Sign In For Admin Tools</legend>
+			<div id="email">
+				<%= label_tag :email %>
+				<%= text_field_tag :email, params[:email] %>
+			</div>
+			<div id="password">
+				<%= label_tag :password %>
+				<%= password_field_tag :password %>
+			</div>
+		</fieldset>
+		<fieldset id="signin-button">
+			<%= submit_tag "Sign In", class: "btn btn-large btn-primary" %>
+		</fieldset>	
+	<% end %>
+</div>

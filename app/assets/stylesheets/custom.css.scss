@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+$gold: #fec400;
+$blue: #193e72;
+
 /*MIXINS*/
 @mixin background_image($bottom_color,$top_color) {
   	background-image: linear-gradient( bottom, $bottom_color, $top_color 50%);
@@ -32,6 +35,21 @@ body {
 
 html {min-height: 100%;}
 
+h1 {
+		text-align: center;
+		color: $gold;
+		font-size: 40px;
+	text-shadow: 2px 2px black;
+	}
+
+	.btn-primary {
+    background-color: $gold;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: 1px solid #193e72;
+    color: #193e72;
+}
+
 header{
 	.navbar{ margin:0;}
 	.navbar-inner {
@@ -61,13 +79,40 @@ header{
 	}
 }
 
+.main-info {
+	margin-top: 40px;
+	background-color: $blue;
+  	border: 1px solid $gold;
+  	opacity:0.9;
+	.span9 {
+		min-height: 400px;
+		width: 75%;
+
+	}
+	.sidebar {	
+		.span12 {
+			border-left: 1px solid $gold;
+			text-align: center;
+			min-height: 200px;
+		}
+		#top .span12{ border-bottom: 1px solid $gold; }
+		.span3 {
+			width: 25%;
+		}
+	}
+	h3 { 
+		margin-top: 10px;
+		color: $gold;
+	}
+}
+
 .navigation-bar{
 	.navbar-inner {
 		@include filter-gradient($outside-color: #fce846, $middle-color:#fec400);
 		margin:auto;
 		ul { width: 100%;
 			text-align: center;
-			overflow: hidden; }
+		}
 		a {
 			width: 60px;
 			text-align: center;
@@ -79,4 +124,52 @@ header{
 		}
 	}
 	.nav > li > a{color: #292899;}
+	.dropdown-menu {
+		min-width: 100px;
+		background-color: #fce846;
+		.active > a:hover{
+			background-color: #fec400;
+		}
+	}
+	.navbar .dropdown-menu:after{border:none;}
+	.dropdown li> a:hover{
+		background-color: #fec400;
+		background-width: 40px;
+	}
+}
+
+#signin-page{
+	border: 1px solid gold;
+	margin: 60px auto auto;
+	padding: 10px 0;
+	width: 400px;
+
+	label {
+		color: $gold;
+		font-size: 18px;
+		float: left;
+		width: 6em;
+		text-align: right;
+		margin-right: 10px;
+		text-align: right;
+		margin-top: 12px;
+	}
+
+	#email, #password{
+		clear:left;
+		margin-top: 5px;
+	}
+	#signin-button {
+		width: 30px;
+		clear: left;
+		float: none;
+		width: auto;
+		padding-left: 12em;
+	}
+}
+
+legend {
+	text-align: center;
+	color: $gold;
+	border-bottom-color: $gold;
 }
