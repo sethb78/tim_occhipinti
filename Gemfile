@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-	gem 'rails', '3.2.8'
+	gem 'rails', '3.2.9'
 	gem 'bootstrap-sass', '2.0.4'	# Twitter bootstrap with the rails asset pipeline supported sass for dynamic CSS stylesheets.
 	gem 'bcrypt-ruby', '3.0.1'	# Secures passwords.
 	gem 'jquery-rails'
@@ -33,6 +33,6 @@ group :test do
 end
 
 group :production do
-  gem 'mysql2'
+  gem 'pg', '0.12.2'
 end
 
