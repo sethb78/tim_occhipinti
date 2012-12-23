@@ -210,7 +210,7 @@ DEPENDENCIES
   guard-spork
   jquery-rails
   libnotify (= 0.5.9)
-  pg
+  pg (~> 0.14.1)
   rails (= 3.2.8)
   rb-inotify (= 0.8.8)
   rspec-rails (= 2.10.0)
