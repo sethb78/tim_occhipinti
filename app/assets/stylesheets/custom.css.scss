@@ -108,7 +108,7 @@ header{
 
 .navigation-bar{
 	.navbar-inner {
-		@include filter-gradient($outside-color: #fce846, $middle-color:$gold);
+		@include filter-gradient($outside-color: #fce846, $middle-color:$blue);
 		margin:auto;
 		ul { width: 100%;
 			text-align: center;
