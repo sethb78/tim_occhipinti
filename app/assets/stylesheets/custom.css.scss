@@ -118,7 +118,7 @@ header{
 			text-align: center;
 		}
 		.divider-vertical {
-			border-right: 1px solid blue;
+			border-right: 1px solid $blue;
 			background-color: none;
 			margin: 0 5px;
 		}
@@ -139,7 +139,7 @@ header{
 }
 
 #signin-page{
-	border: 1px solid gold;
+	border: 1px solid $gold;
 	margin: 60px auto auto;
 	padding: 10px 0;
 	width: 400px;
