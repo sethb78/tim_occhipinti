@@ -35,6 +35,11 @@ body {
 
 html {min-height: 100%;}
 
+.alert {
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	}
 h1 {
 		text-align: center;
 		color: $gold;
@@ -103,6 +108,13 @@ header{
 	h3 { 
 		margin-top: 10px;
 		color: $gold;
+	}
+	label {
+		color: $gold;
+	}
+	legend{
+		border-bottom: dotted;
+		padding-top: 10px;
 	}
 }
 

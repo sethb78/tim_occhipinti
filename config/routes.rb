@@ -1,5 +1,6 @@
 TimOcchipinti::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
+  resources :guests, only: [:new, :create]
 
 
   root to:'pages#home'

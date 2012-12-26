@@ -6,6 +6,7 @@ describe "Pages" do
 
 	shared_examples_for "all Pages" do
 		it { should have_selector('title', text: full_title(page_title)) }
+		it { should have_button('Sign Up') }
 	end
 
 
