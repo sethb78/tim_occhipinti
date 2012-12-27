@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 	gem 'bootstrap-sass', '2.0.4'	# Twitter bootstrap with the rails asset pipeline supported sass for dynamic CSS stylesheets.
 	gem 'bcrypt-ruby', '3.0.1'	# Secures passwords.
 	gem 'jquery-rails'
+  
 
 group :development, :test do
   	gem 'sqlite3', '1.3.5'

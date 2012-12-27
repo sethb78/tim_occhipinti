@@ -1,17 +1,11 @@
 class GuestsController < ApplicationController
 
 
-
-def create
-	@guest = Guest.new(params[:guest])
-	if @guest.save
-	flash[:success] = "Thank you, You are signed up for email Alerts!"
-  redirect_back_or root_path
-
-else
-	flash[:error] = "Invalid Email"
-	redirect_back_or root_path
-end
-	
-end
+	def create
+		@guest = Guest.new(params[:guest])
+		if @guest.save
+			flash[:success] = "Thank you, You are signed up for email Alerts!"
+			redirect_to root_path
+		end
+	end
 end

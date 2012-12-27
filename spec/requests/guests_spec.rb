@@ -9,6 +9,7 @@ describe "Guests" do
 		describe "with invalid info(no info)" do
 			it "should not create a guest" do
 				expect { click_button('Sign Up').not_to change(Guest, :count).by(1) }
+				page.should have_selector('div.alert.alert-error') 
 			end
 		end
 
