@@ -1,0 +1,16 @@
+<%= form_for @guest do |f| %>		<fieldset>
+
+			<legend>Register For Email Alerts</legend>
+			<div id="name">
+				<%= f.label :name %>
+				<%= f.text_field :name %>
+			</div>
+			<div id="email">
+				<%= f.label :email %>
+				<%= f.text_field :email %>
+			</div>
+		</fieldset>
+		<fieldset id="signin-button">
+			<%= f.submit "Sign Up", class: "btn btn-large btn-primary" %>
+		</fieldset>	
+	<% end %>
