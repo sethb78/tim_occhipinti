@@ -16,7 +16,7 @@ module SessionsHelper
   def current_user
   	@current_user ||= User.find_by_remember_token(cookies[:remember_token])
   end
-
+  
   def current_user?(user)
     user == current_user
   end
@@ -36,6 +36,7 @@ module SessionsHelper
   end
 
 
+
   private
     def signed_in_user
       unless signed_in?
@@ -43,7 +44,7 @@ module SessionsHelper
         redirect_to signin_url, notice: "You are not an authorized user, please sign in to proceed"
       end
     end
-  
+
   def correct_user
       @user = User.find(params[:id])
       redirect_to(root_path) unless current_user?(@user)

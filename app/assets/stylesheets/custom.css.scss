@@ -88,22 +88,33 @@ header{
 .main-info {
 	margin: 40px 0 100px;
 	background-color: $blue;
-  	border: 1px solid $gold;
   	opacity:0.9;
 	.span9 {
-		min-height: 400px;
+		min-height: 500px;
 		width: 75%;
-
+		border-top: 1px solid $gold;
+		border-left: 1px solid $gold;
+		border-bottom: 1px solid $gold;
 	}
 	.sidebar {	
 		.span12 {
-			border-left: 1px solid $gold;
 			text-align: center;
-			min-height: 200px;
 		}
-		#top .span12{ border-bottom: 1px solid $gold; }
+		#top .span12{ 			
+			border-left: 1px solid $gold;
+			border-right: 1px solid $gold; 
+			border-top: 1px solid $gold; 
+			height: 150px;
+		}
 		.span3 {
 			width: 25%;
+		}
+		#bottom .span12 {			
+			border: 1px solid $gold;
+			border-radius: 5px 5px 5px 5px;
+			height: 350px;
+			color: white;
+			a { color: white;}
 		}
 	}
 	h3 { 
@@ -115,9 +126,11 @@ header{
 	}
 	legend{
 		border-bottom: dotted;
-		padding-top: 10px;
+		padding-top: 2px;
+		margin-bottom: 5px;
 	}
 }
+
 
 .navigation-bar{
 	.navbar-inner {
@@ -188,7 +201,7 @@ legend {
 }
 
 #about-tim {
-	height: 400px;
+	height: 450px;
 	overflow: scroll;
 	background-color: white;
 	padding: 30px 60px;

@@ -2,15 +2,13 @@
 	<fieldset>
 		<legend>Register For Email Alerts</legend>
 		<div id="name">
-			<%= f.label :name %>
-			<%= f.text_field :name %>
+			<%= f.text_field :name, label: false, placeholder: "Name" %>
 		</div>
 		<div id="email">
-			<%= f.label :email %>
-			<%= f.text_field :email %>
+			<%= f.text_field :email, label: false, placeholder: "Email Address" %>
 		</div>
 	</fieldset>
 	<fieldset id="signin-button">
-		<%= f.submit "Sign Up", class: "btn btn-large btn-primary" %>
+		<%= f.submit "Sign Up", class: "btn btn-medium btn-primary" %>
 	</fieldset>	
 <% end %>

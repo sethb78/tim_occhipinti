@@ -34,4 +34,7 @@ TimOcchipinti::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+TWITTER_KEY = '966CCHa1WCXufbwhXbr8g'
+TWITTER_SECRET = 'rXgr70ofImEEiYubx5bYRImaddHMLKZycooXSwgOg'
 end
