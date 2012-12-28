@@ -201,10 +201,30 @@ legend {
 }
 
 #about-tim {
-	height: 450px;
-	overflow: scroll;
-	background-color: white;
-	padding: 30px 60px;
-	font-size:14px;
-	word-spacing: 1px;
+	#tim-content {
+		overflow: scroll;
+		height: 450px;
+		background-color: white;
+		font-size:14px;
+		word-spacing: 1px;
+	 }
+	.tab-content {
+	    padding: 40px;
+	}
+	.nav {
+		margin-bottom: 0;
+	}
+	.nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+	   	border-color: black black transparent;
+	    border-width: 1px;
+	    outline: 0
+	}
+	.nav-tabs {
+    background-color: white;
+    border-bottom: 1px solid black;
+	}
+	a, a:hover{ 
+		font-weight: bold;
+		font-size: 20px;
+	}
 }
