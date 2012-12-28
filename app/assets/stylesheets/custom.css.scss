@@ -201,9 +201,10 @@ legend {
 }
 
 #about-tim {
+	max-height: 500px;
+	overflow: hidden;
 	#tim-content {
 		overflow: scroll;
-		height: 450px;
 		background-color: white;
 		font-size:14px;
 		word-spacing: 1px;
