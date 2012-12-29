@@ -56,7 +56,43 @@ h1 {
     color: #193e72;
 }
 
+.row {
+	margin: 0px;
+}
+
+#topline-block {
+	background-color: #2B2B2A;
+	margin-bottom: 10px;
+	.topline {
+		width: 940px;
+		margin: auto;
+		span {
+			margin: 7px 250px 0 0;	
+			a {
+				color: $gold;
+			}		
+		}
+		label, input { 
+			float: left;
+			margin-left:3px;
+		}
+		label {
+			color: $gold;
+			font-size: 15px;
+			margin-top: 7px;
+			margin-right:5px;
+		}
+		.row {
+			padding-top: 5px;
+		}
+		#guest_name, #guest_email {
+		    width: 150px;
+		}
+	}
+}
+
 header{
+
 	.navbar{ margin:0;}
 	.navbar-inner {
 	    background-color: inherit;
@@ -72,7 +108,7 @@ header{
 		position: relative;
 		height: 200px;
 		overflow: hidden;
-		span {
+		#bgimage {
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -84,6 +120,7 @@ header{
 		}
 	}
 }
+
 
 .main-info {
 	margin: 40px 0 100px;
@@ -117,18 +154,6 @@ header{
 			a { color: white;}
 		}
 	}
-	h3 { 
-		margin-top: 10px;
-		color: $gold;
-	}
-	label {
-		color: $gold;
-	}
-	legend{
-		border-bottom: dotted;
-		padding-top: 2px;
-		margin-bottom: 5px;
-	}
 }
 
 
@@ -149,7 +174,11 @@ header{
 			margin: 0 5px;
 		}
 	}
-	.nav > li > a{color: #292899;}
+	.nav > li > a {
+  		color: #292899;
+    	font-size: 15px;
+    	width: 100px;
+	}
 	.dropdown-menu {
 		min-width: 100px;
 		background-color: #fce846;
@@ -164,41 +193,9 @@ header{
 	}
 }
 
-#signin-page{
-	border: 1px solid $gold;
-	margin: 60px auto auto;
-	padding: 10px 0;
-	width: 400px;
 
-	label {
-		color: $gold;
-		font-size: 18px;
-		float: left;
-		width: 6em;
-		text-align: right;
-		margin-right: 10px;
-		text-align: right;
-		margin-top: 12px;
-	}
 
-	#email, #password{
-		clear:left;
-		margin-top: 5px;
-	}
-	#signin-button {
-		width: 30px;
-		clear: left;
-		float: none;
-		width: auto;
-		padding-left: 12em;
-	}
-}
 
-legend {
-	text-align: center;
-	color: $gold;
-	border-bottom-color: $gold;
-}
 
 #about-tim {
 	max-height: 500px;
