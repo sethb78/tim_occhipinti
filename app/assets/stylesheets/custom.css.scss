@@ -67,9 +67,10 @@ h1 {
 		width: 940px;
 		margin: auto;
 		span {
-			margin: 7px 250px 0 0;	
+			margin: 7px 300px 0 0;	
 			a {
 				color: $gold;
+				font-size:20px;
 			}		
 		}
 		label, input { 
@@ -87,6 +88,12 @@ h1 {
 		}
 		#guest_name, #guest_email {
 		    width: 150px;
+		}
+		.btn {
+			background-image: none;
+			background-color: $gold;
+			color: $blue;
+			margin-top: 1px;
 		}
 	}
 }
@@ -227,3 +234,4 @@ header{
 		font-size: 20px;
 	}
 }
+

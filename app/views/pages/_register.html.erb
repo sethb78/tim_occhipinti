@@ -1,7 +1,10 @@
- <label>Sign Up For Email Alerts:  </label>
- <%= form_for :guest, :url => {:action => :create, :controller => :guests} do |f| %>
-			<%= f.text_field :name, label: false, placeholder: "Name" %>
-			<%= f.text_field :email, label: false, placeholder: "Email Address" %>
-		<%= f.submit "Sign Up", class: "btn btn-medium btn-primary" %>
+<label>Sign Up For Email Alerts:  </label>
+    <form name="ccoptin" action="http://visitor.constantcontact.com/d.jsp" method="post" target="blank">
+	<input type="hidden" name="m" value="1103157500718">
+    <input type="hidden" name="p" value="oi">
+    <input type="text" name="ea" value="Your Email Address">
+    <input type="submit" value="Sign Up" class="btn btn-medium btn-primarty">
+</form>
 
-<% end %>
+
+

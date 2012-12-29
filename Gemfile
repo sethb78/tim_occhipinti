@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 	gem 'jquery-rails'
   gem "railties", "~> 3.2.9"
 
-
 group :development, :test do
   	gem 'sqlite3', '1.3.5'
    	gem 'rspec-rails', '2.10.0'	# Uses rspec to run Test Driven Development Tests.
