@@ -9,6 +9,15 @@
 	</head>	
 	<%= render'layouts/topline' %>	
 <body>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 		<div class="container">
 			<%= render 'layouts/header' %>
 			<%= render 'layouts/navigation-bar' %>
@@ -26,11 +35,11 @@
 							<div id="top">
 								<div class="row-fluid">
 									<div class="span12">
-										<%= render 'pages/register' %>
-   									</div>
+										<%= render 'layouts/intouch' %>
+									</div>
 								</div>
 							</div>
-							<div id="bottom"%>
+							<div id="bottom">
 								<div class="row-fluid">
 									<div class="span12">
 										<%= render 'layouts/twitter' %>

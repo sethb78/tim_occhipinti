@@ -148,7 +148,8 @@ header{
 			border-left: 1px solid $gold;
 			border-right: 1px solid $gold; 
 			border-top: 1px solid $gold; 
-			height: 150px;
+			height: 60px;
+			overflow: hidden;
 		}
 		.span3 {
 			width: 25%;
@@ -156,9 +157,19 @@ header{
 		#bottom .span12 {			
 			border: 1px solid $gold;
 			border-radius: 5px 5px 5px 5px;
-			height: 350px;
+			height: 440px;
 			color: white;
 			a { color: white;}
+		}
+	}
+	#in-touch {
+		color: $gold;
+		padding: 5px 5px;
+		img {
+			margin-top: 2px;
+			margin-left: 2px;
+			height: 30px;
+
 		}
 	}
 }
