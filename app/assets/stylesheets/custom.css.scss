@@ -246,3 +246,32 @@ header{
 	}
 }
 
+#contact-page {
+	margin-left: 20px;
+	margin-top: 20px;
+	padding:5px;	
+	ul{
+	}
+	li {
+		width: 210px;
+		list-style: none;
+	}
+	label { 
+		background-color: inherit;
+		color: $gold;
+		width: 210px;
+		display: inline;
+	}
+
+	form.formtastic li textarea {
+    height: 200px;
+    width: 500px;
+    margin-top: 5px;
+    color: black;
+	}
+	input {
+		margin-top: 5px;
+		color: black;
+	}
+}
+

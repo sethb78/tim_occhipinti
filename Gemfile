@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 	gem 'bcrypt-ruby', '3.0.1'	# Secures passwords.
 	gem 'jquery-rails'
   gem "railties", "~> 3.2.9"
+  gem 'contact_us', '~> 0.4.0'
+  gem "formtastic", "~> 2.2.1"
 
 
 

@@ -11,10 +11,11 @@ TimOcchipinti::Application.routes.draw do
   match '/photos',                  to: 'pages#photo'
   match '/gallery',                 to: 'pages#gallery'
   match '/title',                   to: 'pages#title'
-  match '/contact',		              to: 'pages#contact'
+  match '/contact',		              to: 'contact_us/contacts#new'
   match '/admin',                   to: 'pages#admin'
   match '/signin',                  to: 'sessions#new'
   match '/signout',                 to: 'sessions#destroy', via: :delete
+
 
 
 
