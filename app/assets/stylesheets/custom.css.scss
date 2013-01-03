@@ -134,7 +134,7 @@ header{
 	background-color: $blue;
   	opacity:0.9;
 	.span9 {
-		min-height: 500px;
+		height: 500px;
 		width: 75%;
 		border-top: 1px solid $gold;
 		border-left: 1px solid $gold;
@@ -211,7 +211,14 @@ header{
 	}
 }
 
+#home {
+	img {
+		height: 498px;
+		width: 710px;
+	}
 
+
+}
 
 
 
@@ -275,3 +282,67 @@ header{
 	}
 }
 
+#galleries {
+	padding: 0 10px;
+	text-align: left;
+	h4 {
+		color: $gold;
+	}
+	.thumbnails {
+		text-align: center;
+	}
+	.thumbnail {
+		width: 200px;
+		border: 1px solid $gold;
+	}
+	.thumbnails .span4:nth-child(3n+1),
+	.thumbnails .span4:first-child + li + li + li,
+	.thumbnails .span4:first-child + li + li + li + li + li + li {
+	    margin-left: 0;
+	}
+
+	.pagination {
+	 	margin: 0 0 18px;
+	 }
+	 a {
+	 	color: $gold;
+	 	border-color: $gold;
+	 }
+}
+
+#gallery-page {
+	.pagination {
+		margin: 5px 0;
+	}
+	padding-left: 10px;
+	text-align: center;
+	margin: auto;
+	.span3 {
+		width: 23%;
+	}
+	.thumbnail {
+		padding: 7px;
+	}
+	h5 {
+	    font-size: 12px;
+	    position: absolute;
+	    right: 620px;
+	    text-align: center;
+	    top: 360px;
+	}
+	.thumbnails .span3:nth-child(4n+1),
+	.thumbnails .span3:first-child + li + li + li + li {
+	    margin-left: 0px;
+	}
+	img {
+		height: 120px;
+	}
+}
+
+.photo-scroll {
+	background-color: white;
+	height: 500px;
+	.carousel {
+		height: inherit;
+	}
+}

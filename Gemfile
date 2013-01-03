@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 	gem 'rails', '3.2.9'
-	gem 'bootstrap-sass', '2.0.4'	# Twitter bootstrap with the rails asset pipeline supported sass for dynamic CSS stylesheets.
-	gem 'bcrypt-ruby', '3.0.1'	# Secures passwords.
 	gem 'jquery-rails'
   gem "railties", "~> 3.2.9"
   gem 'contact_us', '~> 0.4.0'
   gem "formtastic", "~> 2.2.1"
-
+  gem 'carrierwave'
+  gem 'faker', '1.0.1'
+  gem 'will_paginate', '3.0.3'
+  gem 'bootstrap-will_paginate', '0.0.6'
+  gem "bcrypt-ruby", "~> 3.0.1"
 
 
 group :development, :test do
@@ -25,6 +27,8 @@ group :assets do
    	gem 'sass-rails', '~> 3.2.3'	# Sass adapter for the Rails asset pipeline.
    	gem 'coffee-rails', '~> 3.2.1'	# Coffee Script adapter for the Rails asset pipeline.
    	gem 'uglifier', '>= 1.0.3'	# Ruby wrapper for UglifyJS JavaScript compressor.
+    gem 'bootstrap-sass', '2.0.4' # Twitter bootstrap with the rails asset pipeline supported sass for dynamic CSS stylesheets.
+
 end
 
 group :test do

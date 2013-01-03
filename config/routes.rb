@@ -1,7 +1,10 @@
 TimOcchipinti::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :guests, only: [:new, :create]
-
+  resources :galleries, :has_many => :photos
+  resources :photos, :only => [:index]
+  resources :images
+  
 
   root to:'pages#home'
 
@@ -9,7 +12,6 @@ TimOcchipinti::Application.routes.draw do
   match '/media',                   to: 'pages#media'
   match '/contribute',              to: 'pages#contribute'
   match '/photos',                  to: 'pages#photo'
-  match '/gallery',                 to: 'pages#gallery'
   match '/title',                   to: 'pages#title'
   match '/contact',		              to: 'contact_us/contacts#new'
   match '/admin',                   to: 'pages#admin'
