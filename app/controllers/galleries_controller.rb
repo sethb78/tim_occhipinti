@@ -8,7 +8,8 @@ class GalleriesController < ApplicationController
 
   def show
     @gallery = Gallery.find(params[:id])
-    @photos = @gallery.photos.all
+    @photo = @gallery.photos.find(:first)
+    @photos= @gallery.photos.all
     #@photos = @gallery.photos.paginate(page: params[:page])
   end
 

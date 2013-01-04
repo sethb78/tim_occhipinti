@@ -28,7 +28,7 @@ group :assets do
    	gem 'coffee-rails', '~> 3.2.1'	# Coffee Script adapter for the Rails asset pipeline.
    	gem 'uglifier', '>= 1.0.3'	# Ruby wrapper for UglifyJS JavaScript compressor.
     gem 'bootstrap-sass', '2.0.4' # Twitter bootstrap with the rails asset pipeline supported sass for dynamic CSS stylesheets.
-
+gem 'bootstrap-addons-rails'
 end
 
 group :test do

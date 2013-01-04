@@ -1,5 +1,6 @@
 @import "bootstrap";
 
+
 $gold: #fec400;
 $blue: #193e72;
 
@@ -346,3 +347,19 @@ header{
 		height: inherit;
 	}
 }
+
+
+
+
+#gallery {
+	overflow: hidden;
+	img {width:75px;
+		height:75px;
+		margin:2px;
+}}
+
+#myCarousel2{
+	width: 10000px;
+	height: 100px;
+}
+ #galleria{ width: 700px; height: 400px; background: #000 }

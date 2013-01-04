@@ -25,4 +25,8 @@
 //= require bootstrap-collapse
 //= require bootstrap-carousel
 //= require bootstrap-typeahead
+//= require galleria-1.2.8
+//= require galleria-1.2.8.min
+//= require galleria.classic.min
+//= require galleria.facebook
 //= require_tree .

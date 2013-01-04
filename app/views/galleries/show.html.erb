@@ -1,15 +1,11 @@
-<div class="photo-scroll">
-<div id="myCarousel" class="carousel slide">
-    <!-- Carousel items -->
-    <% @photos.each do |photo| %>
-    <div class="carousel-inner">
-    <div class="active item"><%= image_tag(photo.image) %></div>
-    <div class="item"><%= image_tag('twitter.png') %></div>
-    <div class="item"><%= image_tag('email.png') %></div>
-    </div>
-    <!-- Carousel nav -->
-    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    <% end %>
-    </div>
+<div id="galleria">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAwbUFvzN8tSHfa5TLbcWKJbFWj8_iSlbWfCSkYiihlo53s3qu6Gkoa_yM">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAwbUFvzN8tSHfa5TLbcWKJbFWj8_iSlbWfCSkYiihlo53s3qu6Gkoa_yM">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAwbUFvzN8tSHfa5TLbcWKJbFWj8_iSlbWfCSkYiihlo53s3qu6Gkoa_yM">
 </div>
+
+        <script>
+Galleria.loadTheme("<%= javascript_path('galleria.classic.min.js') %>");
+
+            Galleria.run('#galleria');
+        </script>
