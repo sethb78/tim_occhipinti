@@ -36,6 +36,12 @@ body {
 
 html {min-height: 100%;}
 
+p {
+	a {
+		color: $gold;
+	}
+}
+
 .alert {
 	text-align: center;
 	font-weight: bold;
@@ -515,3 +521,37 @@ header{
 
 }
  #galleria{ width: 720px; height: 480px; background: #000 }
+
+ #edit-photo {
+ 	text-align: center;
+ 	img { 
+ 		height:200px;
+ 		width: 200px;
+ 		margin-bottom: 10px;
+ 	}
+ 	.gallery-field {
+    clear: both;
+    display: inline;
+    position: relative;
+    right: 120px;
+    width: 650px;
+}
+ 	textarea {
+		line-height: 15px;
+		width: 400px;
+		height: 100px;
+ 	}
+ 	label, .badge {
+ 		background-color: $blue;
+ 		color: gold;
+	}
+	li {
+		list-style: none;
+	}
+	label {
+		margin-top: 40px;
+	}
+	input {
+		float:none;
+	}
+ }

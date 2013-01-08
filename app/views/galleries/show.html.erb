@@ -7,7 +7,7 @@
 	</p>
 	<div id="galleria">
 		<% @gallery.photos.each do |photo| %>
-			<li><%= image_tag(photo.image, 'data-layer' => ("<div id='photo-overlay'>#{link_to 'remove', '#'}  |  #{link_to 'edit', '#'}</div><div id='description'>#{photo.description}</div>")) %>
+			<li><%= image_tag(photo.image, 'data-layer' => ("<div id='photo-overlay'>#{link_to 'remove', '#'}  |  #{link_to 'edit', edit_photo_path(photo)}</div><div id='description'>#{photo.description}</div>")) %>
 		<% end %>
 	</div>
 </div>
