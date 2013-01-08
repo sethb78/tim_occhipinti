@@ -1,11 +1,30 @@
-<div id="galleria">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAwbUFvzN8tSHfa5TLbcWKJbFWj8_iSlbWfCSkYiihlo53s3qu6Gkoa_yM">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAwbUFvzN8tSHfa5TLbcWKJbFWj8_iSlbWfCSkYiihlo53s3qu6Gkoa_yM">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAwbUFvzN8tSHfa5TLbcWKJbFWj8_iSlbWfCSkYiihlo53s3qu6Gkoa_yM">
+<%= provide(:title, @gallery.name) %>
+<div id="gallery-show">
+	<p>
+	  <%= link_to "Add a Photo", new_photo_path(:gallery_id => @gallery) %> |
+	  <%= link_to "Remove Gallery", @gallery, :confirm => 'Removing the gallery will delete all the pictures in the gallery.  ARE YOU SURE?', :method => :delete %> |
+	  <%= link_to "View Galleries", galleries_path %>
+	</p>
+	<div id="galleria">
+		<% @gallery.photos.each do |photo| %>
+			<li><%= image_tag(photo.image, 'data-layer' => ("<div id='photo-overlay'>#{link_to 'remove', '#'}  |  #{link_to 'edit', '#'}</div><div id='description'>#{photo.description}</div>")) %>
+		<% end %>
+	</div>
 </div>
 
-        <script>
-Galleria.loadTheme("<%= javascript_path('galleria.classic.min.js') %>");
 
-            Galleria.run('#galleria');
-        </script>
+<script>
+	Galleria.loadTheme("<%= javascript_path('galleria.classic.min.js') %>");
+	Galleria.run('#galleria', {
+		showInfo: false,
+		_toggleInfo: false,
+    dataConfig: function(img) {
+        return {
+            description: $(img).parent().next('.desc').html()
+        };
+    }
+	});
+</script>
+
+
+

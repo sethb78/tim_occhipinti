@@ -1,25 +1,23 @@
 class PhotosController < ApplicationController
-   def index
-    @gallery=Gallery.find{params[:gallery_id]}
-    @photo = Photo.find(params[:gallery_id])
+  def new
+
   end
 
-def show
-  @gallery=Gallery.find(params[:gallery_id])
-  @photo= @gallery.photo.id
+  def create
+    @photo = Photo.new(params[:photo])
+    if @photo.save
+      flash[:notice] = "Successfully created photo."
+      redirect_to @photo.gallery
+    else
+      redirect_to @photo.gallery
+    end
+  endd
 end
-
-def new
-  redirect_to(root_path) unless !signed_in?
-  @user=User.new
-end
-
 
   def destroy
-    @photo = Photo.find(params[:id])
-    @photo.destroy
-    flash[:notice] = "Successfully destroyed photo."
-    redirect_to @photo.gallery
+    @photos = Photo.find(params[:id])
+    @photos.destroy
+   redirect_to :back
   end
 
 end

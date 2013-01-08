@@ -6,19 +6,18 @@
 	  	<%= javascript_include_tag "application" %>
 	  	<%= csrf_meta_tags %>
 	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  	        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-        <script src="galleria/galleria-1.2.8.min.js"></script>
+		<%= render 'layouts/scripts' %>
 	  	<%= render 'layouts/shim' %>
 	</head>	
 	<%= render'layouts/topline' %>	
 <body>
-		<div class="container">
-			<%= render 'layouts/header' %>
-			<%= render 'layouts/navigation-bar' %>
-       		<h1><%= yield(:title) %></h1>
-       						<% flash.each do |key, value| %>
+	<div class="container">
+		<%= render 'layouts/header' %>
+		<%= render 'layouts/navigation-bar' %>
+       	<h1><%= yield(:title) %></h1>
+       		<% flash.each do |key, value| %>
         		<%= content_tag(:div, value, class: "alert alert-#{key}") %>
-        		<% end %>
+        	<% end %>
 			<div class="main-info">
         		<div class="row-fluid">
         			<div class="span9">
@@ -46,8 +45,5 @@
 			</div>
 			<!--%= render 'layouts/footer' %>-->
 		</div>
-		    <script src="twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>  
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-carousel.js"></script>  
-
 	</body>
 </html>

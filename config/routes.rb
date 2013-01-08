@@ -2,9 +2,7 @@ TimOcchipinti::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :guests, only: [:new, :create]
   resources :galleries, :has_many => :photos
-  resources :photos, :only => [:index]
-  resources :images
-  
+  resources :photos, only: [:new, :create, :destroy]
 
   root to:'pages#home'
 

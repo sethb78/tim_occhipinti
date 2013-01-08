@@ -1,23 +1,20 @@
-<% provide(:title, 'Photo Galleries') %>.
-
+<% provide(:title, 'Photo Galleries') %>
 <div id="galleries">
-		<%= will_paginate @gallery %>
-
-<ul class="thumbnails">
-	<% @gallery.each do |gallery| %>
-		<li class="span4">
-			<div class="thumbnail">
-				<% @photos.each do |photo| %>
-				<%= link_to image_tag(photo.image), gallery_path(gallery)%>
-				<% end %>
-	    		<h4><%=  gallery.name %></h4>
-	    						<% if 2==2 %>
-					<div class="actions">
-				        <%= link_to "remove", gallery, :confirm => 'Are you sure you want to remove the whole gallery?', :method => :delete %>
-	      			</div>
-		        <% end %>
-	    	</div>
-		</li>
-	<% end %>
-</ul>
+	<div id="add-gallery-link">
+    	<%= link_to "Add Gallery Here", new_gallery_path %>
+	</div>
+	<ul class="thumbnails">
+		<% @galleries.each do |gallery| %>
+			<li class="span4">
+				<div class="thumbnail">
+				   <div class="edit-delete">                            
+				   		<%= link_to gallery.name, gallery %>
+                    </div>
+					<%= link_to image_tag(gallery.cover_image), gallery_path(gallery)%>
+					    <h5><%=  gallery.name %></h5>
+					    <span id="photo-counter"><%= gallery.photos.count%> photos </span>
+	    		</div>
+			</li>
+		<% end %>
+	</ul>
 </div>

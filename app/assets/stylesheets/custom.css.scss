@@ -42,6 +42,20 @@ html {min-height: 100%;}
 	font-size: 18px;
 	}
 
+	#error_explanation {
+		background-color: yellow;
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+ }
+
 h1 {
 	text-align: center;
 	color: $gold;
@@ -135,6 +149,7 @@ header{
 	background-color: $blue;
   	opacity:0.9;
 	.span9 {
+		overflow: hidden;
 		height: 500px;
 		width: 75%;
 		border-top: 1px solid $gold;
@@ -284,31 +299,147 @@ header{
 }
 
 #galleries {
-	padding: 0 10px;
+	background-color: black;
+	padding: 10px 10px;
 	text-align: left;
-	h4 {
-		color: $gold;
+	margin-top: -10px;
+	height: 498px;
+	overflow: scroll;
+	img {
+		height: 124px;
+		width: 160px;
+		margin-top:10px;
 	}
+	h5 {
+		color: $gold;
+		margin-top:4px;
+		height: 35px;
+		overflow: hidden;
+	}
+	#photo-counter {
+		color: gray;
+		float: right;
+	}
+
 	.thumbnails {
 		text-align: center;
+
 	}
 	.thumbnail {
-		width: 200px;
-		border: 1px solid $gold;
+    border: 1px solid #E7E5CF;
+    border-radius: 8px 8px 8px 8px;
+    float: left;
+    padding: 11px 11px 27px;
+    width: 160px;
+    height: 160px;
 	}
 	.thumbnails .span4:nth-child(3n+1),
 	.thumbnails .span4:first-child + li + li + li,
 	.thumbnails .span4:first-child + li + li + li + li + li + li {
 	    margin-left: 0;
 	}
+	#add-gallery-link {
+		text-align: center;
+		margin: 10px 0;
+		a {
+			font-size: 20px;
+		}
+
+	}
+	.edit-delete {
+    display: block;
+    margin-top: -6px;
+    position: absolute;
+    text-align: center;
+    width: inherit;
+	}
 
 	.pagination {
 	 	margin: 0 0 18px;
 	 }
-	 a {
+	a {
 	 	color: $gold;
 	 	border-color: $gold;
-	 }
+	}
+}
+
+.gallery-form {
+	text-align: center;
+	color: $gold;
+	margin-top: 50px;
+	label {
+		display: inline-block;
+		float:left;
+		text-align: right;
+		width: 14em;
+		margin-top: 4px;
+		font-size: 17px;
+
+	}
+	a {
+		color: $gold;
+	}
+	a:hover {
+		color: white;
+	}
+	input {
+		float:right;
+	}
+	.btn {
+		clear: both;
+		margin-right: 50px;
+	}
+	.gallery-field {
+		display: block;
+		height: 50px;
+	}
+	#error_explanation {
+		width: 720px;
+		margin-to: -60px;
+	}
+	img{
+		height: 75px;
+		width: 75px;
+	}
+	.rows {
+		margin-top: 20px;
+	}
+	#edit-delete {
+		display:block;
+		clear: both;
+		a {
+			color:white;
+		}
+	}
+	#delete-button {
+		display:block;
+		float: right;
+		margin-top: -50px;
+	}
+	.btn {
+		background-color: $gold;
+		color: $blue;
+		background-image:none;
+	}
+	.thumbnails > li{
+		margin: 0 1px;
+	}
+	.pagination a {
+		line-height: 20px;
+	}
+	.tab-content {
+		height: 190px;
+	}
+	.nav-tabs > li > a, .nav-pills > li > a {
+		background-color: $gold;
+		color: $blue;
+	}
+	.nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+		background-color: $blue;
+		color: $gold;
+		border-width: 3px;
+		outline: 0
+	}
 }
 
 #gallery-page {
@@ -348,18 +479,39 @@ header{
 	}
 }
 
+#gallery-show {
+	p {
+		background-color: black;
+		margin: 0;
+	}
+	a {
+		margin-left: 10px;
+	}
+	#photo-overlay{
+	    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+	    display: inline-block;
+	    padding-right: 8px;
+		a {
+			color: lighten(#0088CC, 25%)
+		}
+	}
+	.actions {
+		position:absolute;
+		top:10px; left: 10px;
+		background-color: red;
+	}
 
 
 
-#gallery {
-	overflow: hidden;
-	img {width:75px;
-		height:75px;
-		margin:2px;
-}}
+	#description {
+	    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+	    bottom: 0;
+	    left: 0;
+	    padding: 10px 15px 5px;
+	    position: absolute;
+	    right: 0;
+	    color: white;
+	}
 
-#myCarousel2{
-	width: 10000px;
-	height: 100px;
 }
- #galleria{ width: 700px; height: 400px; background: #000 }
+ #galleria{ width: 720px; height: 480px; background: #000 }
