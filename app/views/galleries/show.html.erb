@@ -15,16 +15,6 @@
 
 <script>
 	Galleria.loadTheme("<%= javascript_path('galleria.classic.min.js') %>");
-	Galleria.run('#galleria', {
-		showInfo: false,
-		_toggleInfo: false,
-    dataConfig: function(img) {
-        return {
-            description: $(img).parent().next('.desc').html()
-        };
-    }
-	});
+    Galleria.run('#galleria');
 </script>
-
-
 
