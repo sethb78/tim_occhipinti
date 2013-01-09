@@ -5,10 +5,11 @@ source 'https://rubygems.org'
   gem 'contact_us', '~> 0.4.0'
   gem "formtastic", "~> 2.2.1"
   gem 'carrierwave'
-  gem 'faker', '1.0.1'
+  #gem 'faker', '1.0.1'
   gem 'will_paginate', '3.0.3'
   gem 'bootstrap-will_paginate', '0.0.6'
   gem "bcrypt-ruby", "~> 3.0.1"
+  gem 'bootstrap-addons-rails'
 
 
 group :development, :test do

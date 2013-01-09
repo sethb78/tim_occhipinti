@@ -11,25 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130109015516) do
+ActiveRecord::Schema.define(:version => 20130109161920) do
 
   create_table "galleries", :force => true do |t|
     t.string   "name"
     t.string   "description"
+    t.integer  "gallery_id"
+    t.string   "cover_image"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.string   "cover_image"
   end
 
   create_table "photos", :force => true do |t|
-    t.string    "image"
-    t.integer   "gallery_id"
-    t.text      "description"
-    t.timestamp "created_at",  :null => false
-    t.timestamp "updated_at",  :null => false
+    t.string   "image"
+    t.integer  "gallery_id"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
-  add_index "photos", ["gallery_id", "created_at"], :name => "index_photos_on_gallery_id_and_created_at"
+  add_index "photos", ["gallery_id"], :name => "index_photos_on_gallery_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
