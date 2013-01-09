@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require fantastic.galleria.js
 //= require bootstrap-transition
 //= require bootstrap-alert
 //= require bootstrap-modal
