@@ -25,6 +25,7 @@
 //= require bootstrap-collapse
 //= require bootstrap-carousel
 //= require bootstrap-typeahead
+//= require galleria.classic
 //= require galleria-1.2.8
 //= require galleria-1.2.8.min
 //= require galleria.classic.min
