@@ -12,7 +12,7 @@
                     </div>
 					<%= link_to image_tag(gallery.cover_image), gallery_path(gallery)%>
 					    <h5><%=  gallery.description %></h5>
-					    <span id="photo-counter"><%= gallery.photos.count%> photos </span>
+					    <span id="photo-counter"><%= pluralize(gallery.photos.count, 'photo')%> </span>
 	    		</div>
 			</li>
 		<% end %>

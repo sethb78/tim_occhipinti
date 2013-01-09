@@ -16,7 +16,7 @@ before_filter :signed_in_user, only: [:admin]
   def contribute
   end
 
-  def photos
+  def vision
   end
 
   def gallery
@@ -25,5 +25,7 @@ before_filter :signed_in_user, only: [:admin]
   def contact
   end
   def admin
+  end
+  def status_reports
   end
 end

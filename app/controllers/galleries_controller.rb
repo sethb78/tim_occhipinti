@@ -12,8 +12,8 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.new(params[:gallery])
     if @gallery.save
       flash[:notice] = "Successfully created gallery."
-      redirect_to @gallery
-    else
+      redirect_to galleries_path
+      else
       render :action => 'new'
     end
   end

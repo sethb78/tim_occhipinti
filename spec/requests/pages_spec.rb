@@ -36,15 +36,9 @@ describe "Pages" do
 		it_should_behave_like "all Pages"
 	end
 
-	describe "Photo page" do
-		before { visit photos_path }
-		let(:page_title) { 'Photos' }
-		it_should_behave_like "all Pages"
-	end
-
-	describe "Gallery page" do
-		before { visit gallery_path }
-		let(:page_title) { 'Gallery' }
+	describe "Vision 2017 page" do
+		before { visit vision_path }
+		let(:page_title) { 'Vision For 2017' }
 		it_should_behave_like "all Pages"
 	end
 
@@ -54,6 +48,12 @@ describe "Pages" do
 		it_should_behave_like "all Pages"
 	end
 
+	describe "Status Reports page" do
+		before { visit status_reports_path }
+		let(:page_title) { 'Status Reports' }
+		it_should_behave_like "all Pages"
+	end	
+
 	it "should have the right links on the layout" do
     visit root_path 
     click_link "About Tim"
@@ -62,11 +62,13 @@ describe "Pages" do
     page.should have_selector 'title', text: full_title('Media') 
     click_link "Contribute"
    	page.should have_selector 'title', text: full_title('Contribute') 
-     click_link "Photos"
-    page.should have_selector 'title', text: full_title('Photos') 
-    click_link "Gallery"
-    page.should have_selector 'title', text: full_title('Gallery') 
+    click_link "Vision 2017"
+    page.should have_selector 'title', text: full_title('Vision For 2017') 
+    click_link "Photo Galleries"
+    page.should have_selector 'title', text: full_title('Photo Galleries') 
     click_link "Contact"
     page.should have_selector 'title', text: full_title('Contact') 
+    click_link "Status Reports"
+    page.should have_selector "title", text: full_title('Status Reports')
     end
 end

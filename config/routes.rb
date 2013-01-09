@@ -7,8 +7,10 @@ TimOcchipinti::Application.routes.draw do
   root to:'pages#home'
 
   match '/about_tim',  	            to: 'pages#about_tim'
+  match '/vision',                  to: 'pages#vision'
   match '/contribute',              to: 'pages#contribute'
-  match '/title',                   to: 'pages#title'
+  match '/media',                   to: 'pages#media'
+  match '/status_reports',          to: 'pages#status_reports'
   match '/contact',		              to: 'contact_us/contacts#new'
   match '/admin',                   to: 'pages#admin'
   match '/signin',                  to: 'sessions#new'

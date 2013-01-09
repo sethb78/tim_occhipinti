@@ -9,8 +9,6 @@ source 'https://rubygems.org'
   gem 'will_paginate', '3.0.3'
   gem 'bootstrap-will_paginate', '0.0.6'
   gem "bcrypt-ruby", "~> 3.0.1"
-  gem 'bootstrap-addons-rails'
-
 
 group :development, :test do
   	gem 'sqlite3', '1.3.5'
@@ -29,7 +27,6 @@ group :assets do
    	gem 'coffee-rails', '~> 3.2.1'	# Coffee Script adapter for the Rails asset pipeline.
    	gem 'uglifier', '>= 1.0.3'	# Ruby wrapper for UglifyJS JavaScript compressor.
     gem 'bootstrap-sass', '2.0.4' # Twitter bootstrap with the rails asset pipeline supported sass for dynamic CSS stylesheets.
-gem 'bootstrap-addons-rails'
 end
 
 group :test do
