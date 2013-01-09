@@ -11,7 +11,7 @@
 				   		<%= link_to gallery.name, gallery %>
                     </div>
 					<%= link_to image_tag(gallery.cover_image), gallery_path(gallery)%>
-					    <h5><%=  gallery.name %></h5>
+					    <h5><%=  gallery.description %></h5>
 					    <span id="photo-counter"><%= gallery.photos.count%> photos </span>
 	    		</div>
 			</li>

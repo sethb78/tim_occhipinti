@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
   def new
-
-  end
+    @photo = Photo.new(:gallery_id => params[:gallery_id])
+      end
 
   def create
     @photo = Photo.new(params[:photo])
@@ -9,10 +9,9 @@ class PhotosController < ApplicationController
       flash[:notice] = "Successfully created photo."
       redirect_to @photo.gallery
     else
-      redirect_to @photo.gallery
+      render :action => 'new'
     end
-  endd
-end
+  end
 
   def edit
     @photo = Photo.find(params[:id])
@@ -32,8 +31,8 @@ end
   def destroy
     @photos = Photo.find(params[:id])
     @photos.destroy
-   redirect_to :back
+    flash[:notice] = "Successfully destroyed photo."
+    redirect_to @photos.gallery
   end
 
 end
-

@@ -522,7 +522,7 @@ header{
 }
  #galleria{ width: 720px; height: 480px; background: #000 }
 
- #edit-photo {
+ .photo-form {
  	text-align: center;
  	img { 
  		height:200px;
@@ -535,7 +535,7 @@ header{
     position: relative;
     right: 120px;
     width: 650px;
-}
+	}
  	textarea {
 		line-height: 15px;
 		width: 400px;
@@ -554,4 +554,29 @@ header{
 	input {
 		float:none;
 	}
+ }
+
+ .add-photo-form {
+ 	@extend .photo-form;
+ 	label {
+ 		float: none;
+	    margin-right: 5px;
+	    margin-top: 0;
+	    font-weight: bold;
+	}
+ 	textarea {
+ 		width: 210px;
+ 		height: 200px;
+ 	} 
+ 	.gallery-field{
+ 		margin-bottom: 10px;
+ 	}
+ 	p {
+	    margin: 0 0 9px;
+	    position: relative;
+	    top: -15px;
+	}
+ 	a { 
+ 		margin-right: 50px;
+ 	}
  }

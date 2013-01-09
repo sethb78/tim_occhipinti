@@ -1,0 +1,22 @@
+<%= provide(:title, "Add Photo to #{@photo.gallery.name}") %>
+<div class="add-photo-form">
+	<div class="gallery-form">
+      	<%= semantic_form_for(@photo) do |f| %>
+        	<%= render 'shared/error_messages', object: f.object %>
+        	<%= f.hidden_field :gallery_id %>
+      
+        	<div class="gallery-field">
+        	  	<%= f.label :image, "Image:  " %>
+          		<%= f.text_field :image %>
+        	</div>
+			<div class="gallery-field add-description">
+	  			<%= f.input :description, :as => :text, :label => t('.description (optional):  ') %>
+		 	</div>
+        	<%= f.submit "Add Photo", class: "btn btn-large btn-primary" %>
+      	<% end %>
+    </div>
+  	<p><%= link_to "Back to Gallery", @photo.gallery %></p>
+</div>
+
+
+
