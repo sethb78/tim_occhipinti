@@ -585,3 +585,36 @@ header{
  		margin-right: 50px;
  	}
  }
+#edit-photo {
+  	text-align: center;
+  	img {
+  		height:200px;
+  		width: 200px;
+  		margin-bottom: 10px;
+  	}
+  	.gallery-field {
+    	clear: both;
+    	display: inline;
+    	position: relative;
+    	right: 120px;
+    	width: 650px;
+	}	
+  	textarea {
+		line-height: 15px;
+		width: 400px;
+		height: 100px;
+	}
+	label, .badge {
+	  	background-color: $blue;
+	  content: olor: gold;
+	}
+	li {
+		list-style: none;
+	}
+	label {
+		margin-top: 40px;
+	}
+	input {
+		float:none;
+	}
+}
