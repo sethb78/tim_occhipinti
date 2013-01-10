@@ -34,7 +34,7 @@ class GalleriesController < ApplicationController
     @gallery=Gallery.find(params[:id])
     if @gallery.update_attributes(params[:gallery])
       flash[:success] = "#{@gallery.name} Updated"
-      redirect_to :back
+      redirect_to galleries_path
     else
       render 'edit'
     end

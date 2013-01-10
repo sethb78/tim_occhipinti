@@ -1,29 +1,26 @@
 <% provide(:title, @gallery.name) %>
+<p class="center"><%= link_to "Back to Galleries", galleries_path %></p>
+<p class="center">
+    <%= link_to "DELETE GALLERY", @gallery, method: :delete, data: { confirm: "You sure, deleting the gallery will delete all photos associated with #{@gallery.name}?"}, class: "btn btn-large btn-primary" %>
+</p> 
 <div class="gallery-form">
-    <p><%= link_to "Back to Galleries", galleries_path %></p>
-    <div class="row">
-        <div class="span8">
-            <%= form_for(@gallery) do |f| %>
-                <%= render 'shared/error_messages', object: f.object %>
-                <div class="delete-button">
-                    <%= link_to "DELETE GALLERY", @gallery, method: :delete, data: { confirm: "You sure, deleting the gallery will delete all photos associated with #{@gallery.name}?"}, class: "btn btn-large btn-primary" %>
-                </div> 
-                <div class="gallery-field">
-                    <%= f.label :name, "Gallery Name:  " %>
-                    <%= f.text_field :name %>
-                </div>
-                <div class="gallery-field">
-                    <%= f.label :description, "Description (Optional):  " %>
-                    <%= f.text_field :description %>
-                </div>
-                <div class="gallery-field">
-                    <%= f.label :cover_image, "Cover Page:  " %>
-                    <%= f.text_field :cover_image %>
-                </div>
-                <%= f.submit "Update Gallery", class: "btn btn-large btn-primary" %>
-            <% end %>
-        </div>
-    </div>
-    <p><%= link_to "Back to Galleries", galleries_path %></p>
+    <%= form_for(@gallery) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <p>
+            <%= f.label :name, "Gallery Name:  " %>
+            <%= f.text_field :name %>
+        </p>
+        <p>
+            <%= f.label :cover_image, "Album Cover Image Upload:  " %>
+            <%= f.file_field :cover_image %>
+        </p>
+        <p>
+          <%= f.label :remote_cover_image_url, "or Album Cover URL:" %>
+          <%= f.text_field :remote_cover_image_url %>
+        </p>
+        <p class="center">
+            <%= f.submit "Update Gallery", class: "btn btn-large btn-primary" %>
+        </p>
+    <% end %>
 </div>
            

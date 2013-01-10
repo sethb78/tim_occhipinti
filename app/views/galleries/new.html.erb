@@ -1,27 +1,23 @@
 <% provide(:title, 'Add Gallery') %>
-<div class="gallery-form">
-  <div class="row">
-    <div class="span8">
-
-      <%= form_for(@gallery) do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
-      
-        <div class="gallery-field">
-          <%= f.label :name, "Gallery Name:  " %>
-          <%= f.text_field :name %>
-        </div>
-        <div class="gallery-field">
-          <%= f.label :description, "Description (Optional):  " %>
-          <%= f.text_field :description %>
-        </div>
-        <div class="gallery-field">
-          <%= f.label :cover_image, "URL:  " %>
-          <%= f.text_field :cover_image %>
-        </div>
-        <%= f.submit "Create Gallery", class: "btn btn-large btn-primary" %>
-      <% end %>
-    </div>
-  </div>      <p><%= link_to "Back to Galleries Page", galleries_path %></p>
-
+  <p class="center"><%= link_to "Back to Galleries Page", galleries_path %></p>
+  <div class="gallery-form">
+  <%= form_for @gallery, :html => {:multipart => true} do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <p>
+      <%= f.label :name, "Gallery Name:  " %>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :cover_image, "Album Cover Image Upload:  " %>
+      <%= f.file_field :cover_image %>
+    </p>
+    <p>
+      <%= f.label :remote_cover_image_url, "or Album Cover URL:" %>
+      <%= f.text_field :remote_cover_image_url %>
+    </p>
+    <p class="center">
+      <%= f.submit "Create Gallery", class: "btn btn-large btn-primary" %>
+    </p>
+  <% end %>
 </div>
 

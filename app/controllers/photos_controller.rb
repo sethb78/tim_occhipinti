@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
   def new
     @photo = Photo.new(:gallery_id => params[:gallery_id])
-      end
+  end
 
   def create
     @photo = Photo.new(params[:photo])

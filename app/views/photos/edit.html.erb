@@ -1,15 +1,16 @@
 <%= provide(:title, 'Edit Photo') %>
-<div id="edit-photo">
-	  <p><%= link_to "Back to Gallery", @photo.gallery %></p>
-	<div class="gallery-form">
-			<%= image_tag(@photo.image) %>
-			<%= semantic_form_for @photo do |f| %>
-				<ul>
-			        <div class="gallery-field">
-			        	<%= f.input :description, :as => :text, :label => t('.description') %>
-			        </div>
-			        <%= f.submit "Update Description", class: "btn btn-large btn-primary" %>
-			     </ul>
-			<% end %>
-		</div>
+<p class="center"><%= link_to "Back to Gallery", @photo.gallery %></p>
+<p class="center edit-image"><%= image_tag(@photo.image_url.to_s) %></p>
+<p class=center>
+    <%= link_to "DELETE Photo", @photo, method: :delete, data: { confirm: "You sure?"} %>
+</p>
+<div class="gallery-form">
+	<%= semantic_form_for @photo do |f| %>
+	    <p class= "descripton">
+			<%= f.input :description, :as => :text, :label => t('.description (optional):  ') %>
+	   	</p>      
+	    <p class="center">
+		    <%= f.submit "Update Description", class: "btn btn-large btn-primary" %>
+		</p>
+	<% end %>
 </div>

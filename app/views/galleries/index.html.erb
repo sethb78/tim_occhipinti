@@ -7,16 +7,15 @@
 		<% @galleries.each do |gallery| %>
 			<li class="span4">
 				<div class="thumbnail">
-				   <div class="edit-delete">                            
+				   <div class="gallery-name">                            
 				   		<%= link_to gallery.name, gallery %>
                     </div>
 					<%= link_to image_tag(gallery.cover_image), gallery_path(gallery)%>
-					<h5><%=  gallery.description %><br>
-					    <span>
+					<h5><span>
 						   	<div id="photo-counter">
-						   		<%= link_to "Edit", edit_gallery_path(gallery) %>
+						   		<%= link_to "Edit Gallery", edit_gallery_path(gallery) %>
 						   		<div id="count">
-						   			<%= pluralize(gallery.photos.count, 'photo')%>
+						   			<%= link_to(pluralize(gallery.photos.count, 'photo'), gallery) %>
 						   		</div> 
 						   	</div>
 						</span>
