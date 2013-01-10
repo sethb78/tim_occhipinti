@@ -11,8 +11,16 @@
 				   		<%= link_to gallery.name, gallery %>
                     </div>
 					<%= link_to image_tag(gallery.cover_image), gallery_path(gallery)%>
-					    <h5><%=  gallery.description %></h5>
-					    <span id="photo-counter"><%= pluralize(gallery.photos.count, 'photo')%> </span>
+					<h5><%=  gallery.description %><br>
+					    <span>
+						   	<div id="photo-counter">
+						   		<%= link_to "Edit", edit_gallery_path(gallery) %>
+						   		<div id="count">
+						   			<%= pluralize(gallery.photos.count, 'photo')%>
+						   		</div> 
+						   	</div>
+						</span>
+					</h5>
 	    		</div>
 			</li>
 		<% end %>

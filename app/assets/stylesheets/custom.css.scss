@@ -326,10 +326,15 @@ header{
 		overflow: hidden;
 	}
 	#photo-counter {
-		color: gray;
-		float: right;
-		position: relative;
-    	top: -10px
+	    color: gray;
+	    display: block;
+	    width: 100%;
+	    a {
+	    	float: left;
+	    }
+	    #count {
+	    	float:right;
+	    }
 	}
 
 	.thumbnails {
@@ -377,7 +382,7 @@ header{
 .gallery-form {
 	text-align: center;
 	color: $gold;
-	margin-top: 50px;
+	margin-top: 60px;
 	label {
 		display: inline-block;
 		float:left;
@@ -385,7 +390,10 @@ header{
 		width: 14em;
 		margin-top: 4px;
 		font-size: 17px;
-
+	}
+	p {
+	    margin: 0 0 9px;
+	    position: relative;
 	}
 	a {
 		color: $gold;
@@ -412,8 +420,8 @@ header{
 		height: 75px;
 		width: 75px;
 	}
-	.rows {
-		margin-top: 20px;
+	.row {
+		margin-top: 40px;
 	}
 	#edit-delete {
 		display:block;
@@ -422,10 +430,12 @@ header{
 			color:white;
 		}
 	}
-	#delete-button {
-		display:block;
-		float: right;
-		margin-top: -50px;
+.delete-button {
+    display: block;
+    left: 140px;
+    position: relative;
+    top: -40px;
+    margin-bottom: -20px;
 	}
 	.btn {
 		background-color: $gold;
@@ -606,7 +616,7 @@ header{
 	}
 	label, .badge {
 	  	background-color: $blue;
-	  content: olor: gold;
+	  	content-color: gold;
 	}
 	li {
 		list-style: none;

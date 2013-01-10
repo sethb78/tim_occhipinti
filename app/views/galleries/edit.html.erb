@@ -1,69 +1,29 @@
 <% provide(:title, @gallery.name) %>
 <div class="gallery-form">
-<div class="tabbable">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#pane1" data-toggle="tab">Update Gallery Info</a></li>
-            <li><a href="#pane2" data-toggle="tab">Add Photos</a></li>
-        </ul>
-        <div class="tab-content">
-            <div id="pane1" class="tab-pane active">
-                <div class="row">
-                    <div class="span8">
-                        <%= form_for(@gallery) do |f| %>
-                            <%= render 'shared/error_messages', object: f.object %>
-                            <div id="delete-button">
-                            <%= link_to "DELETE GALLERY", @gallery, method: :delete, data: { confirm: "You sure, deleting the gallery will delete all photos associated with #{@gallery.name}?"}, class: "btn btn-large btn-primary" %>
-                            </div> 
-                            <div class="gallery-field">
-                                <%= f.label :name, "Gallery Name:  " %>
-                                <%= f.text_field :name %>
-                            </div>
-                            <div class="gallery-field">
-                                <%= f.label :description, "Description (Optional):  " %>
-                                <%= f.text_field :description %>
-                            </div>
-                            <div class="gallery-field">
-                                <%= f.label :cover_image, "Cover Page:  " %>
-                                <%= f.text_field :cover_image %>
-                            </div>
-                            <%= f.submit "Update Gallery", class: "btn btn-large btn-primary" %>
-                        <% end %>
-                    </div>
+    <p><%= link_to "Back to Galleries", galleries_path %></p>
+    <div class="row">
+        <div class="span8">
+            <%= form_for(@gallery) do |f| %>
+                <%= render 'shared/error_messages', object: f.object %>
+                <div class="delete-button">
+                    <%= link_to "DELETE GALLERY", @gallery, method: :delete, data: { confirm: "You sure, deleting the gallery will delete all photos associated with #{@gallery.name}?"}, class: "btn btn-large btn-primary" %>
+                </div> 
+                <div class="gallery-field">
+                    <%= f.label :name, "Gallery Name:  " %>
+                    <%= f.text_field :name %>
                 </div>
-            </div>
-             <div id="pane2" class="tab-pane">
-                <div class="row">
-                    <div class="span8">
-<%= form_for @photo, :html => {:multipart => true} do |f| %>
-  <%= f.error_messages %>
-  <%= f.hidden_field :gallery_id %>
-                                <div class="gallery-field">
-                                <%= f.label :image, "Image:  " %>
-                                <%= f.text_field :image %>
-                            </div>
-                            <div class="gallery-field">
-                                <%= f.label :description, "Description (Optional):  " %>
-                                <%= f.text_field :description %>
-                            </div>
-                            
-                            <%= f.submit "Add Photo", class: "btn btn-large btn-primary" %>
-                        <% end %>
-                    </div>
+                <div class="gallery-field">
+                    <%= f.label :description, "Description (Optional):  " %>
+                    <%= f.text_field :description %>
                 </div>
-            </div>
+                <div class="gallery-field">
+                    <%= f.label :cover_image, "Cover Page:  " %>
+                    <%= f.text_field :cover_image %>
+                </div>
+                <%= f.submit "Update Gallery", class: "btn btn-large btn-primary" %>
+            <% end %>
         </div>
     </div>
-    <div class="rows">
-        <ul class="thumbnails">
-            <% @photos.each do |photo| %>
-                <li><%= image_tag(photo.image) %>
-                    <div id="edit-delete">
-                        <%= link_to "delete", photo, method: :delete, data: { confirm: "You sure?" },
-                                     title: photo.image %>
-                    </div>
-                </li>
-            <% end %>
-        </ul>
-        <%= will_paginate @photos %>
-    </div>
+    <p><%= link_to "Back to Galleries", galleries_path %></p>
 </div>
+           
