@@ -11,15 +11,11 @@
 				   		<%= link_to gallery.name, gallery %>
                     </div>
 					<%= link_to image_tag(gallery.cover_image), gallery_path(gallery)%>
-					<h5><span>
-						   	<div id="photo-counter">
-						   		<%= link_to "Edit Gallery", edit_gallery_path(gallery) %>
-						   		<div id="count">
-						   			<%= link_to(pluralize(gallery.photos.count, 'photo'), gallery) %>
-						   		</div> 
-						   	</div>
-						</span>
-					</h5>
+					<div id="photo-counter">
+						<%= link_to "Edit", edit_gallery_path(gallery) %>
+						<%= link_to "Add Photo", new_photo_path(:gallery_id => gallery.id) %> 
+						<%= pluralize(gallery.photos.count, 'photo') %>
+					</div>
 	    		</div>
 			</li>
 		<% end %>
