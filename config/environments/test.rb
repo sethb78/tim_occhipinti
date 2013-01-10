@@ -34,4 +34,9 @@ TimOcchipinti::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  AWS_ACCESS_KEY_ID = 'AKIAI7X2GMZHZM22NFTA'
+  AWS_SECRET_ACCESS_KEY = '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'
+  AWS_S3_BUCKET = 'tim_occhipinti'
+
 end

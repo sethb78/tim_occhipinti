@@ -3,7 +3,6 @@ class Gallery < ActiveRecord::Base
   has_many :photos, dependent: :destroy
   mount_uploader :cover_image, ImageUploader
 
-
   validates :name, length: { maximum: 60}
 
 

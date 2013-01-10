@@ -66,4 +66,8 @@ TimOcchipinti::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   TWITTER_KEY = '966CCHa1WCXufbwhXbr8g'
   TWITTER_SECRET = 'rXgr70ofImEEiYubx5bYRImaddHMLKZycooXSwgOg'
+  AWS_ACCESS_KEY_ID = 'AKIAI7X2GMZHZM22NFTA'
+  AWS_SECRET_ACCESS_KEY = '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'
+  AWS_S3_BUCKET = 'tim_occhipinti'
+
 end
