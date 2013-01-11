@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @contribution.name %>
+</p>
+
+<p>
+  <b>Address1:</b>
+  <%= @contribution.address1 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @contribution.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @contribution.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @contribution.zip %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @contribution.email %>
+</p>
+
+<p>
+  <b>Occupation:</b>
+  <%= @contribution.occupation %>
+</p>
+
+<p>
+  <b>Employer name:</b>
+  <%= @contribution.employer_name %>
+</p>
+
+<p>
+  <b>Employer address1:</b>
+  <%= @contribution.employer_address1 %>
+</p>
+
+<p>
+  <b>Employer address2:</b>
+  <%= @contribution.employer_address2 %>
+</p>
+
+<p>
+  <b>Employer city:</b>
+  <%= @contribution.employer_city %>
+</p>
+
+<p>
+  <b>Employer state:</b>
+  <%= @contribution.employer_state %>
+</p>
+
+<p>
+  <b>Employer zip:</b>
+  <%= @contribution.employer_zip %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @contribution.amount %>
+</p>
+
+<p>
+  <b>Card type:</b>
+  <%= @contribution.card_type %>
+</p>
+
+<p>
+  <b>Card expires on:</b>
+  <%= @contribution.card_expires_on %>
+</p>
+
+
+<%= link_to 'Edit', edit_contribution_path(@contribution) %> |
+<%= link_to 'Back', contributions_path %>

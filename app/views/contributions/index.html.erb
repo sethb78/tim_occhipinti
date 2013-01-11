@@ -1,0 +1,53 @@
+<h1>Listing contributions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address1</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Email</th>
+    <th>Occupation</th>
+    <th>Employer name</th>
+    <th>Employer address1</th>
+    <th>Employer address2</th>
+    <th>Employer city</th>
+    <th>Employer state</th>
+    <th>Employer zip</th>
+    <th>Amount</th>
+    <th>Card type</th>
+    <th>Card expires on</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contributions.each do |contribution| %>
+  <tr>
+    <td><%= contribution.name %></td>
+    <td><%= contribution.address1 %></td>
+    <td><%= contribution.city %></td>
+    <td><%= contribution.state %></td>
+    <td><%= contribution.zip %></td>
+    <td><%= contribution.email %></td>
+    <td><%= contribution.occupation %></td>
+    <td><%= contribution.employer_name %></td>
+    <td><%= contribution.employer_address1 %></td>
+    <td><%= contribution.employer_address2 %></td>
+    <td><%= contribution.employer_city %></td>
+    <td><%= contribution.employer_state %></td>
+    <td><%= contribution.employer_zip %></td>
+    <td><%= contribution.amount %></td>
+    <td><%= contribution.card_type %></td>
+    <td><%= contribution.card_expires_on %></td>
+    <td><%= link_to 'Show', contribution %></td>
+    <td><%= link_to 'Edit', edit_contribution_path(contribution) %></td>
+    <td><%= link_to 'Destroy', contribution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Contribution', new_contribution_path %>

@@ -1,4 +1,7 @@
 TimOcchipinti::Application.routes.draw do
+  resources :contributions
+
+
   resources :sessions, only: [:new, :create, :destroy]
   resources :guests, only: [:new, :create]
   resources :galleries, :has_many => :photos

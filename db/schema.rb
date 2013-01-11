@@ -11,7 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130109161920) do
+ActiveRecord::Schema.define(:version => 20130111002158) do
+
+  create_table "contributions", :force => true do |t|
+    t.string   "name"
+    t.string   "address1"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "email"
+    t.string   "occupation"
+    t.string   "employer_name"
+    t.string   "employer_address1"
+    t.string   "employer_address2"
+    t.string   "employer_city"
+    t.string   "employer_state"
+    t.string   "employer_zip"
+    t.string   "amount"
+    t.string   "card_type"
+    t.date     "card_expires_on"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
   create_table "galleries", :force => true do |t|
     t.string   "name"

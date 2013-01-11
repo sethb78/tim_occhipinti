@@ -1,0 +1,24 @@
+<%= semantic_form_for @contribution do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :address1 %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+    <%= f.input :zip %>
+    <%= f.input :email %>
+    <%= f.input :occupation %>
+    <%= f.input :employer_name %>
+    <%= f.input :employer_address1 %>
+    <%= f.input :employer_address2 %>
+    <%= f.input :employer_city %>
+    <%= f.input :employer_state %>
+    <%= f.input :employer_zip %>
+    <%= f.input :amount %>
+    <%= f.input :card_type %>
+    <%= f.input :card_expires_on %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
