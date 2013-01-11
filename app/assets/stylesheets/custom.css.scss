@@ -540,3 +540,23 @@ header{
 	    margin-bottom:-10px;
 	}
 }
+
+.contribute {
+	background-color: darken(white,5%);
+	color: black;
+	@extend .gallery-form;
+	height: 498px;
+	#mail-to {
+		margin-top: -60px;
+		padding:5px;
+		border-bottom: 1px solid $gold;
+		margin-bottom: 5px;
+	}
+	label {
+    background-color: inherit;
+    color: black;
+	}
+	input {
+		border: 1px solid gray;
+	}
+}
