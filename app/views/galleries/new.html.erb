@@ -1,5 +1,5 @@
 <% provide(:title, 'Add Gallery') %>
-  <p class="center"><%= link_to "Back to Galleries Page", galleries_path %></p>
+  <p class="center back-to-galleries"><%= link_to "Back to Galleries Page", galleries_path %></p>
   <div class="gallery-form">
   <%= form_for @gallery, :html => {:multipart => true} do |f| %>
     <%= render 'shared/error_messages', object: f.object %>

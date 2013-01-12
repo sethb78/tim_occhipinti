@@ -1,12 +1,19 @@
 <%= provide(:title, "Contribute") %>
 <div class="contribute">
-	<%= form_for @contribution do |f| %>
-	 	<%= render 'shared/error_messages', object: f.object %>
-	 	<%= render 'contributions/intro' %>
-	 	<%= render "#{@contribution.current_step}_step", :f => f %>
-  		<p class="center submit">
-  			<%= f.submit "Back", :name => "back_button" unless @contribution.first_step? %>
-  			<%= f.submit "Continue" %>
-  		</p>
-	<% end %>
+	<div class="tabbable">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#pane1" data-toggle="tab">Electronic Contribution</a></li>
+			<li><a href="#pane2" data-toggle="tab">Check Contribution</a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="pane1" class="tab-pane active">
+				<%= render :partial => 'electronic_contribution' %>
+			</div>
+			<div id="pane2" class="tab-pane">
+				<%= render :partial => 'check_contribution' %>
+			</div>
+		</div>
+	</div>
 </div>
+
+

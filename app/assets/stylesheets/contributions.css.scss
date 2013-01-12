@@ -1,3 +1,122 @@
-// Place all the styles related to the Contributions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'universal_css';
+
+.contribute {
+	@extend .gallery-form;
+	margin: 0;
+	background-color: darken(white,5%);
+	color: black;
+	height: 498px;
+	#mail-to {
+		padding: 5% 10%;
+		.closer-lines {
+			line-height: 90%;
+		}
+		p {
+			font-size: 15px;
+		}
+		.large-font {
+			font-size: 18px;
+		}
+	}
+	h2 {
+		text-align: center;
+		margin-bottom: 4px;
+	}
+	label, select {
+	    background-color: inherit;
+	    color: black;
+	}
+	input {
+		border: 1px solid gray;
+	}
+	select {
+		width: 70px;
+	}
+	p {
+		margin: 0;
+	}
+	.city-state-zip {
+		input {
+			width: 100px;
+		}
+		.zip {
+			input {
+				width: 40px;
+			}
+			textarea {
+				width: 40px;
+			}
+		}
+	}
+	.submit {
+		margin: 10px 0 -10px;
+	}
+	#error_explanation {
+		margin-bottom: 0;
+	    float:right;
+	    width: 686px;
+	    .alert {
+     		padding: 5px 0;
+     		margin-bottom:10px;
+     	}
+     	li {
+     		margin-left: 20px;
+     		display: inline;
+     	}
+	}
+	.field_with_errors {
+		width: inherit;
+		margin: 0;
+		background-color: inherit;
+		display: inline;
+		label {
+			color: red;
+		}
+		input {
+			border: 1px solid red;
+		}
+	}
+	.zip .field_with_errors input {
+		width: 40px;
+	}
+	.city .field_with_errors input {
+		width: 100px;
+	}
+	.nav-tabs {
+	    background-color: white;
+	    border-bottom: 2px solid black;
+	    a:hover {
+	    	background-color: white;
+	    	color: black;
+	    	outline: none;
+	    	border-color: transparent transparent black;
+	    }
+	 	.active > a, .nav-tabs > .active > a:hover {
+			background-color: #F2F2F2;
+		    border-color: black black #F2F2F2;
+		    border-width: 2px;
+    		outline: none;
+    		color: black;
+		}
+	}
+}
+.contribute-links {
+	color: $gold;
+	font-size: 15px;
+	left: 650px;
+	margin-bottom: 30px;
+	position: absolute;
+	text-align: center;
+	top: 350px;
+	.active {
+		a {
+			color: $gold;
+			font-size:15px;
+			padding: 0 8px;
+		}
+	}
+	a:hover {
+		background-color: $gold;
+		color: $blue;
+	}
+}
