@@ -1,0 +1,19 @@
+<h2>Personal Information</h2>
+<p>
+  <%= f.label :name, "Name:*  " %>
+  <%= f.text_field :name %>
+</p>
+<p> 
+ 	<%= f.label :address1, "Address:*  " %>
+ 	<%= f.text_field :address1 %>
+</p>
+<p>
+ 	<%= f.label :address2, "Address:  " %>
+ 	<%= f.text_field :address2 %>
+</p>
+<p class="city-state-zip">
+ 	<%= f.label :city, "City/State/Zip:*  " %>
+ 	<span class="city"><%= f.text_field :city %></span>
+	<%= f.select :state, options_for_select(us_states)%> 
+	<span class="zip"><%= f.text_field :zip %></span>
+</p>

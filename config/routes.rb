@@ -1,5 +1,5 @@
 TimOcchipinti::Application.routes.draw do
-  resources :contributions, only: [:new, :create]
+  resources :contributions, only: [:new, :create, :check]
 
 
   resources :sessions, only: [:new, :create, :destroy]
@@ -12,6 +12,7 @@ TimOcchipinti::Application.routes.draw do
   match '/about_tim',  	            to: 'pages#about_tim'
   match '/vision',                  to: 'pages#vision'
   match '/contribute',              to: 'contributions#new'
+  match '/contribute/check',         to: 'contributions#check'
   match '/media',                   to: 'pages#media'
   match '/status_reports',          to: 'pages#status_reports'
   match '/contact',		              to: 'contact_us/contacts#new'

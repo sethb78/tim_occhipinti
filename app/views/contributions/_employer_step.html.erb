@@ -1,0 +1,23 @@
+<h2>Employment Information</h2>
+<p>
+	<%= f.label :employer_name, "Employer:  " %>
+	<%= f.text_field :employer_name %>
+</p>
+<p>
+	<%= f.label :occupation, "Job Title:  " %>
+	<%= f.text_field :occupation %>
+</p>
+<p>
+ 	<%= f.label :employer_address1, "Address:  " %>
+ 	<%= f.text_field :employer_address1 %>
+</p>
+<p>
+ 	<%= f.label :employer_address2, "Address:  " %>
+ 	<%= f.text_field :employer_address2 %>
+</p>
+<p class="city-state-zip">
+ 	<%= f.label :employer_city, "City/State/Zip:*  " %>
+ 	<span class="city"><%= f.text_field :employer_city %></span>
+	<%= f.select :employer_state, options_for_select(us_states)%> 
+	<span class="zip"><%= f.text_field :employer_zip %></span>
+</p>

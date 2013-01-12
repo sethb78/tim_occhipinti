@@ -3,26 +3,34 @@ class ContributionsController < ApplicationController
   # GET /contributions.json
  
   def new
-    @contribution = Contribution.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @contribution }
-    end
+    session[:contribution_params] ||= {}
+    @contribution = Contribution.new(session[:contribution_params])
+    @contribution.current_step = session[:contribution_step]
   end
+def check
+end
+
+
+
 
   def create
-    @contribution = Contribution.new(params[:contribution])
-
-    respond_to do |format|
-      if @contribution.save
-        format.html { redirect_to @contribution, notice: 'Contribution was successfully created.' }
-        format.json { render json: @contribution, status: :created, location: @contribution }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @contribution.errors, status: :unprocessable_entity }
+    session[:contribution_params].deep_merge!(params[:contribution]) if params[:contribution]
+    @contribution = Contribution.new(session[:contribution_params])
+    @contribution.current_step = session[:contribution_step]
+      if params[:back_button]
+        @contribution.previous_step
+      elsif @contribution.last_step?
+      @contribution.save if @contribution.all_valid?
+            else
+        @contribution.next_step
       end
+      session[:contribution_step] = @contribution.current_step
+    if @contribution.new_record?
+      render 'new'
+    else
+      session[:order_step] = session[:order_params] = nil
+      flash[:notice]= "Thank You for contributing"
+      redirect_to root_path
     end
   end
-
 end

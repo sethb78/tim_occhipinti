@@ -4,18 +4,24 @@
 					<ul class="nav">
 				    	<li> <%= link_to "About Tim", about_tim_path %></li>
 				    	<li> <%= link_to "Vision 2017", vision_path %></li>
-				    	<li> <%= link_to "Contribute", contribute_path %></li>
+				    	<li id="fat-menu" class="dropdown">
+				    		<a href= 'contribute_path'  class="dropdown-toggle" data-toggle="dropdown">Contribute<b class="caret"></b></a>
+				    		<ul class="dropdown-menu">
+				    			<li><%= link_to "Electronic Contributions",contribute_path %></li>
+				    			<li><%= link_to "Check Contributions", contribute_check_path %></li>
+				    		</ul>
+				    	</li>
 				    	<li> <%= link_to "Status Reports", status_reports_path %></li>
 				    	<li> <%= link_to "Media", media_path %></li>
 				    	<li> <%= link_to "Photo Galleries", galleries_path %></li>
 				    	<li> <%= link_to "Contact", contact_path %></li>
 				    	<% if 2+2 == 4 %>
-				    	<li id="fat-menu" class="dropdown pull-right"> 
+				    	<li id="fat-menu" class="dropdown"> 
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin
 								<b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li> <%= link_to "Add Gallery", '#' %>	
-								<li> <%= link_to "Edit Gallery", '#' %>		  		
+								<li> <%= link_to "Add A Gallery", new_gallery_path %>	
+								<li> <%= link_to "Edit Galleries", galleries_path %>		  		
 				    			<li> <%= link_to "Sign Out", signout_path, method: "delete" %></li>
 				    		</ul>
 				    	</li>
@@ -24,3 +30,13 @@
 				</div>
 			</div>
 		</div>
+
+<script>
+   $(document).ready(function () {
+        $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
+        var $parent=$('a[href="' + this.location.pathname + '"]').parent()
+
+     
+    });
+</script>
+

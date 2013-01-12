@@ -1,6 +1,5 @@
 @import "bootstrap";
 
-
 $gold: #fec400;
 $blue: #193e72;
 
@@ -41,7 +40,10 @@ p {
 		color: $gold;
 	}
 }
-
+ 
+ .underline {
+ 	text-decoration: underline;
+ }
 .alert {
 	text-align: center;
 	font-weight: bold;
@@ -49,12 +51,8 @@ p {
 	}
 
 	#error_explanation {
-		background-color: yellow;
-  color: #f00;
-  ul {
-    list-style: none;
-    margin: 0 0 18px 0;
-  }
+	background-color: yellow;
+  	color: #f00;
 }
 
 .field_with_errors {
@@ -149,6 +147,7 @@ header{
 			background-image: url(banner.png);
 			background-size: cover;
 			background-repeat: no-repeat;
+			border-radius: 10px 10px 10px 10px;
 		}
 	}
 }
@@ -202,15 +201,23 @@ header{
 
 
 .navigation-bar{
+
+	.navbar .nav .active > a, .navbar .nav .active > a:hover {
+	    background-color: darken($gold, 25%);
+	    color: white;
+	    text-decoration: none;
+	}
 	.navbar-inner {
 		@include filter-gradient($outside-color: #fce846, $middle-color:$gold);
 		margin:auto;
+		border-radius: 0px 0px 10px 10px;
 		ul { width: 100%;
 			text-align: center;
 		}
 		a {
 			width: 100px;
 			text-align: center;
+			border-radius: 0px 0px 10px 10px;
 		}
 		.divider-vertical {
 			border-right: 1px solid $blue;
@@ -218,27 +225,36 @@ header{
 			margin: 0 2px;
 		}
 	}
+	li {
+		margin: 1px;
+	}
 	.nav > li > a {
   		color: #292899;
     	font-size: 14px;
     	padding: 9px 2px;
 	}
 	.dropdown-menu {
-		min-width: 100px;
 		background-color: #fce846;
 		.active > a:hover{
-			background-color: #fec400;
+			background-col div#tabshori ul li:active a{background:#000; color:#FFF;}or: #fec400;
 		}
+		a {
+			color: $blue;
+			padding: 5px;
+			width: inherit;
+		}
+		a:hover {
+		background-width: inherit
+	}
 	}
 	.navbar .dropdown-menu:after{border:none;}
 	.dropdown li> a:hover{
 		background-color: #fec400;
 		background-width: 40px;
 	}
-	.dropdown-menu a {
-		padding: 3px 0;
-	}
-}
+.nav-active {
+	background-color: darken($gold, 10%);
+}}
 
 #home {
 	img {
@@ -542,21 +558,106 @@ header{
 }
 
 .contribute {
+	
+	margin: 0;
 	background-color: darken(white,5%);
 	color: black;
 	@extend .gallery-form;
 	height: 498px;
 	#mail-to {
-		margin-top: -60px;
-		padding:5px;
-		border-bottom: 1px solid $gold;
-		margin-bottom: 5px;
+		padding: 10%;
+		.closer-lines {
+			line-height: 90%;
+		}
+		p {
+			font-size: 15px;
+		}
+		.large-font {
+			font-size: 18px;
+		}
 	}
-	label {
+	h2 {
+		text-align: center;
+		margin-bottom: 4px;
+	}
+	label, select {
     background-color: inherit;
     color: black;
 	}
 	input {
 		border: 1px solid gray;
 	}
+	select {
+		width: 70px;
+	}
+	p {
+		margin: 0;
+	}
+	.city-state-zip {
+		input {
+			width: 100px;
+		}
+		.zip {
+		 	input {
+				width: 40px;
+			}
+			textarea {
+				width: 40px;
+			}
+		}
+	}
+	.submit {
+		margin: 10px 0 -10px;
+	}
+	#error_explanation {
+		margin-bottom: 0;
+    	float:right;
+    	width: 686px;
+    	.alert {
+    		padding: 5px 0;
+    		margin-bottom:10px;
+    	}
+    	li {
+    		margin-left: 20px;
+    		display: inline;
+    	}
+	}
+	.field_with_errors {
+		width: inherit;
+		margin: 0;
+		background-color: inherit;
+		display: inline;
+		label {
+			color: red;
+		}
+		input {
+			border: 1px solid red;
+		}
+	}
+	.zip .field_with_errors input {
+		width: 40px;
+	}
+	.city .field_with_errors input {
+		width: 100px;
+	}
 }
+	.contribute-links {
+	 color: $gold;
+	    font-size: 15px;
+	    left: 650px;
+	    margin-bottom: 30px;
+	    position: absolute;
+	    text-align: center;
+	    top: 350px;
+	   .active {
+	   	a {
+	   		color: $gold;
+	   		font-size:15px;
+	   		padding: 0 8px;
+	   	}
+	   }
+	a:hover {
+		background-color: $gold;
+		color: $blue;
+	}
+	}

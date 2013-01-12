@@ -1,3 +1,47 @@
 class Contribution < ActiveRecord::Base
-  attr_accessible :address1, :amount, :card_expires_on, :card_type, :city, :email, :employer_address1, :employer_address2, :employer_city, :employer_name, :employer_state, :employer_zip, :name, :occupation, :state, :zip
+  attr_accessible :address1, :address2, :amount, :card_expires_on, :card_type, :city, :email, :employer_address1, :employer_address2, :employer_city, :employer_name, :employer_state, :employer_zip, :name, :occupation, :state, :zip
+  attr_writer :current_step
+
+  validates_presence_of :name, :address1, :city, :state, :zip, :if => :personal?
+  validates_presence_of :occupation, :employer_name, :employer_address1, :employer_city, :employer_state, :employer_zip, :if => :employer?
+
+
+  def current_step
+  	@current_step || steps.first
+  end
+
+  def steps
+  	%w[personal employer payment]
+  end
+
+  def next_step
+  	self.current_step = steps[steps.index(current_step)+1]
+  end
+  def previous_step
+  	self.current_step = steps[steps.index(current_step)-1]  
+  end
+  def first_step?
+  	current_step == steps.first
+  end
+  def last_step?
+  	current_step == steps.last
+  end
+
+   def personal?
+    current_step == "personal"
+  end
+
+  def employer?
+  	current_step == "employer"
+  end
+  
+
+def all_valid?
+  steps.all? do |step|
+    self.current_step = step
+    valid?
+  end
+end
+
+
 end
