@@ -10,7 +10,6 @@ module ApplicationHelper
 
 def us_states
   [
-    ['NJ', 'NJ'],
     ['AK', 'AK'],
     ['AL', 'AL'],
     ['AR', 'AR'],
@@ -42,6 +41,7 @@ def us_states
     ['ND', 'ND'],
     ['NE', 'NE'],
     ['NH', 'NH'],
+    ['NJ', 'NJ'],
     ['NM', 'NM'],
     ['NV', 'NV'],
     ['NY', 'NY'],
