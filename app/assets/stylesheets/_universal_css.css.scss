@@ -39,6 +39,7 @@ abbr[title] {
 	letter-spacing:1px;
 	.stringish input {
 		width: 50%;
+		padding: .5%;
 	}
 	li {
 		list-style: none;
@@ -54,7 +55,9 @@ abbr[title] {
 		color: black;
 	}
 	input {
+		margin-bottom: .5em;
 		border: 1px solid gray;
+
 	}
 	.input .inline-hints {
 	margin-top: -.5em;
