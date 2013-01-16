@@ -28,8 +28,8 @@ class ContributionsController < ApplicationController
       render 'new'
     else
       session[:contribution_step] = session[:contribution_params] = nil
+      redirect_to 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M7WJB2AGSQZSE'
       flash[:notice]= "Thank You for contributing"
-redirect_to 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M7WJB2AGSQZSE'
     end
   end
 

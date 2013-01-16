@@ -25,9 +25,7 @@ abbr[title] {
 	border: none;
 }
 
-.center {
-	text-align: center;
-}
+
 
 
 
