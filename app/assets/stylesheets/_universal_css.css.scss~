@@ -25,7 +25,9 @@ abbr[title] {
 	border: none;
 }
 
-
+.center {
+	text-align: center;
+}
 
 
 
@@ -55,5 +57,10 @@ abbr[title] {
 	}
 	.input .inline-hints {
 	margin-top: -.5em;
+	}
+	.inline-errors {
+		color: #F2F2F2;
+		height: 0;
+		margin: 0;
 	}
 }

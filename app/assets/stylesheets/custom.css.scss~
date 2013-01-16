@@ -185,7 +185,7 @@ overflow: hidden;
 width: 25%;
 }
 #bottom .span12 {
-overflow: hidden;
+overflow: hidden
 border: 1px solid $gold;
 border-radius: 5px 5px 5px 5px;
 height: 440px;

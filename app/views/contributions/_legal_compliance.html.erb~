@@ -1,0 +1,12 @@
+<div id="legal-compliance">
+	Legal Compliance:
+
+	1. This contribution is made from my own personal funds and is not made from the general treasury funds of a corporation, labor organization, or national bank.
+
+	2. This contribution is made on a personal credit card and not a corporate credit card or the credit card of another person.
+
+	3. I understand that I may not contribute in excess of $2,600 per candidate per election.
+
+	4. I certify the information provided is true and accurate to the best of my knowledge.
+
+<%= f.input :legal_notice, :label => "I have read and understood the above terms." %></div>

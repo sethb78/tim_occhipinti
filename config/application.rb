@@ -44,6 +44,10 @@ module TimOcchipinti
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    config.filter_parameters += [:card_number]  
+    config.filter_parameters += [:card_verification]  
+
+
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
@@ -64,5 +68,6 @@ module TimOcchipinti
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
   end
 end

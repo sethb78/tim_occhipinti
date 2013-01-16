@@ -7,14 +7,16 @@ class ContributionsController < ApplicationController
     @contribution = Contribution.new(session[:contribution_params])
     @contribution.current_step = session[:contribution_step]
   end
+def check
+end
 
 
 
- def create
+
+  def create
     session[:contribution_params].deep_merge!(params[:contribution]) if params[:contribution]
     @contribution = Contribution.new(session[:contribution_params])
     @contribution.current_step = session[:contribution_step]
-    if @contribution.valid?
       if params[:back_button]
         @contribution.previous_step
       elsif @contribution.last_step?
@@ -23,15 +25,12 @@ class ContributionsController < ApplicationController
         @contribution.next_step
       end
       session[:contribution_step] = @contribution.current_step
-    end
     if @contribution.new_record?
       render 'new'
     else
-      session[:contribution_step] = session[:contribution_params] = nil
+      session[:order_step] = session[:order_params] = nil
       flash[:notice]= "Thank You for contributing"
-redirect_to 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M7WJB2AGSQZSE'
+      redirect_to root_path
     end
   end
-
-
 end

@@ -1,17 +1,18 @@
 class Contribution < ActiveRecord::Base
-  attr_accessor :card_number, :card_verification
-  attr_accessible :card_number, :card_verification, :legal_notice, :address1, :address2, :amount, :card_expires_on, :card_type, :city, :email, :employer_address1, :employer_address2, :employer_city, :employer_name, :employer_state, :employer_zip, :name, :occupation, :state, :zip, :first_name, :last_name
+  attr_accessible :legal_notice, :address1, :address2, :amount, :card_expires_on, :card_type, :city, :email, :employer_address1, :employer_address2, :employer_city, :employer_name, :employer_state, :employer_zip, :name, :occupation, :state, :zip, :first_name, :last_name
+attr_accessor :card_number, :card_verification
+
   attr_writer :current_step
   validates_presence_of :name, :address1, :city, :state, :zip, :if => :personal?
   validates_presence_of :occupation, :employer_name, :employer_address1, :employer_city, :employer_state, :employer_zip, :if => :employer?
-  validates_presence_of :legal_notice, :if => :legal_notice?
+
 
   def current_step
   	@current_step || steps.first
   end
 
   def steps
-  	%w[personal employer legal_notice]
+  	%w[personal employer payment]
   end
 
   def next_step
@@ -27,10 +28,6 @@ class Contribution < ActiveRecord::Base
   	current_step == steps.last
   end
 
-  def save_step?
-    current_step == steps.third
-  end
-
    def personal?
     current_step == "personal"
   end
@@ -39,9 +36,6 @@ class Contribution < ActiveRecord::Base
   	current_step == "employer"
   end
 
-  def legal_notice?
-    current_step == "legal_notice"
-  end
 
 def all_valid?
   steps.all? do |step|
@@ -50,5 +44,5 @@ def all_valid?
   end
 end
 
-  
+
 end

@@ -1,12 +1,18 @@
 <div class="payment">
 	<h2>Payment Info</h2>
 	<div id="name">
-		<%= f.input :first_name, :label => "First Name", :hint => "(as it appears on card)" %>
-		<%= f.input :last_name, :label => "Last Name", :hint => "(as it appears on card)" %>
-	</div>
-	    <%= f.input :card_type, :as => :select, :label => "Card", :collection =>[["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["AMEX", "american_express"]] %>
-		<%= f.input :card_number, :label => "Number" %>
-		<%= f.input :card_verification, :label => "CSV" %>
+	<%= f.input :first_name, :label => "First Name", :hint => "(as it appears on card)" %>
+	<%= f.input :last_name, :label => "Last Name", :hint => "(as it appears on card)" %>
+</div>
+    <%= f.input :card_type, :as => :select, :label => "Card", :collection =>[["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["AMEX", "american_express"]] %>
+  <p>
+    <%= f.label :card_number %><br />
+    <%= f.text_field :card_number %>
+  </p>
+  <p>
+    <%= f.label :card_verification, "Card Verification Value (CVV)" %><br />
+    <%= f.text_field :card_verification %>
+  </p>
 	<div id="expiration">
 		<%= f.label :card_expires_on, "Expiration" %>
 		<%= f.date_select :card_expires_on, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true %>

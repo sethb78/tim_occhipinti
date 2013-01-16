@@ -39,9 +39,4 @@ TimOcchipinti::Application.configure do
   AWS_SECRET_ACCESS_KEY = 'U+f/NTYO6chqYLEXq0/DVFe+LjVUQeTYVTus4ga/'
   AWS_S3_BUCKET = 'tim_occhipinti'
 
-config.after_initialize do
-  ActiveMerchant::Billing::Base.mode = :test
-  ::GATEWAY = ActiveMerchant::Billing::BogusGateway.new
-end
-
 end

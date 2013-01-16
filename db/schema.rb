@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130113183446) do
+ActiveRecord::Schema.define(:version => 20130115034316) do
 
   create_table "contributions", :force => true do |t|
     t.string   "name"
@@ -27,13 +27,16 @@ ActiveRecord::Schema.define(:version => 20130113183446) do
     t.string   "employer_city"
     t.string   "employer_state"
     t.string   "employer_zip"
-    t.string   "amount"
     t.string   "card_type"
     t.date     "card_expires_on"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.string   "address2"
     t.boolean  "legal_notice"
+    t.string   "ip_address"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "amount"
   end
 
   create_table "galleries", :force => true do |t|

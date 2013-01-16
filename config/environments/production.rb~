@@ -72,7 +72,7 @@ TimOcchipinti::Application.configure do
 
 
 config.after_initialize do
-	ActiveMerchant::Billing::Base.mode = :production
+	ActiveMerchant::Billing::Base.mode = :test
 	::Gateway = ActiveMerchant::Billing::PaypalGateway.new(
 	  :login => "sethb7_1358131916_biz_api1.gmail.com",
 	  :password => "1358131956",
