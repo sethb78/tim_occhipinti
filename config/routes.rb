@@ -7,8 +7,6 @@ TimOcchipinti::Application.routes.draw do
   resources :galleries, :has_many => :photos
   resources :photos
 
-  get "paypal_express/checkout"
-
   root to:'pages#home'
 
   match '/about_tim',  	            to: 'pages#about_tim'
