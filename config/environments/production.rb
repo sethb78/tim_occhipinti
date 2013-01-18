@@ -66,18 +66,18 @@ TimOcchipinti::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   TWITTER_KEY = '966CCHa1WCXufbwhXbr8g'
   TWITTER_SECRET = 'rXgr70ofImEEiYubx5bYRImaddHMLKZycooXSwgOg'
-  AWS_ACCESS_KEY_ID = ENV["AMAZON_KEY_ID"]
-  AWS_SECRET_ACCESS_KEY = ENV["AMAZON_SECRET_KEY"]
-  AWS_S3_BUCKET = ENV["AMAZON_BUCKET_NAME"]
+  AWS_ACCESS_KEY_ID = 'AKIAI7X2GMZHZM22NFTA'
+  AWS_SECRET_ACCESS_KEY = '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'
+  AWS_S3_BUCKET = 'tim_occhipinti'
 
 
-  config.action_mailer.smtp_settings = {
-  enable_starttls_auto: true,
-  address: 'smtp.gmail.com',
-  port: 587,
-  authentication: 'plain',
-  user_name: ENV["GMAIL_USERNAME"],
-  password: ENV["GMAIL_PASSWORD"]
-}
+config.after_initialize do
+	ActiveMerchant::Billing::Base.mode = :production
+	::Gateway = ActiveMerchant::Billing::PaypalGateway.new(
+	  :login => "sethb7_1358131916_biz_api1.gmail.com",
+	  :password => "1358131956",
+	  :signature => "AyrbsaUlnYimER1uwMo9B4yIeMVKA4JqQlENS47irPcndY420RKTz.AA"
+	)
+end
 
 end
