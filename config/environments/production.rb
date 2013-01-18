@@ -64,10 +64,7 @@ TimOcchipinti::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-  TWITTER_KEY = '966CCHa1WCXufbwhXbr8g'
-  TWITTER_SECRET = 'rXgr70ofImEEiYubx5bYRImaddHMLKZycooXSwgOg'
-  AWS_ACCESS_KEY_ID = 'AKIAI7X2GMZHZM22NFTA'
-  AWS_SECRET_ACCESS_KEY = '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'
-  AWS_S3_BUCKET = 'tim_occhipinti'
-
+  AWS_ACCESS_KEY_ID = ENV['AMAZON_KEY_ID']
+  AWS_SECRET_ACCESS_KEY = ENV['AMAZON_SECRET_KEY']
+  AWS_S3_BUCKET = ENV ['AMAZON_BUCKET_NAME']
 end
