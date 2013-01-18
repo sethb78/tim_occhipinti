@@ -8,11 +8,12 @@
 		width: 100%;
 		list-style: none;
 	}
-	label {
+	label, .badge {
 		background-color: inherit;
-		color: $gold;
+		color: black;
 		width: 10%;
 		display: inline;
+		text-shadow: none;
 	}
 	form.formtastic li textarea {
 	    height: 200px;
@@ -22,6 +23,7 @@
 	}
 	input {
 		margin-top: 5px;
+		margin-left: 2%;
 		color: black;
 	}
 	input[type="submit"] {

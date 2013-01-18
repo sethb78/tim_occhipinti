@@ -1,25 +1,20 @@
 @import 'universal_css';
-
-/*MIXINS*/
-@mixin background_image($bottom_color,$top_color) {
-   background-image: linear-gradient( bottom, $bottom_color, $top_color 50%);
-background-image: -o-linear-gradient( bottom, $bottom_color, $top_color 50%);
-background-image: -moz-linear-gradient( bottom, $bottom_color, $top_color 50%);
-background-image: -webkit-linear-gradient( bottom, $bottom_color, $top_color 50%);
-background-image: -ms-linear-gradient( bottom, $bottom_color, $top_color 50%);
-background-image: -webkit-gradient( linear, bottom, left top, color-stop(0, $bottom_color), color-stop(1, $top_color));
+html {
+    min-height: 100%;
 }
 
-@mixin filter-gradient($outside-color, $middle-color) {
-background: -moz-linear-gradient(top, $outside-color 0%, $middle-color 52%, $outside-color 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$outside-color), color-stop(52%,$middle-color), color-stop(100%,$outside-color)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* IE10+ */
-background: linear-gradient(to bottom, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$outside-color', endColorstr='$middle-color',GradientType=0 ); /* IE6-9 */
+body {
+    @include background-image($bottom_color: #BABCC4 ,$top_color: #193e72);
+    background-size: cover;
+    .container {
+        min-height: 400px;
+    }
 }
 
+.main-info {
+    max-height: 750px;
+    overflow: auto
+}
 
 .back-to-galleries{
 	a {
@@ -29,16 +24,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$outside-colo
 		color: white;
 	}
 }
-body {
-   @include background-image($bottom_color: #BABCC4 ,$top_color: #193e72);
-   background-size: cover;
-    .container {
-background-image:none;
-min-height: 400px;
-  }
-}
 
-html {min-height: 100%;}
+
 
 p {
 a {
@@ -88,7 +75,7 @@ text-shadow: 2px 2px black;
 margin: 0px;
 }
 
-#topline-block {
+#topline-block,  {
 background-color: #2B2B2A;
 margin-bottom: 10px;
 .topline {
@@ -126,439 +113,13 @@ margin-top: 1px;
 }
 }
 
-header{
-
-.navbar{ margin:0;}
-.navbar-inner {
-background-color: inherit;
-background-repeat: repeat-x;
-min-height: 40px;
-padding: 0;
-background-image: none;
-border-radius: none;
-box-shadow: none;
-}
-
-h1 {
-position: relative;
-height: 200px;
-overflow: hidden;
-#bgimage {
-position: absolute;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-background-image: url(banner.png);
-background-size: cover;
-background-repeat: no-repeat;
-border-radius: 10px 10px 10px 10px;
-}
-}
-}
-
-
-.main-info {
-margin: 40px 0 100px;
-background-color: $blue;
-   opacity:0.9;
-.span9 {
-overflow: hidden;
-height: 500px;
-width: 75%;
-border-top: 1px solid $gold;
-border-left: 1px solid $gold;
-border-bottom: 1px solid $gold;
-}
-.sidebar {
-.span12 {
-text-align: center;
-}
-#top .span12{
-border-left: 1px solid $gold;
-border-right: 1px solid $gold;
-border-top: 1px solid $gold;
-height: 60px;
-overflow: hidden;
-}
-.span3 {
-width: 25%;
-}
-#bottom .span12 {
-overflow: hidden;
-border: 1px solid $gold;
-border-radius: 5px 5px 5px 5px;
-height: 440px;
-color: white;
-a { color: white;}
-}
-}
-#in-touch {
-color: $gold;
-padding: 5px 5px;
-img {
-margin-top: 2px;
-margin-left: 2px;
-height: 30px;
-
-}
-}
-}
-
-
-.navigation-bar{
-
-.navbar .nav .active > a, .navbar .nav .active > a:hover {
-background-color: lighten($gold, 25%);
-text-decoration: none;
-color: $blue
-}
-.navbar-inner {
-@include filter-gradient($outside-color: #fce846, $middle-color:$gold);
-margin:auto;
-border-radius: 0px 0px 10px 10px;
-ul { width: 100%;
-text-align: center;
-}
-a {
-width: 100px;
-text-align: center;
-border-radius: 0px 0px 10px 10px;
-}
-.divider-vertical {
-border-right: 1px solid $blue;
-background-color: none;
-margin: 0 2px;
-}
-}
-li {
-margin: 1px;
-}
-.nav > li > a {
-   color: #292899;
-     font-size: 14px;
-     padding: 9px 2px;
-}
-.dropdown-menu {
-background-color: #fce846;
-.active > a:hover{
-background-col div#tabshori ul li:active a{background:#000; color:#FFF;}or: #fec400;
-}
-a {
-color: $blue;
-padding: 5px;
-width: inherit;
-}
-a:hover {
-background-width: inherit
-}
-}
-.navbar .dropdown-menu:after{border:none;}
-.dropdown li> a:hover{
-background-color: #fec400;
-background-width: 40px;
-}
-.nav-active {
-background-color: darken($gold, 10%);
-}}
-
-#home {
-img {
-height: 498px;
-width: 710px;
-}
-
-
-}
 
 
 
-#about-tim {
-max-height: 500px;
-overflow: hidden;
-#tim-content {
-height: 500px;
-overflow: scroll;
-background-color: white;
-font-size:14px;
-word-spacing: 1px;
-}
-.tab-content {
-padding: 40px;
-}
-.nav {
-margin-bottom: 0;
-}
-.nav-tabs > .active > a, .nav-tabs > .active > a:hover {
-border-color: black black transparent;
-border-width: 1px;
-outline: 0
-}
-.nav-tabs {
-    background-color: white;
-    border-bottom: 1px solid black;
-}
-a, a:hover{
-font-weight: bold;
-font-size: 20px;
-}
-}
-
-#contact-page {
-margin-left: 20px;
-margin-top: 20px;
-padding:5px;
-ul{
-}
-li {
-width: 210px;
-list-style: none;
-}
-label {
-background-color: inherit;
-color: $gold;
-width: 210px;
-display: inline;
-}
-
-form.formtastic li textarea {
-    height: 200px;
-    width: 500px;
-    margin-top: 5px;
-    color: black;
-}
-input {
-margin-top: 5px;
-color: black;
-}
-}
-
-#galleries {
-background-color: black;
-padding: 10px 10px;
-text-align: left;
-margin-top: -10px;
-height: 498px;
-overflow: scroll;
-img {
-height: 124px;
-width: 160px;
-margin-top:10px;
-}
-h5 {
-color: $gold;
-margin-top:4px;
-height: 35px;
-overflow: hidden;
-}
-#photo-counter {
-font-size: 12px;
-color: gray;
-display: block;
-width: 100%;
-margin-top:8px;
-a {
-margin-right:15px;
-float: left;
-}
-}
-
-.thumbnails {
-text-align: center;
-
-}
-.thumbnail {
-border: 1px solid #E7E5CF;
-border-radius: 8px 8px 8px 8px;
-float: left;
-padding: 11px 11px 27px;
-width: 160px;
-height: 160px;
-}
-.thumbnails .span4:nth-child(3n+1),
-.thumbnails .span4:first-child + li + li + li,
-.thumbnails .span4:first-child + li + li + li + li + li + li {
-margin-left: 0;
-}
-#add-gallery-link {
-text-align: center;
-margin: 20px 0;
-a {
-font-size: 20px;
-text-decoration: underline;
-}
-
-}
-.gallery-name {
-    display: block;
-    margin-top: -6px;
-    position: relative;
-    text-align: center;
-    width: inherit;
-    height: 25px;
-}
-
-.pagination {
-margin: 0 0 18px;
-}
-a {
-color: $gold;
-border-color: $gold;
-}
-}
-
-.gallery-form {
-color: $gold;
-text-align: left;
-margin-top: 60px;
-
-a:hover {
-color: white;
-}
-input {
-float:right;
-}
-.btn {
-clear: both;
-}
-.gallery-field {
-display: block;
-height: 50px;
-}
-#error_explanation {
-width: 720px;
-margin-to: -60px;
-}
-img{
-height: 75px;
-width: 75px;
-}
-.row {
-margin-top: 40px;
-}
-#edit-delete {
-display:block;
-clear: both;
-a {
-color:white;
-}
-}
-.delete-button {
-    display: block;
-    left: 140px;
-    position: relative;
-    top: -40px;
-    margin-bottom: -20px;
-}
-.btn {
-background-color: $gold;
-color: $blue;
-background-image:none;
-}
-.thumbnails > li{
-margin: 0 1px;
-}
-.pagination a {
-line-height: 20px;
-}
-.tab-content {
-height: 190px;
-}
-.nav-tabs > li > a, .nav-pills > li > a {
-background-color: $gold;
-color: $blue;
-}
-.nav-tabs > .active > a, .nav-tabs > .active > a:hover {
-background-color: $blue;
-color: $gold;
-border-width: 3px;
-outline: 0
-}
-.add_description {
-margin-top: 10px;
-}
-label {
-float: left;
-margin-right: 10px;
-text-align: right;
-width: 250px;	}
-input {
-float: none;
-}
-textarea {
-  width: 210px;
-  height: 200px;
-  }
-  label, .badge {
-  background-color: $blue;
-  color: $gold;
-  font-weight: none;
-}
-}
 
 
 
-.photo-scroll {
-background-color: white;
-height: 500px;
-.carousel {
-height: inherit;
-}
-}
-
-#gallery-show {
-p {
-background-color: black;
-margin: 0;
-}
-a {
-margin-left: 10px;
-}
-#photo-overlay{
-background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
-display: inline-block;
-padding-right: 8px;
-a {
-color: lighten(#0088CC, 25%)
-}
-}
-.actions {
-position:absolute;
-top:10px; left: 10px;
-background-color: red;
-}
 
 
 
-#description {
-background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
-bottom: 0;
-left: 0;
-padding: 10px 15px 5px;
-position: absolute;
-right: 0;
-color: white;
-}
 
-}
- #galleria{ width: 720px; height: 480px; background: #000 }
-
-
-
-.upload-image-fields {
-background: white;
-}
-.center {
-text-align: center;
-}
-
-.edit-image {
-img{
-background: none repeat scroll 0 0 white;
-border: 1px solid $gold;
-height: 100px;
-padding: 5px;
-width: 100px;
-margin-bottom:-10px;
-}
-}

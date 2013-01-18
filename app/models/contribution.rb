@@ -3,6 +3,7 @@ class Contribution < ActiveRecord::Base
   attr_accessible :card_number, :card_verification, :legal_notice, :address1, :address2, :amount, :card_expires_on, :card_type, :city, :email, :employer_address1, :employer_address2, :employer_city, :employer_name, :employer_state, :employer_zip, :name, :occupation, :state, :zip, :first_name, :last_name
   attr_writer :current_step
   validates_presence_of :name, :address1, :city, :state, :zip, :if => :personal?
+  validates_format_of :zip, :with => %r{\d{5}(-\d{4})?}, :message => "should be 12345 or 12345-1234"
   validates_presence_of :occupation, :employer_name, :employer_address1, :employer_city, :employer_state, :employer_zip, :if => :employer?
   validates_presence_of :legal_notice, :if => :legal_notice?
 

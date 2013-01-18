@@ -1,6 +1,7 @@
 @import "bootstrap";
 $gold: #fec400;
 $blue: #193e72;
+$light-blue: #BABCC4;
 
 @mixin background_image($bottom_color,$top_color) {
    background-image: linear-gradient( bottom, $bottom_color, $top_color 50%);
@@ -29,8 +30,14 @@ abbr[title] {
 	text-display: underline;
 }
 
+.row-fluid [class*="span"] {
+	margin-left: 0;
+}
 
-
+h1 {
+	color: $gold;
+	margin-bottom: 2%;
+}
 
 .formtastic {
 	width: 40%;
@@ -49,6 +56,9 @@ abbr[title] {
 		margin-right: 2%;
 		margin-top: 2px;
 		font-size: 13px;
+	}
+	.label, badge {
+		text-shadow: none;
 	}
 	label, select {
 		background-color: inherit;

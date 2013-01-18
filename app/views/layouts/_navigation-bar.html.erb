@@ -1,35 +1,25 @@
 <div class="navigation-bar">
-			<div class="navbar">
-				<div class="navbar-inner">
-					<ul class="nav">
-				    	<li> <%= link_to "About Tim", about_tim_path %></li>
-				    	<li> <%= link_to "Vision 2017", vision_path %></li>
-				    	<li><%= link_to "Contributions",contribute_path %></li>
-				    	<li> <%= link_to "Status Reports", status_reports_path %></li>
-				    	<li> <%= link_to "Media", media_path %></li>
-				    	<li> <%= link_to "Photo Galleries", galleries_path %></li>
-				    	<li> <%= link_to "Contact", contact_path %></li>
-				    	<% if 2+2 == 4 %>
-				    	<li id="fat-menu" class="dropdown"> 
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin
-								<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li> <%= link_to "Add A Gallery", new_gallery_path %>	
-								<li> <%= link_to "Edit Galleries", galleries_path %>		  		
-				    			<li> <%= link_to "Sign Out", signout_path, method: "delete" %></li>
-				    		</ul>
-				    	</li>
-				    	<% end %>				    
-				    </ul>
-				</div>
-			</div>
-				</div>
+	<div class="navbar">
+		<div class="navbar-inner">
+			<ul class="nav">
+		    	<li> <%= link_to "About Tim", about_tim_path %></li>
+		    	<!--<li> <%= link_to "Vision 2017", vision_path %></li>-->
+		    	<li><%= link_to "Contributions",contribute_path %></li>
+				 <li> <%= link_to "Status Reports", status_reports_path %></li>
+				 <li> <%= link_to "Media", media_path %></li>
+				 <li> <%= link_to "Photo Galleries", galleries_path %></li>
+				 <li> <%= link_to "Contact", contact_path %></li>
+				 <% if signed_in? %>
+				 	<li><%= link_to "Admin Tools", '#' %></li>
+				 <% end %>				    
+			</ul>
+		</div>
+	</div>
+</div>
 <script>
    $(document).ready(function () {
         $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
         var $parent=$('a[href="' + this.location.pathname + '"]').parent()
-
-     
     });
 </script>
 

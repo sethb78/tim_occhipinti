@@ -1,7 +1,9 @@
 <% provide(:title, 'Photo Galleries') %>
 <div id="galleries">
 	<div id="add-gallery-link">
-    	<%= link_to "Add Gallery Here", new_gallery_path %>
+    	<% if signed_in? %>
+    		<%= link_to "Add Gallery Here", new_gallery_path %>
+    	<% end %>
 	</div>
 	<ul class="thumbnails">
 		<% @galleries.each do |gallery| %>
@@ -12,8 +14,10 @@
                     </div>
 					<%= link_to image_tag(gallery.cover_image), gallery_path(gallery)%>
 					<div id="photo-counter">
-						<%= link_to "Edit", edit_gallery_path(gallery) %>
-						<%= link_to "Add Photo", new_photo_path(:gallery_id => gallery.id) %> 
+						<% if signed_in? %>
+							<%= link_to "Edit", edit_gallery_path(gallery) %>
+							<%= link_to "Add Photo", new_photo_path(:gallery_id => gallery.id) %>
+						<% end %>
 						<%= pluralize(gallery.photos.count, 'photo') %>
 					</div>
 	    		</div>
