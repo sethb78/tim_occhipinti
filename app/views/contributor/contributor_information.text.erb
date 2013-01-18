@@ -1,0 +1,24 @@
+<p>Name:  <%= @contributor.name %></p>
+
+<%if @contributor.email? %>
+	<p> Email:  <%= @contributor.email %></p>
+<% end %>
+
+<p>Address: <%= @contributor.address1 %></p>
+<% if @contributor.address2? %>
+	<p><%= @contributor.address2 %></p>
+<% end %>
+<p>City:  <%= @contributor.city %></p>
+<p>State:  <%= @contributor.state %></p>
+<p>Zip:  <%= @contributor.zip %></p>
+
+<p> Occupation:  <%= @contributor.occupation %></p>
+<p>Employer:  <%= @contributor.employer_name %></p>
+<p>Address:  <%= @contributor.employer_address1 %></p>
+<% if @contributor.employer_address2? %>
+	<p><%= @contributor.employer_address2 %></p>
+<% end %>
+<p>City:  <%= @contributor.employer_city %></p>
+<p>State:  <%= @contributor.state %></p>
+<p>Zip:  <%= @contributor.zip %><p>
+
