@@ -65,8 +65,8 @@ TimOcchipinti::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   AWS_ACCESS_KEY_ID = ENV['AMAZON_KEY_ID']
-  AWS_SECRET_ACCESS_KEY = ENV['U+f/NTYO6chqYLEXq0/DVFe+LjVUQeTYVTus4ga/']
-  AWS_S3_BUCKET = ENV ['tim_occhipinti']
+  AWS_SECRET_ACCESS_KEY = 'U+f/NTYO6chqYLEXq0/DVFe+LjVUQeTYVTus4ga/'
+  AWS_S3_BUCKET = 'tim_occhipinti'
 
 
 
