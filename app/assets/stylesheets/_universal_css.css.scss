@@ -37,6 +37,7 @@ abbr[title] {
 h1 {
 	color: $gold;
 	margin-bottom: 2%;
+	text-align: center;
 }
 
 .closer-lines {
@@ -49,6 +50,50 @@ p {
 
 .large-font {
 	font-size: 18px;
+}
+
+
+.underline {
+  	text-decoration: underline;
+}
+
+.alert {
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#error_explanation {
+	background-color: yellow;
+   	color: #f00;
+}
+
+.field_with_errors {
+  	@extend .control-group;
+  	@extend .error;
+ }
+
+input[type="text"] {
+	color: black;
+}
+
+h1 {
+	text-align: center;
+	color: $gold;
+	font-size: 40px;
+	text-shadow: 2px 2px black;
+}
+
+.btn-primary {
+    background-color: $gold;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: 1px solid #193e72;
+    color: #193e72;
+}
+
+.row {
+	margin: 0px;
 }
 
 .formtastic {

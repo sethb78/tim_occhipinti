@@ -10,8 +10,8 @@
 				 <li> <%= link_to "Photo Galleries", galleries_path %></li>
 				 <li> <%= link_to "Contact", contact_path %></li>
 				 <% if signed_in? %>
-				 	<li><%= link_to "Admin Tools", '#' %></li>
-				 <% end %>				    
+				 	<li> <%= link_to "Administrative Tools", admin_path %></li>
+				<% end %>				    
 			</ul>
 		</div>
 	</div>

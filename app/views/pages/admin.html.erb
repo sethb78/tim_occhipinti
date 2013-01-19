@@ -1,1 +1,14 @@
-<% provide(:title, "Administrative Tools") %>
+<h1><%= provide(:title, "Administrative Tools") %></h1>
+<div id="admin-page">
+	<div class="containter-fluid">
+		<div class="row-fluid">
+			<div class="span4">
+				<div class="span12">
+					<h3> Edit Photos</h3>
+					<p> <%= link_to("Add a additional Gallery", new_gallery_path) %></p>
+					<p> <%= link_to("Edit existing Gallery", galleries_path) %></p>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
