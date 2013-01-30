@@ -1,4 +1,4 @@
-ActiveAdmin.register_page "Dashboard" do
+ActiveAdmin::Dashboards.build do
   section "Recent Posts" do
     table_for Blog.order("date desc").limit(5) do
       column :title
