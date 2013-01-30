@@ -89,8 +89,7 @@ body {
     width: 100%;
     text-align: center;
     .navbar .nav .active > a, .navbar .nav .active > a:hover {
-        background-color: lighten($gold, 25%);
-        text-decoration: none;
+        text-decoration: underline;
         color: $blue
     }
     .nav {

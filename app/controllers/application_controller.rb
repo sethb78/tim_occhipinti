@@ -3,7 +3,4 @@ class ApplicationController < ActionController::Base
   include ContributionsHelper
 
     protect_from_forgery
-def set_layout_variables
-  	@blog=Blog.last
-  end
 end

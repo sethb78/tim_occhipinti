@@ -1,6 +1,4 @@
 class GuestsController < ApplicationController
-
-
 	def create
 		@guest = Guest.new(params[:guest])
 		if @guest.save

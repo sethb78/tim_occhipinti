@@ -1,13 +1,13 @@
 <%= provide(:title, @gallery.name) %>
 <div id="gallery-show">
 	<p>
-	  <%= link_to "Add a Photo", new_photo_path(:gallery_id => @gallery) %> |
+	  <%= link_to "Add a Photo", new_admin_photo_path(:gallery_id => @gallery) %> |
 	  <%= link_to "Remove Gallery", @gallery, :confirm => 'Removing the gallery will delete all the pictures in the gallery.  ARE YOU SURE?', :method => :delete %> |
 	  <%= link_to "View Galleries", galleries_path %>
 	</p>
 	<div id="galleria">
 		<% @gallery.photos.each do |photo| %>
-			<li><%= image_tag(photo.image_url.to_s, 'data-layer' => ("<div id='photo-overlay'>#{link_to 'remove', photo, :confirm => 'Are you sure you want to delete photo?', :method => :delete}  |  #{link_to 'edit', edit_photo_path(photo)}</div><div id='description'>#{photo.description}</div>")) %>
+			<li><%= image_tag(photo.image_url.to_s, 'data-layer' => ("<div id='photo-overlay'>#{link_to 'remove', photo, :confirm => 'Are you sure you want to delete photo?', :method => :delete}  |  #{link_to 'edit', edit_admin_photo_path(photo)}</div><div id='description'>#{photo.description}</div>")) %>
 		<% end %>
 	</div>
 </div>
