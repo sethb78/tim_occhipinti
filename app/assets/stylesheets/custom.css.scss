@@ -32,6 +32,7 @@ body {
     .topline {
         width: 940px;
         margin: auto;
+        padding-left: 50%;
         span {
             margin: 7px 300px 0 0;
             a {
@@ -194,6 +195,7 @@ body {
         display:inline;
     }
     li {
+        color: white;
         margin: 0 2%;
         display: inline-block;
         list-style: none;
