@@ -1,13 +1,24 @@
 <div id="home">
-    <div class="span12">
-        <div class="hero-unit">
-            <%= image_tag('tim-blog.jpeg') %>
-            <h2><%= @blog.title %></h2>
-            <p><%= @blog.tagline %></p>
-            <div class="content">
-                <p><%= raw truncate @blog.content, length: 400 %></p>
-                <p><%= link_to("Read More", blog_path(@blog)) %></p>
-            </div>
+        <div class="span12 hero-unit">
+                <%= image_tag('tim-blog.jpeg') %>
+                <h2><%= @blog.title %></h2>
+                <p><%= @blog.tagline %></p>
+                <div class="content">
+                    <p><%= raw truncate @blog.content, length: 600 %></p>
+                    <p><%= link_to("Read More", blog_path(@blog)) %>   |   <%= link_to("Full Archives", blogs_path) %></p>
+                </div>
+        </div>
+    <div class="row-fluid">
+        <div class="span6 in-the-news">
+            <h3 class="center"> Latest News </h3>
+            <p class="center"> <%= link_to("News Archives", news_articles_path) %></p>
+            <hr>
+            <% @latest_news.each do |latest_news| %>
+                <p><div class="news-title"><%= link_to(latest_news.title, latest_news.link, target: "blank") %> </div>
+               <div class="news-date-source">--<%= latest_news.date.strftime("%b %d, %Y") %> - <%= latest_news.source %></div> 
+                <div class="snippet"> <%= latest_news.snippet %>  -<%= link_to "full article", latest_news.link, target: "blank" %></div></p>
+            <% end %>
         </div>
     </div>
+
 </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130130001759) do
+ActiveRecord::Schema.define(:version => 20130130175558) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -69,7 +69,6 @@ ActiveRecord::Schema.define(:version => 20130130001759) do
     t.string   "employer_city"
     t.string   "employer_state"
     t.string   "employer_zip"
-    t.string   "amount"
     t.string   "card_type"
     t.date     "card_expires_on"
     t.datetime "created_at",        :null => false
@@ -79,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20130130001759) do
     t.string   "ip_address"
     t.string   "first_name"
     t.string   "last_name"
+    t.integer  "amount"
   end
 
   create_table "galleries", :force => true do |t|
@@ -88,6 +88,16 @@ ActiveRecord::Schema.define(:version => 20130130001759) do
     t.string   "cover_image"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "news_articles", :force => true do |t|
+    t.string   "title"
+    t.string   "source"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.date     "date"
+    t.string   "link"
+    t.text     "snippet"
   end
 
   create_table "photos", :force => true do |t|

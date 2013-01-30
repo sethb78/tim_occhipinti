@@ -10,9 +10,9 @@ body {
 }
 
 .main-info {
+    background-color: inherit;
     max-height: 750px;
     overflow: auto;
-    background-color: white;
 }
 
 .back-to-galleries{
@@ -215,8 +215,8 @@ body {
     a {
         color: lighten($gold, 20%);
     }
-
 }
+
 
 
 

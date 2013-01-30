@@ -1,0 +1,8 @@
+<div class="news-archive">
+	<%= provide(:title, "Article Archives") %>
+	<h3 class="center"> Past Articles</h3>
+		<% @archive_news.each do |article| %>
+			<p><%= link_to(article.title, article.link, target: "blank") %> <br />
+			<%= article.source %>--<%= article.date.strftime("%b %d, %Y") %></p>
+			<% end %>
+		</div>
