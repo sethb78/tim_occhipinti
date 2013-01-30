@@ -17,8 +17,6 @@ end
 
 
 
-
-
 module TimOcchipinti
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -37,7 +35,7 @@ module TimOcchipinti
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'c
+    # config.time_zone = 'Central Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
@@ -48,10 +46,6 @@ module TimOcchipinti
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-    config.filter_parameters += [:card_number]  
-    config.filter_parameters += [:card_verification]  
-
-
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
@@ -72,7 +66,5 @@ module TimOcchipinti
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-config.assets.initialize_on_precompile = false
-
   end
 end
