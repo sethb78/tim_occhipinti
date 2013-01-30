@@ -6,14 +6,12 @@ html {
 body {
     @include background-image($bottom_color: #BABCC4 ,$top_color: #193e72);
     background-size: cover;
-    .container {
-        min-height: 400px;
-    }
 }
 
 .main-info {
     max-height: 750px;
-    overflow: auto
+    overflow: auto;
+    background-color: white;
 }
 
 .back-to-galleries{
@@ -24,7 +22,9 @@ body {
 		color: white;
 	}
 }
-
+.indent{
+    padding-left: 2%;
+}
 #topline-block,  {
     background-color: #2B2B2A;
     margin-bottom: 10px;
@@ -144,15 +144,11 @@ body {
     }
 }
 
-.main-info {
-    background-color: $light-blue;
-    border: 1px solid $gold;
-    margin-right: 2%;
-}
 
 .side_bar {
+    position: relative;
+    left: 2.2%;
     background-color: #BABCC4;
-    border: 1px solid $gold;
     color: black;
     h4 { 
         color: black
@@ -220,6 +216,7 @@ body {
     }
 
 }
+
 
 
 

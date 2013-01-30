@@ -141,7 +141,7 @@
         float: left;
         margin-right: 10px;
         text-align: right;
-        width: 250px;	
+        width: 20%;	
     }
     input {
         float: none;
@@ -213,5 +213,7 @@
         margin-bottom:-10px;
     }
 }
-
+input.btn.btn-large[type="submit"] {
+    padding: 4px;
+}
 

@@ -5,6 +5,7 @@ before_filter :signed_in_user, only: [:admin]
   end
   
   def home
+    @blog=Blog.last
   end
   
   def about_tim

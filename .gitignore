@@ -17,4 +17,4 @@
 public/**
 taps-*.gem
 
-app/config/application.yml
+/config/application.yml

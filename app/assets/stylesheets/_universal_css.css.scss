@@ -6,7 +6,7 @@ $light-blue: #BABCC4;
 @mixin background_image($bottom_color,$top_color) {
    background-image: linear-gradient( bottom, $bottom_color, $top_color 50%);
 background-image: -o-linear-gradient( bottom, $bottom_color, $top_color 50%);
-background-image: -moz-linear-gradient( bottom, $bottom_color, $top_color 50%);
+background-image: -moz-linear-gradient( bottom, $bottom_color, $top_color 80%);
 background-image: -webkit-linear-gradient( bottom, $bottom_color, $top_color 50%);
 background-image: -ms-linear-gradient( bottom, $bottom_color, $top_color 50%);
 background-image: -webkit-gradient( linear, bottom, left top, color-stop(0, $bottom_color), color-stop(1, $top_color));
@@ -135,3 +135,5 @@ h1 {
 		margin: 0;
 	}
 }
+
+

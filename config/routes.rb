@@ -1,5 +1,10 @@
 TimOcchipinti::Application.routes.draw do
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   resources :contributions, only: [:new, :create, :check]
+  resources :blogs, only: [:show, :index]
 
 
   resources :sessions, only: [:new, :create, :destroy]
