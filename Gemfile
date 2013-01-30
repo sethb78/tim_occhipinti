@@ -6,7 +6,6 @@ gem 'jquery-rails'
   gem "formtastic", "~> 2.2.1"
   gem 'carrierwave'
   #gem 'faker', '1.0.1'
-  #gem "will_paginate", ">=3.0.pre2"
   gem 'bootstrap-will_paginate', '0.0.6'
   gem "bcrypt-ruby", "~> 3.0.1"
   gem "fog"
