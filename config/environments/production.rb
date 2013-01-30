@@ -15,7 +15,7 @@ TimOcchipinti::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -64,11 +64,6 @@ TimOcchipinti::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-  AWS_ACCESS_KEY_ID = ENV['AMAZON_KEY_ID']
-  AWS_SECRET_ACCESS_KEY = ENV['AMAZON_SECRET_KEY']
-  AWS_S3_BUCKET = ENV['AMAZON_BUCKET_NAME']
-
-
 
 
   config.action_mailer.smtp_settings = {
