@@ -2,13 +2,11 @@
     <div class="span12">
         <div class="hero-unit">
             <%= image_tag('tim-blog.jpeg') %>
-            <% @blog.each do |blog| %>
-            <h2><%= blog.title %></h2>
-            <p><%= blog.tagline %></p>
+            <h2><%= @blog.title %></h2>
+            <p><%= @blog.tagline %></p>
             <div class="content">
-                <p><%= raw truncate blog.content, length: 400 %></p>
-                <p><%= link_to("Read More", blog_path(blog)) %></p>
-                <% end %>
+                <p><%= raw truncate @blog.content, length: 400 %></p>
+                <p><%= link_to("Read More", blog_path(@blog)) %></p>
             </div>
         </div>
     </div>
