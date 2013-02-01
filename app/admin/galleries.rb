@@ -2,11 +2,8 @@ ActiveAdmin.register Gallery do
 	index do
 		column :name
 		column :description
-		if :cover_image != nil
-			column :cover_image
-		else
-			column :remove_cover_image_url
-		end
+		column :cover_image
+		column :remove_cover_image_url
 		default_actions
 	end
    form do |f|

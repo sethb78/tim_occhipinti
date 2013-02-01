@@ -2,14 +2,13 @@
 $gold: #fec400;
 $blue: #193e72;
 $light-blue: #BABCC4;
-
-@mixin background_image($bottom_color,$top_color) {
-   background-image: linear-gradient( bottom, $bottom_color, $top_color 50%);
-background-image: -o-linear-gradient( bottom, $bottom_color, $top_color 50%);
-background-image: -moz-linear-gradient( bottom, $bottom_color, $top_color 80%);
-background-image: -webkit-linear-gradient( bottom, $bottom_color, $top_color 50%);
-background-image: -ms-linear-gradient( bottom, $bottom_color, $top_color 50%);
-background-image: -webkit-gradient( linear, bottom, left top, color-stop(0, $bottom_color), color-stop(1, $top_color));
+@mixin background_image($bottom_color, $middle_color, $top_color) {
+   	background-image: linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 77%);
+	background-image: -o-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 77%);
+	background-image: -moz-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 77%);
+	background-image: -webkit-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 77%);
+	background-image: -ms-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 77%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.43, $bottom_color), color-stop(0.6, $middle_color), color-stop(0.77, $top_color));
 }
 
 @mixin filter-gradient($outside-color, $middle-color) {
@@ -76,7 +75,12 @@ p {
 input[type="text"] {
 	color: black;
 }
-
+.background-white {
+	background-color: white;
+}
+.margin-5 {
+	margin-bottom: 5%;
+}
 h1 {
 	text-align: center;
 	color: $gold;

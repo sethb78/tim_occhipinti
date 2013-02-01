@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130130175558) do
+ActiveRecord::Schema.define(:version => 20130131224109) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -53,6 +53,14 @@ ActiveRecord::Schema.define(:version => 20130130175558) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "carousel_pictures", :force => true do |t|
+    t.string   "image"
+    t.string   "remote_image_url"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "name"
   end
 
   create_table "contributions", :force => true do |t|
@@ -109,6 +117,16 @@ ActiveRecord::Schema.define(:version => 20130130175558) do
   end
 
   add_index "photos", ["gallery_id"], :name => "index_photos_on_gallery_id"
+
+  create_table "upcoming_events", :force => true do |t|
+    t.datetime "event_start"
+    t.string   "title"
+    t.string   "location"
+    t.text     "description"
+    t.string   "link"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

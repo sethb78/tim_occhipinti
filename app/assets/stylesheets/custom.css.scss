@@ -5,14 +5,14 @@ html {
 }
 
 body {
-    @include background-image($bottom_color: #BABCC4 ,$top_color: #193e72);
+    @include background-image($bottom_color: #F0F0EB, $middle_color: $light-blue, $top_color: $blue);
     background-size: cover;
 }
 
-.main-info {
-    background-color: inherit;
-    max-height: 750px;
+.main-body {
     overflow: auto;
+}
+.main-container {
 }
 
 .back-to-galleries{
@@ -68,7 +68,7 @@ body {
 .main-image {
     h1 {
         position: relative;
-        height: 200px;
+        height: 180;
         overflow: hidden;
         margin-bottom: 0;
         #bgimage {
@@ -81,6 +81,8 @@ body {
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: 10px 10px 10px 10px;
+            background-size: 90%;
+            margin-left: 5%;
         }
     }
 }
@@ -205,9 +207,7 @@ body {
 
 }
 
-#myCarousel {
-    margin: 0;
-}
+
 
 #sign-out-link {
     text-align: center;
