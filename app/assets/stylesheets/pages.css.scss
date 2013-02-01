@@ -126,10 +126,8 @@
  .carousel {
             width: 200px;
             height: 200px;
-            margin: 5%;
+            margin: 2.5%;
         img {
-        	width: 1250px;
-        	height: 150px;
         }
 
 	}
@@ -141,15 +139,16 @@
 		margin-top: 120px;
 	}
 	.carousel-inner {
-		max-width: 95%;
 		max-height: 100%;
-		margin: 2.5% 2.5%;
+		margin: 0;
 	}
 	p {
 		margin-top: -2%;
 	}
 
 }
-
-
-
+.full-blog {
+	background-color: white;
+	padding: 2% 5%;
+	text-align: justify
+}

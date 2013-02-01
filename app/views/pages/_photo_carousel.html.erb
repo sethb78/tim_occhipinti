@@ -1,16 +1,16 @@
 <div class="span4 photo-carousel">
-            <div id="myCarousel" data-interval="5000" class="carousel slide" class= "autostart">
-                <div class="carousel-inner">
-                    <div class="item active"> <%= image_tag(@first_carousel_picture.image_url.to_s) %>
-                    </div>
-                    <div class="item">
-                        <% @carousel_pictures.each do |carousel_picture| %>
-                            <%= image_tag(carousel_picture.image_url.to_s) %>
-                        <% end %>
-                    </div>
-                </div>
-                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    <div id="myCarousel" data-interval="5000" class="carousel slide" class= "autostart">
+        <div class="carousel-inner">
+            <div class="item active"> <%= image_tag(@first_carousel_picture.image_url.to_s) %>
             </div>
-            <p class="center"><%= link_to("more photos", galleries_path) %></p>
+            <% @carousel_pictures.each do |carousel_picture| %>
+                <div class="item">
+                    <%= image_tag(carousel_picture.image_url.to_s) %>
+                </div>
+            <% end %>
         </div>
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+    <p class="center"><%= link_to("more photos", galleries_path) %></p>
+</div>

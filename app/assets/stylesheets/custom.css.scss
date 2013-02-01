@@ -68,7 +68,7 @@ body {
 .main-image {
     h1 {
         position: relative;
-        height: 180;
+        height: 180px;
         overflow: hidden;
         margin-bottom: 0;
         #bgimage {
@@ -88,7 +88,8 @@ body {
 }
 
 .navigation-bar{
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
     text-align: center;
     .navbar .nav .active > a, .navbar .nav .active > a:hover {
         text-decoration: underline;
@@ -151,12 +152,14 @@ body {
 .side_bar {
     position: relative;
     left: 2.2%;
-    background-color: #BABCC4;
+    background-color: inherit;
     color: black;
     h4 { 
         color: black
     }
     #in-touch {
+        background-color: white;
+        border-radius: 30px;
         text-align: center;
         color: $gold;
         padding: 5px 5px;
@@ -172,6 +175,8 @@ body {
         }
     }
     #register_to_vote {
+        background-color: white;
+        border-radius: 30px;
         text-align:center;
         margin-bottom: 5%;
         img {
@@ -179,6 +184,7 @@ body {
         }
     }
     #twitter_feed {
+        border-radius: 10px;
     }
 }
 
