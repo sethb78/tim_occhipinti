@@ -5,6 +5,7 @@ ActiveAdmin.register NewsArticle do
 		column :date
 		column :link
 		column :snippet
+		default_actions
 	end
 
   

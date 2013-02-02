@@ -23,4 +23,19 @@ ActiveAdmin::Dashboards.build do
     end
     strong { link_to "View All Articles", admin_news_articles_path }
   end
+
+  section "Upcoming Events" do
+    table_for UpcomingEvent.limit(5) do
+      column :event_start
+      column :title
+    end
+    strong { link_to "View Upcoming Events", admin_upcoming_events_path }
+  end
+
+  section "YouTube" do
+    table_for Video.order("created_at desc").limit(1) do
+      column :link
+    end
+    strong { link_to "View Video Links", admin_videos_path }
+  end
 end

@@ -93,7 +93,8 @@ body {
     text-align: center;
     .navbar .nav .active > a, .navbar .nav .active > a:hover {
         text-decoration: underline;
-        color: $blue
+        color: $blue;
+        background-color: inherit;
     }
     .nav {
         float: none;

@@ -101,7 +101,20 @@
 		}
 		.event-link {
 			font-size: .9em;
-			margin-top: -2%;
+			margin-top: -1%;
+		}
+		.event-entry {
+			height: 75px;
+		}
+		.event-image{
+			margin-right: 5%;
+			float: right;
+			height: 65px;
+			width: 75px;
+			img {
+				color: white;
+				height: 65px;
+			}
 		}
 	}
 
@@ -120,14 +133,16 @@
 	background-color: white;
 	border: 1px solid grey;
 	#myCarousel {
-		width: 100%;
-		margin-top: 1%;
+		width: 96%;
+		margin-top: 2%;
 	}
  .carousel {
             width: 200px;
             height: 200px;
-            margin: 2.5%;
+            margin: 2%;
         img {
+        	max-height: 160px;
+    		width: 100%;
         }
 
 	}
@@ -139,11 +154,14 @@
 		margin-top: 120px;
 	}
 	.carousel-inner {
+		margin: 0;
 		max-height: 100%;
 		margin: 0;
 	}
 	p {
 		margin-top: -2%;
+	}
+	.video {
 	}
 
 }
