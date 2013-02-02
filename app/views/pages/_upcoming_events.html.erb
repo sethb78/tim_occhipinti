@@ -5,8 +5,8 @@
                 <div class="event-entry">
                     <div class="event-image"><%= image_tag(event.image_url.to_s) %></div>
                     <p><h4 class="center"><%= event.title %></h4></p>
-                    <p class="event-date"> <b>When:  </b><%= event.event_start.strftime("%A %b %d at %I:%M %p") %><br />
-                    <b>Location:  </b><%= event.location %></p>
+                    <p class="event-date"> <span class="bold">When:  </span><%= event.event_start.strftime("%A %b %d at %I:%M %p") %><br />
+                    <span class="bold">Location:  </span><%= event.location %></p>
                     <% if event.link != nil %>
                         <p class="event-link"><%= link_to "further details", event.link, target: "blank" %></p>
                     <% end %>

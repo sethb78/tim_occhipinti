@@ -44,5 +44,6 @@ end
 
 group :production do
   gem 'pg'
+  gem "rack-google-analytics", "~> 0.11.0"
 end
 

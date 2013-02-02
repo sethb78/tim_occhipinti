@@ -26,7 +26,10 @@ abbr[title] {
 }
 
 .underline {
-	text-display: underline;
+	text-decoration: underline;
+}
+.bold {
+	text-decoration: bold;
 }
 
 .row-fluid [class*="span"] {
