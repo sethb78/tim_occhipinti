@@ -122,14 +122,6 @@
 
 
 
-.news-archive {
-	background-color: white;
-	padding: 5%;
-	a {
-		color: black;
-		text-decoration: underline
-	}
-}
 .photo-carousel {
 	background-color: white;
 	border: 1px solid grey;
@@ -171,3 +163,40 @@
 	padding: 2% 5%;
 	text-align: justify
 }
+
+.media-page {
+	.nav {
+		margin-bottom: 0;
+	}
+	h3 {
+		margin-bottom: 3%;
+	}
+	.nav-tabs {
+		background-color: white;
+		border-bottom: 1px solid black;
+		border-radius: 4px;
+		a {
+			color: black;
+		}
+
+		a:hover {
+			background-color: white;
+			color: black;
+			outline: none;
+			border-color: black;
+		}
+		.active > a, .nav-tabs > .active > a:hover {
+			background-color: white;
+			border-color: black black white;
+			border-bottom: 2px solid white;
+			border-width: 1px;
+     		outline: none;
+    	 	color: black;
+		}
+	}	
+	.news-archive {
+	padding: 5%;
+	}	
+}
+
+

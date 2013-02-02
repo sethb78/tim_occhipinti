@@ -8,4 +8,10 @@ before_filter :signed_in_user, only: [:admin]
     @carousel_pictures = CarouselPicture.find(:all, :conditions => ["id != #{@first_carousel_picture.id}"])
     @video = Video.last
     end
+
+    def media
+    	    	@archive_news = NewsArticle.all(:order => "date DESC")
+        @blogs = Blog.find(:all, :order => "created_at DESC")
+
+end
 end

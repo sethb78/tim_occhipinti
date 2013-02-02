@@ -1,9 +1,11 @@
 @import 'universal_css';
 
 #contact-page {
+	background-color: white;
 	margin-left: 20px;
 	margin-top: 20px;
-	padding:5px;
+	padding:5% 0;
+	height: 500px;
 	li {
 		width: 100%;
 		list-style: none;
@@ -28,6 +30,10 @@
 	}
 	input[type="submit"] {
 		padding: 10px;
+	}
+	p {
+		padding: 0 15%;
+		text-align: justify;
 	}
 }
 

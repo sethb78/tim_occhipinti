@@ -1,6 +1,6 @@
 <div class="span6 in-the-news">
         <h3 class="center"> Latest News </h3>
-        <p class="center"> <%= link_to("News Archives", news_articles_path) %></p>
+        <p class="center"> <%= link_to("News Archives", media_path, :class =>"media-active") %></p>
         <hr>
         <% @latest_news.each do |latest_news| %>
             <div class="news-articles">

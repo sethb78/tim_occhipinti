@@ -5,12 +5,12 @@
         <p><%= @blog.tagline %></p>
         <div class="content">
             <p><%= raw truncate @blog.content, length: 600 %></p>
-            <p><%= link_to("Read More", blog_path(@blog)) %>   |   <%= link_to("Full Archives", blogs_path) %></p>
+            <p><%= link_to("Read More", blog_path(@blog)) %>   |   <%= link_to("All Blogs", media_path) %></p>
             <hr>
         </div>
     </div>
     <div class="row-fluid background-white margin-5">
-    <%= render :partial => 'news_articles' %>
+        <%= render :partial => 'news_articles' %>
         <%= render :partial => 'upcoming_events' %>
     </div>
     <div class="row">
