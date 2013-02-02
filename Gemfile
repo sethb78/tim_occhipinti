@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem "activemerchant", "~> 1.29.3"
   gem "activeadmin"
   gem "kaminari", "~> 0.14.1"
+  gem "rake"
 
 group :development, :test do
    gem 'sqlite3', '1.3.5'
