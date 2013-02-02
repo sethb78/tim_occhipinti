@@ -1,41 +1,17 @@
 <div id="home">
-        <div class="span12 hero-unit ">
-                <%= image_tag('tim-blog.jpeg') %>
-                <h2><%= @blog.title %></h2>
-                <p><%= @blog.tagline %></p>
-                <div class="content">
-                    <p><%= raw truncate @blog.content, length: 600 %></p>
-                    <p><%= link_to("Read More", blog_path(@blog)) %>   |   <%= link_to("Full Archives", blogs_path) %></p>
-                </div>
+    <div class="span12 hero-unit ">
+        <%= image_tag('tim-blog.jpeg') %>
+        <h2><%= @blog.title %></h2>
+        <p><%= @blog.tagline %></p>
+        <div class="content">
+            <p><%= raw truncate @blog.content, length: 600 %></p>
+            <p><%= link_to("Read More", blog_path(@blog)) %>   |   <%= link_to("Full Archives", blogs_path) %></p>
+            <hr>
         </div>
+    </div>
     <div class="row-fluid background-white margin-5">
-        <div class="span6 in-the-news">
-            <h3 class="center"> Latest News </h3>
-            <p class="center"> <%= link_to("News Archives", news_articles_path) %></p>
-            <hr>
-            <% @latest_news.each do |latest_news| %>
-                <div class="news-articles">
-                    <p><div class="news-title"><%= link_to(latest_news.title, latest_news.link, target: "blank") %> </div>
-                    <div class="news-date-source">--<%= latest_news.date.strftime("%b %d, %Y") %> - <%= latest_news.source %></div> 
-                    <div class="snippet"> <%= truncate latest_news.snippet, length: 100 %>  -<%= link_to "full article", latest_news.link, target: "blank" %></div></p>
-                </div>
-            <% end %>
-        </div>
-        <div class="span6 upcoming-events">
-            <h3 class="center"> Upcoming Events </h3>
-            <hr>
-            <% @event.each do |event| %>
-                <div class="event-entry">
-                    <div class="event-image"><%= image_tag(event.image_url.to_s) %></div>
-                    <p><h4 class="center"><%= event.title %></h4></p>
-                    <p class="event-date"> <b>When:  </b><%= event.event_start.strftime("%A %b %d at %I:%M %p") %><br />
-                    <b>Location:  </b><%= event.location %></p>
-                    <% if event.link != nil %>
-                        <p class="event-link"><%= link_to "further details", event.link, target: "blank" %></p>
-                    <% end %>
-                </div>
-            <% end %>
-        </div>
+    <%= render :partial => 'news_articles' %>
+        <%= render :partial => 'upcoming_events' %>
     </div>
     <div class="row">
         <%= render :partial => 'photo_carousel' %>
