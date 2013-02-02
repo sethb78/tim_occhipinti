@@ -5,7 +5,7 @@
         <p><%= @blog.tagline %></p>
         <div class="content">
             <p><%= raw truncate @blog.content, length: 600 %></p>
-            <p><%= link_to("Read More", blog_path(@blog)) %>   |   <%= link_to("All Blogs", media_path) %></p>
+            <p><%= link_to("Read More", blog_path(@blog)) %>   |   <%= link_to("All Blogs", blogs_path) %></p>
             <hr>
         </div>
     </div>

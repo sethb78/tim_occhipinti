@@ -1,6 +1,6 @@
 <%= provide(:title, 'Past Posts by Tim') %>
 <div class="full-blog">	
-	<h2 class="center"> Past Posts by Tim</h2>
+	<h2 class="center"> Past Commentaries</h2>
 	<br />
 	<% @blogs.each do |blog| %>
 		<p class="indent"><%= link_to(blog.title, blogs_path(blog)) %> - <%= blog.date.strftime("%b %d, %Y") %></p>
