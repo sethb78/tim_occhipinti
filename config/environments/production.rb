@@ -79,5 +79,6 @@ TimOcchipinti::Application.configure do
   user_name: ENV["GMAIL_USERNAME"],
   password: ENV["GMAIL_PASSWORD"]
 }
-
+config.gem 'rack-google-analytics', :lib => 'rack/google-analytics'
+config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-38171296-1'
 end
