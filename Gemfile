@@ -44,6 +44,5 @@ end
 
 group :production do
   gem 'pg'
-  gem 'google-analytics-rails'
 end
 
