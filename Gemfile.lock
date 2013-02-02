@@ -133,6 +133,7 @@ GEM
       actionpack (>= 3.0)
     gherkin (2.11.5)
       json (>= 1.4.6)
+    google-analytics-rails (0.0.3)
     guard (1.6.0)
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
@@ -293,6 +294,7 @@ DEPENDENCIES
   ffi (~> 1.00)
   fog
   formtastic (~> 2.2.1)
+  google-analytics-rails
   guard-livereload
   guard-rspec (= 0.5.5)
   guard-spork
