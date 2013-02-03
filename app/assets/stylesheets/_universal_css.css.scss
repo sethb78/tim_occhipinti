@@ -3,12 +3,12 @@ $gold: #fec400;
 $blue: #193e72;
 $light-blue: #BABCC4;
 @mixin background_image($bottom_color, $middle_color, $top_color) {
-   	background-image: linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 82%);
-	background-image: -o-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 82%);
-	background-image: -moz-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 82%);
-	background-image: -webkit-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 82%);
-	background-image: -ms-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 82%);
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.43, $bottom_color), color-stop(0.6, $middle_color), color-stop(0.82, $top_color));
+   	background-image: linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
+	background-image: -o-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
+	background-image: -moz-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
+	background-image: -webkit-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
+	background-image: -ms-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.43, $bottom_color), color-stop(0.6, $middle_color), color-stop(0.80, $top_color));
 }
 
 @mixin filter-gradient($outside-color, $middle-color) {
@@ -142,5 +142,44 @@ h1 {
 		margin: 0;
 	}
 }
+.nav-tabs {
+		background-color: inherit;
+		border-bottom: 1px solid black;
+		border-radius: 4px;
+		margin-bottom: 0;
+		padding-left: 2%;
 
+
+		a { 
+			color: black
+		}
+		a:hover {
+			background-color: white;
+			color: black;
+			outline: none;
+			border-color: black;
+		}
+		.active > a, .nav-tabs > .active > a:hover {
+			background-color: white;
+			border-color: black black white;
+			border-bottom: 2px solid white;
+			border-width: 1px;
+     		outline: none;
+    	 	color: black;
+    	 	border-radius: 15px 15px 0 0;
+		}
+		.active > a, .nav-tabs .nav-tabs > .active > a:hover {
+			margin: 0;
+		}
+		li {
+			border-bottom: 1px solid black;
+			background-color: darken(white, 30%);
+			margin-right:2%;
+			border-radius: 15px 15px 0 0;
+			padding: 0;
+		}
+			.active {
+				border-bottom: 1px solid white;;
+		}
+	}
 

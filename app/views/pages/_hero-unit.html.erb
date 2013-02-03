@@ -1,0 +1,10 @@
+<div id="blog-photo">
+	<%= image_tag(@blog.image_url.to_s) %>
+</div>
+<h2><%= @blog.title %></h2>
+<p><%= @blog.tagline %></p>
+<div class="content">
+  <p><%= raw truncate @blog.content, length: 600 %></p>
+  <p><%= link_to("Read More", blog_path(@blog)) %>   |   <%= link_to("All Blogs", blogs_path) %></p>
+  <hr>
+</div>

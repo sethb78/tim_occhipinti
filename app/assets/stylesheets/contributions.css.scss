@@ -3,10 +3,12 @@
 .contribute {
 	@extend .gallery-form;
 	margin: 0;
-	background-color: white;
 	color: black;
 	#mail-to {
 		padding: 5% 10%;
+	}
+	.tab-content {
+		background-color: white;
 	}
 	.formtastic {
 		margin-top: 40px;
@@ -190,28 +192,7 @@
 			text-align: left;
 		}
 	}
-	.nav-tabs {
-		background-color: white;
-		border-bottom: 1px solid black;
-		border-radius: 4px;
-		a { 
-			color: black
-		}
-		a:hover {
-			background-color: white;
-			color: black;
-			outline: none;
-			border-color: black;
-		}
-		.active > a, .nav-tabs > .active > a:hover {
-			background-color: white;
-			border-color: black black white;
-			border-bottom: 2px solid white;
-			border-width: 1px;
-     		outline: none;
-    	 	color: black;
-		}
-	}
+	
 }
 .contribute-links {
 	color: $gold;
