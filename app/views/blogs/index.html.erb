@@ -2,23 +2,23 @@
 <div class="media-page">
 	<div class="tabbable tab-set">
 		<ul class= "nav nav-tabs">
-			<li class="news-link" ><a href="#news-tab" data-toggle="tab">Past Articles</a></li>
+			<li class="news-link active" ><a href="#news-tab" data-toggle="tab">Past Articles</a></li>
 			<li class="blogs-link active"><a href="#blog-tab" data-toggle="tab">Past Blogs</a></li>
 		</ul>
 
 		<div class="news-archive">
 			<div class="tab-content">
-				<div id="news-tab" class="tab-pane news-link">
+				<div id="news-tab" class="tab-pane news-link active">
 					<h3 class="center"> Past Articles</h3>
 					<% @archive_news.each do |article| %>
 						<p><%= link_to(article.title, article.link, target: "blank") %> <br />
-						<%= article.source %>--<%= article.date.strftime("%b %d, %Y") %></p>
+						<%= article.source %>--<%= article.created_at.strftime("%b %d, %Y") %></p>
 					<% end %>
 				</div>
 				<div id="blog-tab" class="tab-pane active">
 					<h3 class="center"> All Blogs</h3>
 					<% @blogs.each do |blog| %>
-						<p class="indent"><%= link_to(blog.title, blogs_path(blog)) %> - <%= blog.date.strftime("%b %d, %Y") %></p>
+						<p class="indent"><%= link_to(blog.title, blogs_path(blog)) %> - <%= blog.created_at.strftime("%b %d, %Y") %></p>
 						<br />
 					<% end %>
 				</div>
