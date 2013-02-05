@@ -1,7 +1,7 @@
  $(function(){
-// $('.news-article-link').click(function(){
-// 	$('.news-article-link').addClass('active');
+ $('.news-article-link').click(function(){
+ 	$('.news-link').addClass('active');
 
-// });
+ });
 });
 
