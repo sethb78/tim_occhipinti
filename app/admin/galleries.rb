@@ -3,7 +3,7 @@ ActiveAdmin.register Gallery do
 		column :name
 		column :description
 		column :cover_image
-		column :remove_cover_image_url
+		column :remote_cover_image_url
 		default_actions
 	end
    form do |f|
