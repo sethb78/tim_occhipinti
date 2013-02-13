@@ -35,9 +35,9 @@ TimOcchipinti::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 
-  AWS_ACCESS_KEY_ID = 'AKIAI7X2GMZHZM22NFTA'
-  AWS_SECRET_ACCESS_KEY = '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'
-  AWS_S3_BUCKET = 'tim_occhipinti'
+ AWS_ACCESS_KEY_ID = ENV['AMAZON_KEY_ID']
+  AWS_SECRET_ACCESS_KEY = ENV['AMAZON_SECRET_KEY']
+  AWS_S3_BUCKET = ENV['AMAZON_BUCKET_NAME']
 
 config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :test

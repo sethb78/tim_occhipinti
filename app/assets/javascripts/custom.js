@@ -13,7 +13,7 @@ $(document).ready(function(){
 				);
 			});
 			$(this).show();
-			setTimeout(function(){rotatePics(++currentPhoto);}, 3000);
+			setTimeout(function(){rotatePics(++currentPhoto);}, 5000);
 		});
 	}
 

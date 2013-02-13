@@ -146,11 +146,22 @@
 	}
 }
 
-#photo-carousel-wheel{
+#photo-carousel-wheel, #video{
+	margin-left: 2%;
 	overflow: hidden;
-	img{
-		position: absolute;
-		height: 250px;
-		width: 250px;
+	background-color: white;
+	height: 350px;
+	padding-top: 1%;
+	border: 1px solid black;
+	h4, h6 {
+		margin-left: 2%;
+	}
+	#photo-carousel-container, #video-carousel-container {
+		width: 360px;
+		height: 240px;
+		margin: 0 auto;
+	}
+	#video-carousel-container {
+		margin-top: 5%;
 	}
 }
