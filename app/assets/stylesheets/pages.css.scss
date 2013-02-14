@@ -33,12 +33,12 @@
 }
 
 #home{
-  @include border;
   margin-bottom: 3%;
 	.hero-unit {
 		margin-bottom: 0;
 		background-color: white;
 		padding: 2%;
+	  @include border;
 		#blog-photo {
 			float: right;
 			margin-left: 1%;
@@ -148,29 +148,49 @@
 		text-decoration: underline
 	}
 }
+.video-photos {
+	.row-fluid {
+		position: relative;
+		left: 200px;
+	}
+}
 
 #photo-carousel-wheel, #video{
 	margin-left: 2%;
-	overflow: hidden;
 	background-color: #363b3f;
-	height: 400px;
+	height: 340px;
+	width: auto;
+	margin-top: 10px;
+	padding: 5px;;
+	overflow: hidden;
 	.box-text {
 		padding-top: 1%;
 		margin: 0 2% 2%;
 		background-color: #425968;
-	h4, h6 {
-		margin-left: 2%;
-		color: $grey-font;
+		h4, h6 {
+			margin-left: 2%;
+			color: $grey-font;
+
+		}
+	}
+	.show {
+		position: relative;
+		margin: 0 auto;
+		display: block;
 
 	}
-}
-	#video-carousel-container {
-		margin-top: 5%;
+	.hide {
+		display: none;
+
 	}
 	img {
+		position: relative;
+		display: block;
 		height: auto;
-		max-width: 360px;
-		border: 1px solid white;
+		max-width: 400px;
+		max-height: 267px;
+		margin: 0 auto;
+		z-index: 0;
 	}
 	iframe {
 		border: 1px solid white;
@@ -178,8 +198,13 @@
 	}
 }
 
-#photo-carousel-wheel {
-	position: relative;
+#photo-carousel-container {
+	border: 1px solid white;
 	width: 400px;
-	height: 340px;
+	height: 267px;
+	margin: 0 6%;
+	background-color: black;
+	overflow: hidden;
 }
+
+

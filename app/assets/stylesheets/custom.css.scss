@@ -8,13 +8,11 @@ body {
     @include background-image($bottom_color: #F0F0EB, $middle_color: $light-blue, $top_color: $blue);
     background-size: cover;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
-.main-body {
-    overflow: auto;
-    margin-bottom: 5%;
-}
+
 .main-container {
     padding: .5%;
 }

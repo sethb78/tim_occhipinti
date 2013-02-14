@@ -1,10 +1,6 @@
-<div class="span1"></div>
-<div class="span10" id="video">
-    <div class="video-carousel-container">
-      <div class="box-text">
-        <h4><%= @video.title %></h4>
-        <h6><%= @video.video_date.strftime("%A %b %d") %></h6>
-      </div>
-      <iframe width="540" height="304" src="http://www.youtube.com/embed/3ChSI6WT8aw?rel=0" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
+<div id="video">
+  <div class="box-text">
+    <h4><%= @video.title %></h4>
+    <h6><%= @video.video_date.strftime("%A %b %d") %></h6>
+  </div>    <iframe width="400" height="267px" src="<%= @video.link %>" frameborder="0" allowfullscreen></iframe>
+</div>

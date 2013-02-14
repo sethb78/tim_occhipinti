@@ -1,19 +1,13 @@
 $(document).ready(function(){
-	rotatePics(1);
+  slideShow();
 });
-	function rotatePics(currentPhoto){
-		var numberOfPhotos = $('#photo-carousel-wheel img').length;
-		currentPhoto = currentPhoto % numberOfPhotos;
 
-		$('#photo-carousel-wheel img').eq(currentPhoto).fadeOut(function(){
-			$('#photo-carousel-wheel img').each(function(i){
-				$(this).css(
-					'zIndex', ((numberOfPhotos - i) + currentPhoto) %
-				numberOfPhotos
-				);
-			});
-			$(this).show();
-			setTimeout(function(){rotatePics(++currentPhoto);}, 5000);
-		});
-	}
-
+function slideShow() {
+  var current = $('#photo-carousel-container .show');
+  var next = current.next().length ? current.next() : current.parent().children(':first');
+  
+  current.fadeOut('slow').removeClass('show');
+  next.fadeIn('slow').addClass('show');
+  
+  setTimeout(slideShow, 7000);
+}
