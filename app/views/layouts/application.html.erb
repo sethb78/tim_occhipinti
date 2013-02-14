@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<%= favicon_link_tag "favicon.ico" %>
-        <title> <%= full_title(yield(:title)) %></title>
-	  	<%= stylesheet_link_tag    "application", :media => "all" %>
-	  	<%= javascript_include_tag "application" %>
-	  	<%= csrf_meta_tags %>
-	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> <%= full_title(yield(:title)) %></title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<%= render 'layouts/scripts' %>
-	  	<%= render 'layouts/shim' %>
+	  <%= render 'layouts/shim' %>
 	</head>	
 	<body>	
 		<%= render'layouts/topline' %>	
@@ -35,10 +35,13 @@
 						<div class="span12">
 							<%= render 'layouts/voter_registration' %>
 						</div>
-						<%= render 'layouts/twitter' %>
+						<div class="span12">
+							<%= render 'layouts/twitter' %>
+						</div>
 					</div>
 				</div>
 			</div>
 	 		<%= render 'layouts/footer' %>
+	 	</div>
 	</body>
 </html>
