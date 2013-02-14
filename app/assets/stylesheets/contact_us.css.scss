@@ -1,11 +1,10 @@
 @import 'universal_css';
 
 #contact-page {
+	@include border;
 	background-color: white;
-	margin-left: 20px;
-	margin-top: 20px;
 	padding:5% 0;
-	height: 500px;
+	height: 600px;
 	li {
 		width: 100%;
 		list-style: none;

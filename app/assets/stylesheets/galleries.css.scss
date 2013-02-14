@@ -1,10 +1,10 @@
 @import 'universal_css';
 
 #galleries {
-	background-color: black;
+    @include border;
+	background-color: #363b3f;
 	padding: 10px 10px;
 	text-align: left;
-	margin-top: -10px;
 	img {
 		height: 124px;
 		width: 160px;
@@ -37,6 +37,7 @@
         padding: 11px 11px 27px;
         width: 160px;
         height: 160px;
+        background-color: #425968;
     }
     .thumbnails .span4:nth-child(3n+1),
     .thumbnails .span4:first-child + li + li + li,
@@ -46,8 +47,13 @@
     #add-gallery-link {
         text-align: center;
         margin: 20px 0;
+        padding: 2% 0;
+        margin: 0 2% 2%;
+        background-color: #425968;
         a {
             font-size: 20px;
+            color: $grey-font;
+
             text-decoration: underline;
         }
     }
@@ -163,6 +169,7 @@
     }
 }
 #gallery-show {
+    @include border;
     overflow: hidden;
     p {
         background-color: black;

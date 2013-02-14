@@ -2,13 +2,23 @@
 
 .contribute {
 	@extend .gallery-form;
-	margin: 0;
 	color: black;
+	.nav {
+		background-color: #425968;
+		border-top: 8px solid #425968;
+	}
+	.nav-tabs {
+		border-radius: 4px 4px 0 0;
+	}
+
 	#mail-to {
 		padding: 5% 10%;
 	}
 	.tab-content {
 		background-color: white;
+			border-left: 8px solid #425968;
+	border-right: 8px solid #425968;
+	border-bottom: 8px solid #425968;
 	}
 	.formtastic {
 		margin-top: 40px;
