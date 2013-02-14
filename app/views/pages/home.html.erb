@@ -1,16 +1,17 @@
 <div id="home">
-        <div class="span12 hero-unit ">
-            <%= render :partial => 'hero-unit' %>
-        </div>
-        <div class="row-fluid background-white">
-            <%= render :partial => 'news_articles' %>
-            <%= render :partial => 'upcoming_events' %>
-        </div>
+    <div class="span12 hero-unit">
+        <%= render :partial => 'hero-unit' %>
     </div>
-    <div class="row-fluid">
-        <div class="span1"></div>
-            <%= render :partial => 'photo_carousel' %>
-            <%= render :partial => 'video' %>
-        </div>
+    <div class="row-fluid background-white">
+        <%= render :partial => 'news_articles' %>
+        <%= render :partial => 'upcoming_events' %>
+    </div>
+</div>
+<div class="span12">
+    <div class="row">
+    <%= render :partial => 'video' %>
+
+<!--         <%= render :partial => 'photo_carousel' %>
+ --></div>
 </div>
 

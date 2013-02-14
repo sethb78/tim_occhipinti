@@ -7,13 +7,13 @@ html {
 body {
     @include background-image($bottom_color: #F0F0EB, $middle_color: $light-blue, $top_color: $blue);
     background-size: cover;
+    overflow-x: hidden;
 }
+
 
 .main-body {
     overflow: auto;
     margin-bottom: 5%;
-        @include border;
-
 }
 .main-container {
     padding: .5%;
@@ -155,6 +155,7 @@ body {
 
 
 .side_bar {
+    width: 17.25% !important;
     padding: 1%;
     position: relative;
     // left: 2.2%;
@@ -232,7 +233,6 @@ body {
         color: lighten($gold, 20%);
     }
 }
-
 
 
 

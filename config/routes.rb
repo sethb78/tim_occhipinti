@@ -12,7 +12,7 @@ TimOcchipinti::Application.routes.draw do
   resources :galleries, :has_many => :photos
   resources :photos
 
-  root to:'index'
+  root to:'pages#home'
 
   match '/about_tim',  	            to: 'pages#about_tim'
   match '/vision',                  to: 'pages#vision'
