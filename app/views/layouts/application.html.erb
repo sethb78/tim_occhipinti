@@ -17,16 +17,14 @@
 				<div class="span12">
 					<%= render 'layouts/main_image' %>	
 				</div>
-
-					<div class="span12">
-						<%= render 'layouts/navigation-bar' %>
-					</div>
+				<div class="span12">
+					<%= render 'layouts/navigation-bar' %>
 				</div>
 			</div>
 		</div>
-		<div class="container main-container">
-            <div class="row-fluid">
-        		<div class="span9 main-body">
+		<div class="container-fluid main-container">
+	    <div class="row-fluid">
+	     	<div class="span9 main-body">
 					<%= yield %>
 				</div>
 				<div class="span3 side_bar">
@@ -37,19 +35,10 @@
 						<div class="span12">
 							<%= render 'layouts/voter_registration' %>
 						</div>
-							<%= render 'layouts/twitter' %>
-						</div>
+						<%= render 'layouts/twitter' %>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container-fluid">
-    <div class="row-fluid">
-    	<div class="span2"></div>
-        <%= render :partial => 'photo_carousel' %>
-
-        <%= render :partial => 'video' %>
-    </div></div>
-		<%= render 'layouts/footer' %>
+	 		<%= render 'layouts/footer' %>
 	</body>
 </html>

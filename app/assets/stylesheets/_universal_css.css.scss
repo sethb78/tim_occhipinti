@@ -2,6 +2,7 @@
 $gold: #fec400;
 $blue: #193e72;
 $light-blue: #BABCC4;
+$grey-font: #F2ECEC;
 @mixin background_image($bottom_color, $middle_color, $top_color) {
    	background-image: linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
 	background-image: -o-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
@@ -19,6 +20,10 @@ background: -o-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside
 background: -ms-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* IE10+ */
 background: linear-gradient(to bottom, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$outside-color', endColorstr='$middle-color',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin border{
+border: 8px solid #425968;
 }
 
 abbr[title] {

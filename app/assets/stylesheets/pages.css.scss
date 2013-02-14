@@ -149,13 +149,18 @@
 #photo-carousel-wheel, #video{
 	margin-left: 2%;
 	overflow: hidden;
-	background-color: white;
+	background-color: #363b3f;
 	height: 350px;
-	padding-top: 1%;
-	border: 1px solid black;
+	.box-text {
+		padding-top: 1%;
+		margin: 0 2% 2%;
+		background-color: #425968;
 	h4, h6 {
 		margin-left: 2%;
+		color: $grey-font;
+
 	}
+}
 	#photo-carousel-container, #video-carousel-container {
 		width: 360px;
 		height: 240px;
@@ -163,5 +168,14 @@
 	}
 	#video-carousel-container {
 		margin-top: 5%;
+	}
+	img {
+		height: auto;
+		max-width: 360px;
+		border: 1px solid white;
+	}
+	iframe {
+		border: 1px solid white;
+		margin: 0 2%;
 	}
 }

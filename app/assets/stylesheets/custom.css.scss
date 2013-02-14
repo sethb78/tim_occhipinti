@@ -11,8 +11,12 @@ body {
 
 .main-body {
     overflow: auto;
+    margin-bottom: 5%;
+        @include border;
+
 }
 .main-container {
+    padding: .5%;
 }
 
 .back-to-galleries{
@@ -151,9 +155,10 @@ body {
 
 
 .side_bar {
+    padding: 1%;
     position: relative;
-    left: 2.2%;
-    background-color: inherit;
+    // left: 2.2%;
+    background-color: #425968;
     color: black;
     h4 { 
         color: black
@@ -185,7 +190,10 @@ body {
         }
     }
     #twitter_feed {
-        border-radius: 10px;
+         border-radius: 10px 10px 10px 10px;
+        left: -10px;
+        position: relative;
+        top: 12px    
     }
 }
 
