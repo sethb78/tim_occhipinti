@@ -1,7 +1,7 @@
 <%= provide(:title, "Message from Tim") %>
 <div class="full-blog">
-	<h5 class="center"><%= link_to "Blog Archives", blogs_path %>
-	<h3 class="center"><%= @full_blog.title %> - <%= @full_blog.date.strftime("%b %d, %Y") %></h3>
+	<h5 class="center"><%= link_to "Blog Archives", mediablog_path %>
+	<h3 class="center"><%= @full_blog.title %> - <%= @full_blog.created_at.strftime("%b %d, %Y") %></h3>
 	<h5 class="center"><%= @full_blog.tagline %></h5>
 	<p class="content"><%= raw @full_blog.content %></p>
 </div>

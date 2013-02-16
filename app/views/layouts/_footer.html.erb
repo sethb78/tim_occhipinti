@@ -2,8 +2,13 @@
 	<div class="row">
 		<ul>
 			<li> Paid for by Occhipinti for Council 79 Monroe Street Apt. 2RN Hoboken, NJ </li>
-			<li><%= link_to "Admin Tools", admin_path, target: "blank" %></li>
-				<li><%= mail_to("sethb78@gmail.com", "Site by Seth B. Altshuler")%></li>
+      <% if signed_in? %>
+        <%= link_to "Sign Out", destroy_admin_user_session_path, :target => "blank" %>
+        
+      <% else %>
+          <li><%= link_to "Admin Tools", admin_path, target: "blank" %></li>
+      <% end %>
+			<li><%= mail_to("sethb78@gmail.com", "Site by Seth B. Altshuler")%></li>
 		</ul>
 	</div>
 </div>

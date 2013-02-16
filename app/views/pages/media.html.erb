@@ -18,7 +18,7 @@
 				<div id="blog-tab" class="tab-pane<% if @link =="/mediablog" %> active <% end %>">
 					<h3 class="center"> All Blogs</h3>
 					<% @blogs.each do |blog| %>
-						<p class="indent"><%= link_to(blog.title, blogs_path(blog)) %> - <%= blog.created_at.strftime("%b %d, %Y") %></p>
+						<p class="indent"><%= link_to(blog.title, blog_path(blog)) %> - <%= blog.created_at.strftime("%b %d, %Y") %></p>
 						<br />
 					<% end %>
 				</div>
