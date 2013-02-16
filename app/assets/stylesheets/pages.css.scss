@@ -53,10 +53,11 @@
 			font-size:1px;
 		}
 		.content {
+			padding: 2% 5%;
 			p {
 				font-size: 15px;
-				padding: 2% 5%;
-				text-align: justify
+				text-align: justify;
+				line-height: .8em;
 			}
 		}
 	}
