@@ -7,7 +7,6 @@ function slideShow() {
   var next = current.next().length ? current.next() : current.parent().children(':first');
   
   current.fadeOut('slow').removeClass('show');
-  alert(next.height());
   next.fadeIn('slow').addClass('show');
   
   setTimeout(slideShow, 7000);
