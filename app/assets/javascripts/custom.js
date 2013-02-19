@@ -10,4 +10,5 @@ function slideShow() {
   next.fadeIn('slow').addClass('show');
   
   setTimeout(slideShow, 7000);
+  $('#twitter-widget-0').css({width: "208px"})
 }
