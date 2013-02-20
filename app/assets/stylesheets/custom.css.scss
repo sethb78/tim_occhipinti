@@ -190,12 +190,14 @@ color: white;
     }
 }
     #twitter_feed {
-         border-radius: 10px 10px 10px 10px;
-        margin: auto;
-        height: 200px;
-        width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    height: 400px;
+    left: -10.5px;
+    margin: auto;
+    position: relative;
+    top: 10px;
+    width: 100%
     }
-
 
 
 .bottom-line {
@@ -218,6 +220,13 @@ color: white;
     }
     a {
         color: $gold !important;
+    }
+    .row-fluid {
+        margin: 0 2.12765%;
+    }
+    .span4 {
+        background-color: yellow;
+        height: 200px;
     }
 
 }
