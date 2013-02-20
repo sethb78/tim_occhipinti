@@ -189,16 +189,19 @@
 		position: relative;
 		display: block;
 		height: auto;
-		max-width: 400px;
+		max-width: auto;
 		max-height: 267px;
 		margin: 0 auto;
 		z-index: 0;
 	}
-	iframe {
-		width: 100%;
-		height: 100%;
-		margin: auto;
-	}
+}
+iframe {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
+.videos-photos{
+	margin-top: 5%;
 }
 #photo-carousel-container, #video-container {
 	border: 1px solid white;
