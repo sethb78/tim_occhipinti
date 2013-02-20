@@ -1,14 +1,55 @@
-<div class="bottom-line">
-	<div class="row">
-		<ul>
+<footer>
+	<div class="row-fluid">
+    <div class="span1"></div>
+    <div class="span3" id="government-links">
+      <ul><h3>Government Links</h3>
+        <li><%= link_to("City of Hoboken", 'http://www.hobokennj.org/', :target => 'blank')%></li>
+        <li><%= link_to("Hoboken Housing Authority", 'http://www.myhhanj.com/', target: 'blank') %></li>
+        <li><%= link_to("Hoboken Police Department", 'http://www.hobokenpd.com/', target: 'blank') %></li>
+        <li><%= link_to("Hudson County", 'http://www.hudsoncountynj.org/', target: 'blank') %></li>
+        <li><%= link_to("Congressman Albio Sires", 'http://sires.house.gov/', target: 'blank') %></li>
+        <li><%= link_to("Senator Menendez", 'http://www.menendez.senate.gov/', target: 'blank') %></li>
+        <li><%= link_to("Senator Lautenberg", 'http://www.lautenberg.senate.gov/', target: 'blank') %></li>
+        <li><%= link_to("State of NJ", 'http://nj.gov/', target: 'blank') %></li>
+      </ul>
+    </div>
+    <div class="span1"></div>
+    <div class="span3" id="emergency-links">
+      <ul><h3>Emergency Services</h3>
+        <li><%= link_to("Hoboken Snow Routes", 'http://www.hobokennj.org/emergency-snow-routes/', target: 'blank') %></li>
+        <li><%= link_to("Hoboken Flood Maps", 'http://www.hobokennj.org/departments/environmental-services/storm-flood-zones/', target: 'blank') %></li>
+        <li><%= mail_to('complaints@hudsonregionalhealth.org',"Hudson County Health Complaints") %>-(201)223-1133</li>
+        <li><%= link_to("Hudson County Mosquito Control", 'http://www.hudsonregional.org/mosquito/', target: 'blank') %><%= mail_to('gwilliams@hudsonregionalhealth.org', '-email') %></li>
+        <li>Animal Control – Call Hoboken PD-(201)420-2100</li>
+        <li>Hoboken Housing Authority PD–(201)222-7621</li>
+      </ul>
+    </div>
+    <div class="span1"></div>
+    <div class="span3" id="service-organizations">
+      <ul><h3>Service Organizations</h3>
+        <li><%= link_to("Hoboken Volunteers", ' http://www.hobokenvolunteers.com/', target: 'blank') %></li>
+        <li><%= link_to("Hoboken Chamber of Commerce", 'http://hobokenchamber.com/', target: 'blank') %></li>
+        <li><%= link_to("Hoboken Rotary Club", 'http://www.hobokenrotary.org/', target: 'blank') %></li>
+        <li><%= link_to("Hoboken Shelter", 'http://www.hobokenshelter.org', target: 'blank') %></li>
+        <li><%= link_to("Hoboken Museum", 'http://www.hobokenmuseum.org', target: 'blank') %></li>
+        <li><%= link_to("Hoboken Volunteer Ambulance Corps.", 'http://hobokenems.com', target: 'blank') %></li>
+        <li><%= link_to("Habitat For Humanity of Hudson Count", 'http://habitathudsoncounty.org/', target: 'blank') %></li>
+        <li><%= link_to("HOPES CAP, Inc Community Action Partnerships", 'http://www.hopes.org', target: 'blank') %></li>
+        <li><%= link_to("Boys & Girls Clubs of Hudson County", 'http://www.bgchc.org') %></li>
+        <li><%= link_to("Party With Purpose", 'http://www.partywithpurpose.org', target: 'blank') %></li>
+        <li><%= link_to("The Jubilee Center", 'http://jubileecenterhoboken.org', target: 'blank') %></li>
+        <li><%= link_to("TRUE Mentors", 'http://www.truementors.org', target: 'blank') %></li>
+       </ul>
+    </div>
+  </div>
+		<ul id="bottom-line">
 			<li> Paid for by Occhipinti for Council 79 Monroe Street Apt. 2RN Hoboken, NJ </li>
       <% if signed_in? %>
-        <%= link_to "Sign Out", destroy_admin_user_session_path, :target => "blank" %>
+        <%= link_to "Sign Out", destroy_admin_user_session_path, :target => "'blank'" %>
         
       <% else %>
-          <li><%= link_to "Admin Tools", admin_path, target: "blank" %></li>
+          <li><%= link_to "Admin Tools", admin_path, target: "'blank'" %></li>
       <% end %>
-			<li><%= mail_to("sethb78@gmail.com", "Site by Seth B. Altshuler")%></li>
-		</ul>
-	</div>
-</div>
+		<li><%= mail_to("sethb78@gmail.com", "Site by Seth B. Altshuler")%></li>
+	</ul>
+</footer>

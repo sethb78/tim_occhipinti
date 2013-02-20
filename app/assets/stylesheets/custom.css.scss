@@ -200,33 +200,44 @@ color: white;
     }
 
 
-.bottom-line {
-    background-color: #2B2B2A;
-    margin-top: 2%;
-    min-height: 40px;
-    .row {
-        position: relative;
-        top: 10px;
-        text-align: center;
-    }
-    ul {
-        display:inline;
-    }
+footer {
+    background-color: #333333;
+    margin-top: 5%;
+    padding-top: 1%;
+    color: lighten($gold, 10%);
     li {
-        color: white;
-        margin: 0 2%;
-        display: inline-block;
         list-style: none;
     }
+    #government-links {
+        padding-left: 5%;
+    }
+    h3 {
+        color: $gold;
+        font-weight: bold;
+    }
     a {
-        color: $gold !important;
+        color: lighten($gold, 10%);
     }
-    .row-fluid {
-        margin: 0 2.12765%;
+    a:hover {
+        color: darken($gold, 10%);
+        outline:none;
     }
-    .span4 {
-        background-color: yellow;
-        height: 200px;
+
+
+    #bottom-line {
+        display: inline;
+        color: $light-blue;
+        font-size: 1.2em;
+        li {
+            display: inline;
+            margin-right: 5%;
+        }
+        a {
+            color: $light-blue;
+        }
+        a:hover {
+            color: darken($light-blue, 10%%);
+        }
     }
 
 }
