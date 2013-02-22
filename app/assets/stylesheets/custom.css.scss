@@ -161,6 +161,9 @@ color: white;
     width: 98%;
     border: 8px solid #425968;
     overflow: hidden;
+    max-height: 764px;
+    height: 764px;
+    position absolute
     h4 {
         color: black
     }
@@ -193,15 +196,15 @@ color: white;
 }
 .twitter-box {
     background-color: #425968;
-    height: 409px;
     overflow:hidden;
 }
 #twitter_feed {
     border-radius: 0 0 10px 0;
-    height: 413px;
+    height: 600px;
     margin: auto;
     position: relative;
     width: 220px;
+    overflow:hidden
 }
 
 
