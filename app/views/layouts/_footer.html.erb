@@ -1,7 +1,6 @@
-<footer>
+<footer class="fixed-bottom">
 	<div class="row-fluid">
-    <div class="span1"></div>
-    <div class="span3" id="government-links">
+    <div class="span4" id="government-links">
       <ul><h3>Government Links</h3>
         <li><%= link_to("City of Hoboken", 'http://www.hobokennj.org/', :target => 'blank')%></li>
         <li><%= link_to("Hoboken Housing Authority", 'http://www.myhhanj.com/', target: 'blank') %></li>
@@ -11,10 +10,14 @@
         <li><%= link_to("Senator Menendez", 'http://www.menendez.senate.gov/', target: 'blank') %></li>
         <li><%= link_to("Senator Lautenberg", 'http://www.lautenberg.senate.gov/', target: 'blank') %></li>
         <li><%= link_to("State of NJ", 'http://nj.gov/', target: 'blank') %></li>
+        <h3>News Links</h3>
+        <li><%= link_to("Hoboken Reporter", 'http://hudsonreporter.com/pages/hoboken', target: "blank") %></li>
+        <li><%= link_to("Jersey Journal", 'http://www.nj.com/hobokennow/', target: 'blank') %></li>
+        <li><%= link_to("Hoboken Patch", 'http://hoboken.patch.com', target: 'blank') %></li>
+        <li><%= link_to("Hobken 411", 'http://hoboken411.com', target: 'blank') %></li>
       </ul>
     </div>
-    <div class="span1"></div>
-    <div class="span3" id="emergency-links">
+    <div class="span4" id="emergency-links">
       <ul><h3>Emergency Services</h3>
         <li><%= link_to("Hoboken Snow Routes", 'http://www.hobokennj.org/emergency-snow-routes/', target: 'blank') %></li>
         <li><%= link_to("Hoboken Flood Maps", 'http://www.hobokennj.org/departments/environmental-services/storm-flood-zones/', target: 'blank') %></li>
@@ -24,8 +27,7 @@
         <li>Hoboken Housing Authority PD–(201)222-7621</li>
       </ul>
     </div>
-    <div class="span1"></div>
-    <div class="span3" id="service-organizations">
+    <div class="span4" id="service-organizations">
       <ul><h3>Service Organizations</h3>
         <li><%= link_to("Hoboken Volunteers", ' http://www.hobokenvolunteers.com/', target: 'blank') %></li>
         <li><%= link_to("Hoboken Chamber of Commerce", 'http://hobokenchamber.com/', target: 'blank') %></li>

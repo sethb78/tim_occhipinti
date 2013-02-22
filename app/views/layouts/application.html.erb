@@ -12,7 +12,7 @@
 	</head>	
 	<body>	
 		<%= render'layouts/topline' %>	
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span12">
 					<%= render 'layouts/main_image' %>	
@@ -27,18 +27,22 @@
 	     	<div class="span9">
 					<%= yield %>
 				</div>
-				<div class="span2 side_bar">
-					<div class="row-fluid">
-						<div class="span12">
-							<%= render 'layouts/intouch' %>
+				<div class="span3">
+					<div class= "side_bar">
+						<div class="row-fluid">
+							<div class="span12">
+								<%= render 'layouts/intouch' %>
+							</div>
+							<div class="span12">
+								<%= render 'layouts/voter_registration' %>
+							</div>
+							<div class="span12">
+								<%= render 'layouts/contribute_button' %>
+							</div>
+							<div class="span12 twitter-box">
+								<%= render 'layouts/twitter' %>
+							</div>
 						</div>
-						<div class="span12">
-							<%= render 'layouts/voter_registration' %>
-						</div>
-						<div class="span12">
-							<%= render 'layouts/contribute_button' %>
-						</div>
-<%= render 'layouts/twitter' %>
 					</div>
 				</div>
 			</div>
