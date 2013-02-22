@@ -3,12 +3,19 @@
 .contribute {
 	@extend .gallery-form;
 	color: black;
+	.nav-tabs .active > a, .nav-tabs .nav-tabs > .active > a:hover {
+		border-color: white;
+	}	
 	.nav {
 		background-color: #425968;
 		border-top: 8px solid #425968;
 	}
 	.nav-tabs {
 		border-radius: 4px 4px 0 0;
+		border-bottom: 1px solid #425968;
+		li {
+			border-bottom: 1px solid white;
+		}
 	}
 
 	#mail-to {
@@ -16,9 +23,9 @@
 	}
 	.tab-content {
 		background-color: white;
-			border-left: 8px solid #425968;
-	border-right: 8px solid #425968;
-	border-bottom: 8px solid #425968;
+		border-left: 8px solid #425968;
+		border-right: 8px solid #425968;
+		border-bottom: 8px solid #425968;
 	}
 	.formtastic {
 		margin-top: 40px;

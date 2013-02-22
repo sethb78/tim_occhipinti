@@ -1,6 +1,5 @@
 <% provide(:title, 'Photo Galleries') %>
-<div class="span3"></div>
-<div class="span9" id="galleries">
+<div class="span12" id="galleries">
 	<div id="add-gallery-link">
     	<% if signed_in? %>
     		<%= link_to "Add Gallery Here", new_admin_gallery_path %>
