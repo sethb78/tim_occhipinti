@@ -1,13 +1,22 @@
 <div class="in-the-news">
-        <h3 class="center"> Latest News </h3>
-        <p class="center"> <%= link_to("News Archives", media_path(:anchor =>"news-tab"), :class => "news-article-link", ) %></p>
-        <hr>
-        <% @latest_news.each do |latest_news| %>
-            <div class="news-articles">
-                <p><div class="news-title"><%= link_to(latest_news.title, latest_news.link, target: "blank") %> </div>
-                <div class="news-date-source">--<%= latest_news.date.strftime("%b %d, %Y") %> - <%= latest_news.source %></div> 
-                <div class="snippet"> <%= truncate latest_news.snippet, length: 100 %>  -<%= link_to "full article", latest_news.link, target: "blank" %></div></p>
-            </div>
-        <% end %>
+  <h3 class="center"> Latest News </h3>
+  <hr>
+  <% @latest_news.each do |latest_news| %>
+    <div class="news-articles">
+      <p>
+        <div class="news-title">
+          <h4><%= link_to(latest_news.title, latest_news.link, target: "blank") %></h4>
+        </div>
+        <div class="news-date-source">
+          --<%= latest_news.date.strftime("%b %d, %Y") %> - <%= latest_news.source %>
+        </div> 
+        <div class="snippet"> <%= truncate latest_news.snippet, length: 100 %>  -<%= link_to "full article", latest_news.link, target: "blank" %>
+        </div>
+      </p>
     </div>
+  <% end %>
+  <p class="center"> 
+    <%= link_to("News Archives", media_path(:anchor =>"news-tab"), :class => "news-article-link", ) %>
+  </p>
+</div>
 

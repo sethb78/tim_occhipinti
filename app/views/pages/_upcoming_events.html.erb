@@ -1,15 +1,18 @@
 <div class="upcoming-events">
-            <h3 class="center"> Upcoming Events </h3>
-            <hr>
-            <% @event.each do |event| %>
-                <div class="event-entry">
-                    <div class="event-image"><%= image_tag(event.image_url.to_s) %></div>
-                    <p><h4 class="center"><%= event.title %></h4></p>
-                    <p class="event-date"> <span class="bold">When:  </span><%= event.event_start.strftime("%A %b %d at %I:%M %p") %><br />
-                    <span class="bold">Location:  </span><%= event.location %></p>
-                    <% if event.link != nil %>
-                        <p class="event-link"><%= link_to "further details", event.link, target: "blank" %></p>
-                    <% end %>
-                </div>
-            <% end %>
-        </div>
+  <h3 class="center"> Upcoming Events </h3>
+  <hr>
+  <% @event.each do |event| %>
+    <% if event.image? %>
+      <div class="event-image"><%= image_tag(event.image_url.to_s) %></div>
+    <% end %>
+    <p><h4 class="center"><%= event.title %></h4></p>
+    <p class="event-date"> <span class="bold">When:  </span><%= event.event_start.strftime("%A %b %d at %I:%M %p") %></p>
+    <p class="event-location">
+      <span class="bold">Location:  </span><%= event.location %>
+    </p>
+    <% if event.link != nil %>
+      <p class="event-link"><%= link_to "further details", event.link, target: "blank" %>
+      </p>
+    <% end %>
+  <% end %>
+</div>
