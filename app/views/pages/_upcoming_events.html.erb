@@ -10,7 +10,7 @@
     <p class="event-location">
       <span class="bold">Location:  </span><%= event.location %>
     </p>
-    <% if event.link != nil %>
+    <% if event.link? %>
       <p class="event-link"><%= link_to "further details", event.link, target: "blank" %>
       </p>
     <% end %>
