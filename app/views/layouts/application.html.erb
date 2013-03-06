@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<!--[if IE 6]>
+    <link href="ie6.min.css" rel="stylesheet">
+<![endif]-->
 	<head>
 		<%= favicon_link_tag "favicon.ico" %>
      <title> <%= full_title(yield(:title)) %></title>
@@ -48,5 +51,9 @@
 			</div>
 		</div>
 	 		<%= render 'layouts/footer' %>
+
+	<script>
+    $(function(){if($.browser.msie&&parseInt($.browser.version,10)===6){$('.row div[class^="span"]:last-child').addClass("last-child");$('[class*="span"]').addClass("margin-left-20");$(':button[class="btn"], :reset[class="btn"], :submit[class="btn"], input[type="button"]').addClass("button-reset");$(":checkbox").addClass("input-checkbox");$('[class^="icon-"], [class*=" icon-"]').addClass("icon-sprite");$(".pagination li:first-child a").addClass("pagination-first-child")}})
+</script>
 		</body>
 </html>

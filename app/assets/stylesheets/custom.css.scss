@@ -11,6 +11,7 @@ body {
     overflow-y: auto;
     width: 1000px;
     margin: 0 auto !important;
+    background-color: #193e72;
 }
 
 
@@ -109,6 +110,7 @@ color: white;
     }
     .navbar-inner {
         @include filter-gradient($outside-color: #fce846, $middle-color:$gold);
+        background-color: #193e72;
         margin:auto;
         border-radius: 0px 0px 10px 10px;
         padding: 0;
