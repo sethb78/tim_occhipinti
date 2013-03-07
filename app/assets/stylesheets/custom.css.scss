@@ -510,418 +510,416 @@ h1 {
 
 #home{
   margin-bottom: 3%;
-    .hero-unit {
-        margin-bottom: 0;
-        background-color: white;
-        padding: 2%;
-        min-height: 765px;
-        border-radius: 0;
-      @include border;
-        #blog-photo {
-            float: right;
-            margin-left: 1%;
-            margin-bottom: 1%;
-            max-height: 250px;
-            max-width: 250px;
-            color: white;
-            font-size:1px;
-        }
-        .content {
-            padding: 2% 5%;
-            p {
-                font-size: 15px;
-                text-align: justify;
-                line-height: 18px;
-                margin-bottom: 10px;
-            }
-        }
+  .hero-unit {
+    margin-bottom: 0;
+    background-color: white;
+    padding: 2%;
+    min-height: 765px;
+    border-radius: 0;
+    @include border;
+    #blog-photo {
+      float: right;
+      margin-left: 1%;
+      margin-bottom: 1%;
+      max-height: 250px;
+      max-width: 250px;
+      color: white;
+      font-size:1px;
     }
-    .in-the-news {
-        border-right: 1px solid black;
-        padding: 1% 2% 0 2%;
-        background-color: white;
-        margin-top: 2%;
-        margin-bottom: 3%;
-        border-radius: 0;
-    }
-    h3 {
-        margin-bottom: 0;
-    }
-    p {
-        margin-bottom: 0;
-    }
-    hr {
-        border-bottom: 1px dashed black;
-        margin: 1%;
-    }
-    .news-title {
-        font-weight: 500;
-        margin-top: 2%;
-        a {
-            color: black;
-        }
-    }
-    .news-date-source {
-        font-size: .8em;
-        color: lighten(black, 50%);
-    }
-    .snippet {
-        padding: 0 5%;
+    .content {
+      padding: 2% 5%;
+      p {
+        font-size: 15px;
         text-align: justify;
-        margin-bottom: 5%;
-        font-size: 1em;
-        line-height: 1.5em;
+        line-height: 18px;
+        margin-bottom: 10px;
+      }
     }
-    .upcoming-events {
-        height: 200px;
-        @extend .in-the-news;
-        border-right: none;
-        padding-bottom: 5%;
-        h4 {
-            margin-top: 2%;
-            margin-bottom: 1%;
-            font-weight: 900
-        }
-
-
-        .event-date, .event-location, .event-link {
-                        font-size: .9em;
-            line-height: 1.35em;
-
-                text-indent: -30px;
-                padding-left: 30px;
-
-        }
-        .event-image{
-            margin-top: 2%;
-            float: right;
-            height: 65px;
-            width: 75px;
-            img {
-                color: white;
-                height: 65px;
-                border: 1px solid black;
-            }
-        }
-        #event {
-            margin-bottom: 5%;
-        }
+  }
+  .in-the-news {
+    border-right: 1px solid black;
+    padding: 1% 2% 0 2%;
+    background-color: white;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border-radius: 0;
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  hr {
+    border-bottom: 1px dashed black;
+    margin: 1%;
+  }
+  .news-title {
+    font-weight: 500;
+    margin-top: 2%;
+    a {
+      color: black;
     }
-
+  }
+  .news-date-source {
+    font-size: .8em;
+    color: lighten(black, 50%);
+  }
+  .snippet {
+    padding: 0 5%;
+    text-align: justify;
+    margin-bottom: 5%;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .upcoming-events {
+    height: 200px;
+    @extend .in-the-news;
+    border-right: none;
+    padding-bottom: 5%;
+    h4 {
+      color: black;
+      margin-top: 2%;
+      margin-bottom: 1%;
+      font-weight: 900
+    }
+    .event-date, .event-location, .event-link {
+      font-size: .9em;
+      line-height: 1.35em;
+      text-indent: -30px;
+      padding-left: 30px;
+    }
+    .event-image {
+      margin-top: 2%;
+      float: right;
+      height: 65px;
+      width: 75px;
+      img {
+        color: white;
+        height: 65px;
+        border: 1px solid black;
+      }
+    }
+    #event {
+      margin-bottom: 5%;
+    }
+  }
 }
-
-
-
 
 .full-blog {
-    background-color: white;
-    padding: 2% 5%;
-    text-align: justify
+  background-color: white;
+  padding: 2% 5%;
+  text-align: justify
 }
 .media-page {
-    background-color: white;
-    border: 8px solid #425968;
-    h3 {
-        margin-bottom: 3%;
-    }
-    .news-archive {
-    padding: 5%;
-    }   
-    .nav-tabs {
-        border: none;
-        background-color: #425968;
-        border-radius: 0;
-        li {
-            border-bottom: 1px solid white;
-        }
-    }
-    .nav-tabs .active > a, .nav-tabs .nav-tabs > .active > a:hover {
-        border-color: white;
-    }       
-}
-.news-archive {
-    background-color: white;
-    padding: 2% 5%;
-    h3 {
+  background-color: white;
+  border: 8px solid #425968;
+  h3 {
     margin-bottom: 3%;
+  }
+  .news-archive {
+    padding: 5%;
+  }   
+  .nav-tabs {
+    border: none;
+    background-color: #425968;
+    border-radius: 0;
+    li {
+      border-bottom: 1px solid white;
     }
-    a {
+  }
+  .nav-tabs .active > a, .nav-tabs .nav-tabs > .active > a:hover {
+    border-color: white;
+  }       
+}
+
+.news-archive {
+  background-color: white;
+  padding: 2% 5%;
+  h3 {
+    margin-bottom: 3%;
+  }
+  a {
     color: black;
     text-decoration: underline
-    }
+  }
 }
+
 .video-photos {
-    .row-fluid {
-        position: relative;
-    }
-    .span12 {
+  .row-fluid {
+    position: relative;
+  }
+  .span12 {
     width: 960px;   
-    }
+  }
 }
+
 #photo-carousel-wheel, #video{
-    background-color: #363b3f;
-    height: 340px;
-    width: auto;
-    margin-top: 10px;
-    padding-bottom: 2%;
-    overflow: hidden;
-    .box-text {
-        padding-top: 1%;
-        margin: 2% 2%;
-        background-color: #425968;
-        h4, h6 {
-            margin-left: 2%;
-            color: $grey-font;
-        }
+  background-color: #363b3f;
+  height: 340px;
+  width: auto;
+  margin-top: 10px;
+  padding-bottom: 2%;
+  overflow: hidden;
+  .box-text {
+    padding-top: 1%;
+    margin: 2% 2%;
+    background-color: #425968;
+    h4, h6 {
+      margin-left: 2%;
+      color: $grey-font;
     }
-    .show {
-        position: relative;
-        margin: 0 auto;
-        display: block;
-
-    }
-    .hide {
-        display: none;
-    }
-    img {
-        position: relative;
-        display: block;
-        height: auto;
-        max-height: auto;
-        margin: 0 auto;
-        z-index: 0;
-    }
+  }
+  .show {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+  img {
+    position: relative;
+    display: block;
+    height: auto;
+    max-height: auto;
+    margin: 0 auto;
+    z-index: 0;
+  }
 }
+
 iframe {
-    width: 100%;
-    height: 100%;
-    margin: auto;
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
+
 .videos-photos{
-    margin-top: 5%;
+  margin-top: 5%;
 }
+
 #photo-carousel-container, #video-container {
-    border: 1px solid white;
-    width: 96%;
-    height: 81%;
-    margin: auto;
-    background-color: black;
-    overflow: hidden;
+  border: 1px solid white;
+  width: 96%;
+  height: 81%;
+  margin: auto;
+  background-color: black;
+  overflow: hidden;
 }
+
 #photo-carousel-wheel {
-    left: 4.2%;
-    position: relative
+  left: 4.2%;
+  position: relative
 }
+
 .contribute {
-    color: black;
-    .nav-tabs .active > a, .nav-tabs .nav-tabs > .active > a:hover {
-        border-color: white;
-    }   
-    .nav {
-        background-color: #425968;
-        border-top: 8px solid #425968;
+  color: black;
+  .nav-tabs .active > a, .nav-tabs .nav-tabs > .active > a:hover {
+    border-color: white;
+  }   
+  .nav {
+    background-color: #425968;
+    border-top: 8px solid #425968;
+  }
+  .nav-tabs {
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #425968;
+    li {
+      border-bottom: 1px solid white;
     }
-    .nav-tabs {
-        border-radius: 4px 4px 0 0;
-        border-bottom: 1px solid #425968;
-        li {
-            border-bottom: 1px solid white;
-        }
+  }
+  #mail-to {
+    padding: 5% 10%;
+  }
+  .tab-content {
+    background-color: white;
+    border-left: 8px solid #425968;
+    border-right: 8px solid #425968;
+    border-bottom: 8px solid #425968;
+  }
+  .formtastic {
+    margin-top: 40px;
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
     }
-
-    #mail-to {
-        padding: 5% 10%;
+   .fl {
+      float: left;
     }
-    .tab-content {
-        background-color: white;
-        border-left: 8px solid #425968;
-        border-right: 8px solid #425968;
-        border-bottom: 8px solid #425968;
+    #contribution_city_input, #contribution_employer_city_input {
+      margin-left: 4%;
+      width: 50%;
+      label {
+        width: 40%;
+        text-align: right;
+        #contribution_city {
+          float: right;
+        }
+      }
     }
-    .formtastic {
-        margin-top: 40px;
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .fl {
-            float: left;
-        }
-        #contribution_city_input, #contribution_employer_city_input {
-            margin-left: 4%;
-            width: 50%;
-            label {
-                width: 40%;
-                text-align: right;
-                #contribution_city {
-                    float: right;
-                }
-            }
-        }
-        #contribution_state, #contribution_employer_state {
-            width: 10%;
-            float: left;
-            margin: 0 2%;
-            height: 2%;
-        }
-        #contribution_zip_input, #contribution_employer_zip_input {
-            width: 15%;
-            input {
-                width: 80%
-            }
-        }
-        #contribution_submit_action {
-            input[type="submit"] {
-                padding: 10px;
-                float: right;
-            }
-        }
-        .actions {
-            clear: both;
-            padding-left: 35%;
-            margin-top: -3%;
-        }
-        input[type="submit"] {
-            padding: 10px;
-            float: left;
-            margin-right: 10px;
-        }
+    #contribution_state, #contribution_employer_state {
+      width: 10%;
+      float: left;
+      margin: 0 2%;
+      height: 2%;
     }
-    #error_explanation {
-        margin: -7% 0 1% -10%;
-        max-height: 5%;
-        width: 120%;;
-        .alert {
-              padding: 1px 0;
-              margin-bottom:10px;
-        }
-        li {
-            margin-left: 10;
-            display: inline-block;
-        }
+    #contribution_zip_input, #contribution_employer_zip_input {
+      width: 15%;
+      input {
+        width: 80%
+      }
     }
-    .payment {
-        margin-top: -20px;
-        h2 {
-            margin: 10px 0
-        }
-        input {
-            margin: 0 0 2px;
-            .inline-hints {
-                margin-top: -0.9em;
-            }
-            label {
-                margin-top: 2%;
-            }
-        }
-        #name {
-            display: inline-block;
-            #contribution_first_name_input, #contribution_last_name_input {
-                width: 49%;
-                display: inline-block;
-            }
-            .stringish input {
-                width: 60%;
-                margin-left: 2%;
-            }
-            .inline-hints {
-                text-align: center;
-                margin-top: -.3em
-            }
-        }
-        #contribution_card_type_input {
-            width: 25%;
-            display: inline-block;
-            float: left;
-            #contribution_card_type {
-                width: 65%;
-            }
-
-        }
-        #contribution_card_number_input {
-            display: inline-block;
-            width: 45%;
-            float: left;
-            input {
-                width: 60%;
-            }
-        }
-        #contribution_card_verification_input {
-            display: inline-block;
-            width: 20%;
-            float:left;
-            #contribution_card_verification {
-                width: 50%;
-                display: inline-block;
-            }
-        }
-        #expiration {
-            margin-bottom: 2%;
-            label {
-                display: block;
-                float: left;
-                padding-top: 0.2em;
-                width: 25%;
-                font-weight: bold;
-                line-height: 14px;
-                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-                vertical-align: baseline;
-                white-space: nowrap;
-            }
-            #contribution_card_expires_on_1i {
-                width: 13%;
-            }
-            #contribution_card_expires_on_2i {
-                width: 25%;
-            }
-        }
-        #contribution_amount_input {
-            width: 130%;
-            position: relative;
-            right: 10%;
-            .label {
-                width: 0;
-            }
-            .choices-group {
-                width: 90%;
-            }
-            .choice {
-                margin: 0;
-            }
-            label {
-                width: 10%;
-                background-color: white;
-            }
-            .choices-group {
-                padding: 0 0 0 10%;;
-            }
-        }
+    #contribution_submit_action {
+      input[type="submit"] {
+        padding: 10px;
+        float: right;
+      }
     }
-    #donate-button {
-        clear: both;
-        margin-top: 20px;
+    .actions {
+      clear: both;
+      padding-left: 35%;
+      margin-top: -3%;
     }
-    .legal-compliance {
-        background: none repeat scroll 0 0 white;
-        color: black;
-        font-size: 10px;
+    input[type="submit"] {
+      padding: 10px;
+      float: left;
+      margin-right: 10px;
+    }
+  }
+  #error_explanation {
+    margin: -7% 0 1% -10%;
+    max-height: 5%;
+    width: 120%;;
+    .alert {
+      padding: 1px 0;
+      margin-bottom:10px;
+    }
+    li {
+      margin-left: 10;
+      display: inline-block;
+    }
+  }
+  .payment {
+    margin-top: -20px;
+    h2 {
+      margin: 10px 0
+    }
+    input {
+      margin: 0 0 2px;
+      .inline-hints {
+        margin-top: -0.9em;
+      }
+      label {
+        margin-top: 2%;
+      }
+    }
+    #name {
+      display: inline-block;
+      #contribution_first_name_input, #contribution_last_name_input {
+        width: 49%;
+        display: inline-block;
+      }
+      .stringish input {
+        width: 60%;
+        margin-left: 2%;
+      }
+      .inline-hints {
+        text-align: center;
+        margin-top: -.3em
+      }
+    }
+    #contribution_card_type_input {
+      width: 25%;
+      display: inline-block;
+      float: left;
+      #contribution_card_type {
+        width: 65%;
+      }
+    }
+    #contribution_card_number_input {
+      display: inline-block;
+      width: 45%;
+      float: left;
+      input {
+        width: 60%;
+      }
+    }
+    #contribution_card_verification_input {
+      display: inline-block;
+      width: 20%;
+      float:left;
+      #contribution_card_verification {
+        width: 50%;
+        display: inline-block;
+      }
+    }
+    #expiration {
+      margin-bottom: 2%;
+      label {
+        display: block;
+        float: left;
+        padding-top: 0.2em;
+        width: 25%;
         font-weight: bold;
-        margin-right: 20px;
-        position: relative;
-        right: 10%;
-        width: 120%;
+        line-height: 14px;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        vertical-align: baseline;
+        white-space: nowrap;
+      }
+      #contribution_card_expires_on_1i {
+        width: 13%;
+      }
+      #contribution_card_expires_on_2i {
+        width: 25%;
+      }
     }
-    #contribution_legal_notice_input {
-        label {
-            display: block;
-            font-weight: bold;
-            margin-top: 2%;
-            padding-left: 0;
-            text-align: left;
-        }
+    #contribution_amount_input {
+      width: 130%;
+      position: relative;
+      right: 10%;
+      .label {
+        width: 0;
+      }
+      .choices-group {
+        width: 90%;
+      }
+      .choice {
+        margin: 0;
+      }
+      label {
+        width: 10%;
+        background-color: white;
+      }
+      .choices-group {
+        padding: 0 0 0 10%;;
+      }
     }
-    
+  }
+  #donate-button {
+    clear: both;
+    margin-top: 20px;
+  }
+  .legal-compliance {
+    background: none repeat scroll 0 0 white;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: 20px;
+    position: relative;
+    right: 10%;
+    width: 120%;
+  }
+  #contribution_legal_notice_input {
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 2%;
+      padding-left: 0;
+      text-align: left;
+    }
+  }
 }
+
 .contribute-links {
     color: $gold;
     font-size: 15px;
