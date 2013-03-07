@@ -1,5 +1,8 @@
 $(document).ready(function(){
   slideShow();
+  $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
+  var $parent=$('a[href="' + this.location.pathname + '"]').parent()
+
 });
 
 function slideShow() {
@@ -11,4 +14,7 @@ function slideShow() {
   
   setTimeout(slideShow, 7000);
   $('#twitter-widget-0').css({width: "208px"})
+
+
+
 }
