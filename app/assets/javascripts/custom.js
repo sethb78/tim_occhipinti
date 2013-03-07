@@ -2,6 +2,7 @@ $(document).ready(function(){
   slideShow();
   $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
   var $parent=$('a[href="' + this.location.pathname + '"]').parent()
+  $('#twitter-widget-0').css({"min-width": "220px"})
 
 });
 

@@ -246,204 +246,193 @@ body {
   }
 }
 .twitter-box {
-    background-color: #425968;
-    overflow:hidden;
+  background-color: #425968;
+  overflow:hidden;
 }
 #twitter_feed {
-    border-radius: 0 0 10px 0;
-    height: 600px;
-    margin: auto;
-    position: relative;
-    width: 220px;
-    overflow:hidden
+  border-radius: 0 0 10px 0;
+  height: 600px;
+  margin: auto;
+  position: relative;
+  width: 220px;
+  overflow:hidden
 }
-
 
 footer {
-    font-weight: 300;
-    font-size: 10px;
-    background-color: #333333;
-    margin-top: 5%;
-    padding-top: 1%;
+  font-weight: 300;
+  font-size: 10px;
+  background-color: #333333;
+  margin-top: 5%;
+  padding-top: 1%;
+  color: lighten($gold, 10%);
+  width: 960px;
+  margin: 0 auto;
+  li {
+    list-style: none;
+  }
+  #government-links {
+    padding-left: 5%;
+  }
+  h5 {
+    color: $gold;
+    font-weight: bold;
+    text-decoration: underline
+  }
+  a {
     color: lighten($gold, 10%);
-    width: 960px;
-    margin: 0 auto;
+  }
+  a:hover {
+    color: darken($gold, 10%);
+    outline:none;
+  }
+  #bottom-line {
+    display: inline;
+    color: $light-blue;
+    font-size: 1.2em;
     li {
-        list-style: none;
-    }
-    #government-links {
-        padding-left: 5%;
-    }
-    h5 {
-        color: $gold;
-        font-weight: bold;
-        text-decoration: underline
+      display: inline;
+      margin-right: 5%;
     }
     a {
-        color: lighten($gold, 10%);
+      color: $light-blue;
     }
     a:hover {
-        color: darken($gold, 10%);
-        outline:none;
+      color: darken($light-blue, 10%%);
     }
-
-
-    #bottom-line {
-        display: inline;
-        color: $light-blue;
-        font-size: 1.2em;
-        li {
-            display: inline;
-            margin-right: 5%;
-        }
-        a {
-            color: $light-blue;
-        }
-        a:hover {
-            color: darken($light-blue, 10%%);
-        }
-    }
-
+  }
 }
-
-
 
 #sign-out-link {
-    text-align: center;
-    margin-bottom:2%;
-    margin-top: -2%;
-    a {
-        color: lighten($gold, 20%);
-    }
+  text-align: center;
+  margin-bottom:2%;
+  margin-top: -2%;
+  a {
+    color: lighten($gold, 20%);
+  }
 }
 
-
-
 abbr[title] {
-    border: none;
+  border: none;
 }
 
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
 .bold {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 .row-fluid [class*="span"] {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 h1 {
-    color: $gold;
-    margin-bottom: 2%;
-    text-align: center;
+  color: $gold;
+  margin-bottom: 2%;
+  text-align: center;
 }
 
 .closer-lines {
-    line-height: 90%;
+  line-height: 90%;
 }
 
 p {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .large-font {
-    font-size: 18px;
-}
-
-
-.underline {
-    text-decoration: underline;
+  font-size: 18px;
 }
 
 .alert {
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 #error_explanation {
-    background-color: yellow;
-    color: #f00;
+  background-color: yellow;
+  color: #f00;
 }
 
 .field_with_errors {
-    @extend .control-group;
-    @extend .error;
- }
+  @extend .control-group;
+  @extend .error;
+}
 
 input[type="text"] {
-    color: black;
+  color: black;
 }
 
 .margin-5 {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
+
 h1 {
-    text-align: center;
-    color: $gold;
-    font-size: 40px;
-    text-shadow: 2px 2px black;
+  text-align: center;
+  color: $gold;
+  font-size: 40px;
+  text-shadow: 2px 2px black;
 }
 
 .btn-primary {
-    background-color: $gold;
-    background-image: none;
-    background-repeat: repeat-x;
-    border: 1px solid #193e72;
-    color: #193e72;
+  background-color: $gold;
+  background-image: none;
+  background-repeat: repeat-x;
+  border: 1px solid #193e72;
+  color: #193e72;
 }
 
 .row {
-    margin: 0px;
+  margin: 0px;
 }
 
 .formtastic {
-    width: 40%;
-    margin: auto;
-    width: 75%;
-    letter-spacing:1px;
-    .stringish input {
-        width: 50%;
-        padding: .5%;
-    }
-    li {
-        list-style: none;
-    }
-    label {
-        text-align: right;
-        margin-right: 2%;
-        margin-top: 2px;
-        font-size: 13px;
-    }
-    .label, badge {
-        text-shadow: none;
-    }
-    label, select {
-        background-color: inherit;
-        color: black;
-    }
-    input {
-        margin-bottom: .5em;
-        border: 1px solid gray;
-
-    }
-    .input .inline-hints {
-    margin-top: -.5em;
-    }
-    .inline-errors {
-        color: #F2F2F2;
-        height: 0;
-        margin: 0;
-    }
+  width: 40%;
+  margin: auto;
+  width: 75%;
+  letter-spacing:1px;
+  .stringish input {
+    width: 50%;
+    padding: .5%;
+  }
+  li {
+    list-style: none;
+  }
+  label {
+    text-align: right;
+    margin-right: 2%;
+    margin-top: 2px;
+    font-size: 13px;
+  }
+  .label, badge {
+    text-shadow: none;
+  }
+  label, select {
+    background-color: inherit;
+    color: black;
+  }
+  input {
+    margin-bottom: .5em;
+    border: 1px solid gray;
+  }
+  .input .inline-hints {
+  margin-top: -.5em;
+  }
+  .inline-errors {
+    color: #F2F2F2;
+    height: 0;
+    margin: 0;
+  }
 }
+
 .nav-tabs {
-        background-color: inherit;
-        border-bottom: 1px solid black;
-        border-radius: 4px;
-        margin-bottom: 0;
-        padding-left: 2%;
+  background-color: inherit;
+  border-bottom: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 0;
+  padding-left: 2%;
 
 
         a { 
@@ -595,11 +584,8 @@ h1 {
             font-weight: 900
         }
 
-        .event-link {
-            font-size: .9em;
-            margin-top: -1%;
-        }
-        .event-date, .event-location {
+
+        .event-date, .event-location, .event-link {
                         font-size: .9em;
             line-height: 1.35em;
 
@@ -615,7 +601,11 @@ h1 {
             img {
                 color: white;
                 height: 65px;
+                border: 1px solid black;
             }
+        }
+        #event {
+            margin-bottom: 5%;
         }
     }
 

@@ -2,7 +2,7 @@ class PagesController < ApplicationController
     def home
         @blog=Blog.last
         @latest_news=NewsArticle.find(:all, :limit => 5, :order => "date DESC")
-      	@event=UpcomingEvent.order('event_start ASC').limit(5).find(:all, :conditions => ["event_start between ? and ?", (DateTime.now - 1.day), (DateTime.now + 2.months)])
+      	@event=UpcomingEvent.order('event_start ASC').limit(10).find(:all, :conditions => ["event_start between ? and ?", (DateTime.now), (DateTime.now + 2.months)])
         # Comment.order('created_at DESC').limit(5).all
         # @event=UpcomingEvent.order('event_start DESC').find
 
