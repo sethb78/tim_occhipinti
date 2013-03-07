@@ -62,6 +62,7 @@ body {
   width: 960px;
   margin: auto;
   text-align: right;
+  line-height: 0;
   .topline {
     display: inline-block;
     width: 50%;
@@ -921,301 +922,300 @@ iframe {
 }
 
 .contribute-links {
-    color: $gold;
-    font-size: 15px;
-    left: 650px;
-    margin-bottom: 30px;
-    position: absolute;
-    text-align: center;
-    top: 350px;
-    .active {
-        a {
-            color: $gold;
-            font-size:15px;
-            padding: 0 8px;
-        }
+  color: $gold;
+  font-size: 15px;
+  left: 650px;
+  margin-bottom: 30px;
+  position: absolute;
+  text-align: center;
+  top: 350px;
+  .active {
+    a {
+      color: $gold;
+      font-size:15px;
+      padding: 0 8px;
     }
-    a:hover {
-        background-color: $gold;
-        color: $blue;
-    }
+  }
+  a:hover {
+    background-color: $gold;
+    color: $blue;
+  }
 }
-
-
-
-
-
-
-
 
 #full-blog {
-    text-align: justify;
-    .content {
-        font-size: 13px;
-    }
-    p {
-        padding: 0 2%;
-    }
+  text-align: justify;
+  .content {
+    font-size: 13px;
+  }
+  p {
+    padding: 0 2%;
+  }
 }
+
 #contact-page {
-    @include border;
-    background-color: white;
-    padding:5% 0;
-    height: 600px;
-    li {
-        width: 100%;
-        list-style: none;
-    }
-    label, .badge {
-        background-color: inherit;
-        color: black;
-        width: 10%;
-        display: inline;
-        text-shadow: none;
-    }
-    form.formtastic li textarea {
-        height: 200px;
-        width: 500px;
-        margin-top: 5px;
-        color: black;
-    }
-    input {
-        margin-top: 5px;
-        margin-left: 2%;
-        color: black;
-    }
-    input[type="submit"] {
-        padding: 10px;
-    }
-    p {
-        padding: 0 15%;
-        text-align: justify;
-    }
+  @include border;
+  background-color: white;
+  padding:5% 0;
+  height: 600px;
+  li {
+    width: 100%;
+    list-style: none;
+  }
+  label, .badge {
+    background-color: inherit;
+    color: black;
+    width: 10%;
+    display: inline;
+    text-shadow: none;
+  }
+  form.formtastic li textarea {
+    height: 200px;
+    width: 500px;
+    margin-top: 5px;
+    color: black;
+  }
+  input {
+    margin-top: 5px;
+    margin-left: 2%;
+    color: black;
+  }
+  input[type="submit"] {
+    padding: 10px;
+  }
+  p {
+    padding: 0 15%;
+    text-align: justify;
+  }
 }
 
 #galleries {
-    @include border;
-    background-color: #363b3f;
-    padding: 10px 10px;
-    text-align: left;
-    img {
-        height: 124px;
-        width: 160px;
-        margin-top:10px;
+  @include border;
+  background-color: #363b3f;
+  padding: 10px 10px;
+  text-align: left;
+  img {
+    height: 124px;
+    width: 160px;
+    margin-top:10px;
+  }
+  h5 {
+    color: $gold;
+    margin-top:4px;
+    height: 35px;
+    overflow: hidden;
+  }
+  #photo-counter {
+    font-size: 12px;
+    color: gray;
+    display: block;
+    width: 100%;
+    margin-top:8px;
+    a {
+      margin-right:15px;
+      float: left;
     }
-    h5 {
-        color: $gold;
-        margin-top:4px;
-        height: 35px;
-        overflow: hidden;
-    }
-    #photo-counter {
-        font-size: 12px;
-        color: gray;
-        display: block;
-        width: 100%;
-        margin-top:8px;
-        a {
-            margin-right:15px;
-            float: left;
-        }
-    }
-    .thumbnails {
-        text-align: center;
-    }
-    .thumbnail {
-        border: 1px solid #E7E5CF;
-        border-radius: 8px 8px 8px 8px;
-        float: left;
-        padding: 11px 11px 27px;
-        width: 160px;
-        height: 160px;
-        background-color: #425968;
+  }
+  .thumbnails {
+    text-align: center;
+  }
+  .thumbnail {
+    border: 1px solid #E7E5CF;
+    border-radius: 8px 8px 8px 8px;
+    float: left;
+    padding: 11px 11px 27px;
+    width: 160px;
+    height: 160px;
+    background-color: #425968;
     }
     .thumbnails .span4:nth-child(3n+1),
     .thumbnails .span4:first-child + li + li + li,
     .thumbnails .span4:first-child + li + li + li + li + li + li {
-        margin-left: 0;
+      margin-left: 0;
     }
     #add-gallery-link {
-        text-align: center;
-        margin: 20px 0;
-        padding: 2% 0;
-        margin: 0 2% 2%;
-        background-color: #425968;
-        a {
-            font-size: 20px;
-            color: $grey-font;
-
-            text-decoration: underline;
-        }
+      text-align: center;
+      margin: 20px 0;
+      padding: 2% 0;
+      margin: 0 2% 2%;
+      background-color: #425968;
+      a {
+        font-size: 20px;
+        color: $grey-font;
+        text-decoration: underline;
+      }
     }
     .gallery-name {
-        display: block;
-        margin-top: -6px;
-        position: relative;
-        text-align: center;
-        width: inherit;
-        height: 25px;
+      display: block;
+      margin-top: -6px;
+      position: relative;
+      text-align: center;
+      width: inherit;
+      height: 25px;
     }
     .pagination {
-        margin: 0 0 18px;
+      margin: 0 0 18px;
     }
     a {
-        color: $gold;
-        border-color: $gold;
+      color: $gold;
+      border-color: $gold;
     }
-}
-.gallery-form {
+  }
+  .gallery-form {
+  color: $gold;
+  text-align: left;
+  margin-top: 60px;
+  a:hover {
+    color: white;
+  }
+  input {
+    float:right;
+  }
+  .btn {
+    clear: both;
+  }
+  .gallery-field {
+    display: block;
+    height: 50px;
+  }
+  #error_explanation {
+    width: 720px;
+    margin-to: -60px;
+  }
+  img {
+    height: 75px;
+    width: 75px;
+  }
+  .row {
+    margin-top: 40px;
+  }
+  #edit-delete {
+    display:block;
+    clear: both;
+    a {
+      color:white;
+    }
+  }
+  .delete-button {
+    display: block;
+    left: 140px;
+    position: relative;
+    top: -40px;
+    margin-bottom: -20px;
+  }
+  .btn {
+    background-color: $gold;
+    color: $blue;
+    background-image:none;
+  }
+ .thumbnails > li{
+    margin: 0 1px;
+  }
+  .pagination a {
+    line-height: 20px;
+  }
+  .nav-tabs > li > a, .nav-pills > li > a {
+    background-color: $gold;
+    color: $blue;
+  }
+  .nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+    background-color: $blue;
     color: $gold;
-    text-align: left;
-    margin-top: 60px;
-    a:hover {
-        color: white;
-    }
-    input {
-        float:right;
-    }
-    .btn {
-        clear: both;
-    }
-    .gallery-field {
-        display: block;
-        height: 50px;
-    }
-    #error_explanation {
-        width: 720px;
-        margin-to: -60px;
-    }
-    img {
-        height: 75px;
-        width: 75px;
-    }
-    .row {
-        margin-top: 40px;
-    }
-    #edit-delete {
-        display:block;
-        clear: both;
-        a {
-            color:white;
-        }
-    }
-    .delete-button {
-        display: block;
-        left: 140px;
-        position: relative;
-        top: -40px;
-        margin-bottom: -20px;
-    }
-    .btn {
-        background-color: $gold;
-        color: $blue;
-        background-image:none;
-    }
-    .thumbnails > li{
-        margin: 0 1px;
-    }
-    .pagination a {
-        line-height: 20px;
-    }
+    border-width: 3px;
+    outline: 0
+  }
+  .add_description {
+    margin-top: 10px;
+  }
+  label {
+    float: left;
+    margin-right: 10px;
+    text-align: right;
+    width: 20%; 
+  }
+  input {
+    float: none;
+  }
+  textarea {
+    width: 210px;
+    height: 200px;
+  }
+  label, .badge {
+    background-color: $blue;
+    color: $gold;
+    font-weight: none;
+  }
+}
 
-    .nav-tabs > li > a, .nav-pills > li > a {
-        background-color: $gold;
-        color: $blue;
-    }
-    .nav-tabs > .active > a, .nav-tabs > .active > a:hover {
-        background-color: $blue;
-        color: $gold;
-        border-width: 3px;
-        outline: 0
-    }
-    .add_description {
-        margin-top: 10px;
-    }
-    label {
-        float: left;
-        margin-right: 10px;
-        text-align: right;
-        width: 20%; 
-    }
-    input {
-        float: none;
-    }
-    textarea {
-        width: 210px;
-        height: 200px;
-    }
-    label, .badge {
-        background-color: $blue;
-        color: $gold;
-        font-weight: none;
-    }
-}
 .photo-scroll {
-    background-color: white;
-    height: 500px;
-    .carousel {
-        height: inherit;
-    }
+  background-color: white;
+  height: 500px;
+  .carousel {
+    height: inherit;
+  }
 }
+
 #gallery-show {
-    @include border;
-    overflow: hidden;
-    p {
-        background-color: black;
-        margin: 0;
-    }
+  @include border;
+  overflow: hidden;
+  p {
+    background-color: black;
+    margin: 0;
+  }
+  a {
+    margin-left: 10px;
+  }
+  #photo-overlay{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+    display: inline-block;
+    padding-right: 8px;
     a {
-        margin-left: 10px;
+      color: lighten(#0088CC, 25%)
     }
-    #photo-overlay{
-        background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
-        display: inline-block;
-        padding-right: 8px;
-        a {
-            color: lighten(#0088CC, 25%)
-        }
-    }
-    .actions {
-        position:absolute;
-        top:10px; left: 10px;
-        background-color: red;
-    }
-    #description {
-        background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
-        bottom: 0;
-        left: 0;
-        padding: 10px 15px 5px;
-        position: absolute;
-        right: 0;
-        color: white;
-    }
+  }
+ .actions {
+    position:absolute;
+    top:10px; left: 10px;
+    background-color: red;
+  }
+  #description {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+    bottom: 0;
+    left: 0;
+    padding: 10px 15px 5px;
+    position: absolute;
+    right: 0;
+    color: white;
+  }
 }
+
 #galleria { 
-    width: 720px; height: 480px; background: #000 
+  width: 720px; height: 480px; background: #000 
 }
+
 .upload-image-fields {
-    background: white;
+  background: white;
 }
+
 .center {
-    text-align: center;
+  text-align: center;
 }
+
 .edit-image {
-    img{
-        background: none repeat scroll 0 0 white;
-        border: 1px solid $gold;
-        height: 100px;
-        padding: 5px;
-        width: 100px;
-        margin-bottom:-10px;
-    }
+  img{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid $gold;
+    height: 100px;
+    padding: 5px;
+    width: 100px;
+    margin-bottom:-10px;
+  }
 }
+
 input.btn.btn-large[type="submit"] {
-    padding: 4px;
+  padding: 4px;
 }
 
 .signin-page {
-    padding: 5%;
+  padding: 5%;
 }
 
