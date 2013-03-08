@@ -20,11 +20,6 @@ return false;
 });
  
 
- 
-//maintain the popup at center of the page when browser resized
-$(window).bind('resize',positionPopup);
-
-
 function slideShow() {
   var current = $('#photo-carousel-container .show');
   var next = current.next().length ? current.next() : current.parent().children(':first');
