@@ -169,6 +169,7 @@ body {
     color: $blue;
     font-size: 14px;
     padding: 9px 2px;
+    text-shadow: none;
   }
   .navbar .nav > li > a:hover {
     border: 2px inset $gold;
@@ -1231,38 +1232,42 @@ input.btn.btn-large[type="submit"] {
 }
 
 #overlay_form{
-display: none;
-border: 5px solid gray;
-padding: 10px;
-background: black;
-color: white;
-opacity: .98;
-width: 480px;
-height: 480px;
-z-index: 1;
-h2 {
-  color: $gold;
-}
-#petition_text{
+  display: none;
+  border: 5px solid gray;
+  padding: 10px;
+  background: black;
+  color: white;
+  opacity: .98;
+  width: 480px;
+  height: 480px;
+  z-index: 1;
+  position: absoulte;
+  margin-left: 240px;
+  margin-top:  50px;
+  box-shadow: 3px 3px 3px gray;
 
-overflow-y: scroll;
-height: 70%;
-
-}
-ul {
-  width: 100%;
-  margin-top: 20px;
-}
-li {
-  width: 20%;
-  text-align:center;
-  margin: 1% auto;
-  display: block;
-}
-.btn {
-  background-color: $blue !important;
-}
-  a {color: $gold;
-    text-shadow:none;
-    }
+  h2 {
+    color: $gold;
   }
+  #petition_text{
+    overflow-y: scroll;
+    height: 70%;
+  }
+  ul {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  li {
+    width: 20%;
+    text-align:center;
+    margin: 1% auto;
+    display: block;
+  }
+  .btn {
+    background-color: $blue !important;
+  }
+  a {
+    color: $gold;
+    text-shadow:none;
+  }
+}

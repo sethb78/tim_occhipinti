@@ -2,22 +2,19 @@ $(document).ready(function(){
   slideShow();
   $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
   var $parent=$('a[href="' + this.location.pathname + '"]').parent()
+
 if (!document.cookie.match(/(?:^|; *)alert_shown=1/)) {
     $("#overlay_form").fadeIn(1000);
-positionPopup();
-$("#close").click(function(){
-$("#overlay_form").fadeOut(500);
-});
-
-
+    positionPopup();
+    $("#close").click(function(){
+    $("#overlay_form").fadeOut(500);
+    });
 
 function positionPopup(){
-if(!$("#overlay_form").is(':visible')){
-return;
-}
-$("#overlay_form").css({
-left: ($(window).width() - $('#overlay_form').width()) / 2,
-top: ($(window).width() - $('#overlay_form').width()) / 7,
+  if(!$("#overlay_form").is(':visible')){
+  return;
+  }
+  $("#overlay_form").css({
 position:'absolute'
 });
 }
