@@ -14,6 +14,7 @@ function positionPopup(){
   if(!$("#overlay_form").is(':visible')){
   return;
   }
+
 }
  $(window).bind('resize',positionPopup);
 
