@@ -1239,19 +1239,25 @@ input.btn.btn-large[type="submit"] {
   color: white;
   opacity: .98;
   width: 480px;
-  height: 480px;
+  height: 500px;
   z-index: 1;
   position: absolute;
   margin-left: 240px;
   margin-top:  50px;
   box-shadow: 3px 3px 3px gray;
+  
 
   h2 {
     color: $gold;
   }
   #petition_text{
+    margin-top: 10px;
+    font-weight: 100;
     overflow-y: scroll;
     height: 70%;
+  }
+  .bold {
+    font-weight: 900;
   }
   ul {
     width: 100%;
@@ -1264,10 +1270,22 @@ input.btn.btn-large[type="submit"] {
     display: block;
   }
   .btn {
-    background-color: $blue !important;
+    background-color: $blue;
+    border: 5px outset $gold;
+  }
+  .btn:hover {
+    background-color: $gold !important;
+    border: 5px inset $blue;
+    a {
+      color: $blue;
+    }
   }
   a {
     color: $gold;
     text-shadow:none;
+  }
+  a:hover {
+    color: $blue;
+    text-shadow: none;
   }
 }

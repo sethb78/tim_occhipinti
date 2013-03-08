@@ -11,11 +11,12 @@ $("#overlay_form").fadeIn(1000);
 //close popup
 $("#close").click(function(){
 $("#overlay_form").fadeOut(500);
+return false;
 });
 
 
-    document.cookie = "alert_shown=1;max-age=" + 60 * 60 * 24 * 365;
- }
+ document.cookie = "alert_shown=1;max-age=" + 60 * 60 * 24 * 365;
+}
 });
  
 
