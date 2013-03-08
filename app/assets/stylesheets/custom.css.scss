@@ -1231,7 +1231,7 @@ input.btn.btn-large[type="submit"] {
 }
 
 #overlay_form{
-position: relative;
+display: none;
 border: 5px solid gray;
 padding: 10px;
 background: black;
@@ -1240,7 +1240,6 @@ opacity: .98;
 width: 480px;
 height: 480px;
 z-index: 1;
-top: 0;
 h2 {
   color: $gold;
 }
