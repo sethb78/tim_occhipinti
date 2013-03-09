@@ -129,13 +129,10 @@ body {
     height: 16px;
   }
   .nav {
+    display: inline-block;
     float: none;
-    display:inline-block;
+    margin: 0 7%;
     width: 90%;
-    margin: 0 auto;
-  }
-  ul {
-    width: 88%;
   }
   .navbar-inner {
     @include filter-gradient($outside-color: #fce846, $middle-color:$gold);
@@ -143,6 +140,9 @@ body {
     margin: 0 auto;
     border-radius: 0px 0px 5px 5px;
     height: 0px;
+    position: relative;
+    width: 100%;
+    padding: 0;
     ul {
       text-align: center;
     }
@@ -158,9 +158,8 @@ body {
   li#petition_button{
     background-color:red;
     border: 3px outset red;
-    margin-left:2px;
-    width: 20%;
-    overflow:hidden;
+    white-space: nowrap;
+    overflow: hidden;
     a {
       color: $gold;
       font-weight: bold;
