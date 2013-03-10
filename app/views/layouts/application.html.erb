@@ -28,6 +28,9 @@
 		<div class="container-fluid main-container">
 	    <div class="row-fluid">
 	     	<div class="span9">
+	     		<% flash.each do |key, msg| %>
+        		<%= content_tag :div, msg, :class => [key, " message"], :id => "notice_#{key}" %>
+      		<% end %>
 					<%= yield %>
 				</div>
 				<div class="span3">

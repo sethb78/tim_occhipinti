@@ -1289,3 +1289,20 @@ input.btn.btn-large[type="submit"] {
     text-shadow: none;
   }
 }
+
+#notice_error {
+  background: url("exclamation.png") no-repeat scroll 8px 50% #FFE3E3;
+  border: 1px solid #DD0000;
+  border-radius: 5px 5px 5px 5px;
+  color: #880000;
+  margin: 0 0 10px;
+  padding: 4px 4px 4px 30px;
+}
+#notice_notice {
+  background: url("true.png") no-repeat scroll 8px 50% #DFFFDF;
+  border: 1px solid #9FCF9F;
+  border-radius: 5px 5px 5px 5px;
+  color: #005F00;
+  margin: 0 0 10px;
+  padding: 4px 4px 4px 30px;
+}
