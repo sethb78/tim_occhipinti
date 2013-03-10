@@ -1,5 +1,5 @@
 class Contributor < ActionMailer::Base
-  default from: "sethb78@gmail.com"
+  default from: "timothy.occhipinti@gmail.com"
 
   def contributor_information(contributor)
     @contributor = contributor

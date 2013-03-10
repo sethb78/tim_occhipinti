@@ -23,6 +23,8 @@ group :development do
     gem 'annotate', '2.5.0' # Annotates Rails/ActiveRecord Models, routes, fixtures, and others based on the database schema.
     gem 'guard-spork'
     gem 'guard-livereload'
+  gem "letter_opener"
+
   end
 
 group :assets do
