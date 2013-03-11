@@ -36,8 +36,7 @@ html {
 }
 
 body {
-  background-color: $blue;
- filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#BABCC4', endColorstr='#193E72');/*For IE7-8-9*/ 
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#BABCC4', endColorstr='#193e72');/*For IE7-8-9*/ 
   height: 1%;/*For IE7*/ 
   @include background-image($bottom_color: #F0F0EB, $middle_color: $light-blue, $top_color: $blue);
   background-size: cover;
@@ -203,7 +202,8 @@ body {
 }
 
 .main-container {
-  margin-bottom:2%
+  margin-bottom:2%;
+  background-color: none;
 }
 
 .side_bar {
