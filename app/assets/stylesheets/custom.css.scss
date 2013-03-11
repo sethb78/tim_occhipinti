@@ -21,7 +21,7 @@ $grey-font: #F2ECEC;
   background: -o-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* IE10+ */
   background: linear-gradient(to bottom, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$outside-color', endColorstr='$middle-color',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#fce486, endColorstr=#fec400,GradientType=0 );
   zoom: 1 /* IE6-9 */
 }
 
