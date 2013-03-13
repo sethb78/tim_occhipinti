@@ -42,7 +42,6 @@ html {
 }
 
 body {
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#193e72', endColorstr='#BABCC4');/*For IE7-8-9*/ 
   height: 1%;/*For IE7*/ 
   @include background-image($bottom_color: #F0F0EB, $middle_color: $light-blue, $top_color: $blue);
   background-repeat: repeat;

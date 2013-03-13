@@ -1,6 +1,8 @@
-<div id="blog-photo">
-	<%= image_tag(@blog.image_url.to_s) %>
-</div>
+<% if @blog.image? %>
+  <div id="blog-photo">
+    <%= image_tag(@blog.image_url.to_s) %>
+  </div>
+<% end %>
 <div class="content">
   <h2 class="center"><%= @blog.title %></h2>
   <% if @blog.tagline? %><p><%= @blog.tagline %></p><% end %>
