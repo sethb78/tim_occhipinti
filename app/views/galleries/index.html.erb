@@ -1,10 +1,10 @@
 <% provide(:title, 'Photo Galleries') %>
 <div class="span12" id="galleries">
-	<div id="add-gallery-link">
-    	<% if signed_in? %>
-    		<%= link_to "Add Gallery Here", new_admin_gallery_path %>
-    	<% end %>
-	</div>
+ 	<% if signed_in? %>
+		<div id="add-gallery-link">
+   		<%= link_to "Add Gallery Here", new_admin_gallery_path %>
+		</div>
+	<% end %>
 	<ul class="thumbnails">
 		<% @galleries.each do |gallery| %>
 			<li class="span4">
