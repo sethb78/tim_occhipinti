@@ -43,11 +43,10 @@ html {
 }
 
 body {
-  height: 1%;/*For IE7*/ 
   @include background-image($bottom_color: #F0F0EB, $middle_color: $light-blue, $top_color: $blue);
   background-repeat: repeat;
-  overflow-x: hidden;
-  overflow-y: auto;
+  // overflow-x: hidden;
+  // overflow-y: auto;
   max-width: 960px;
   margin: 0 auto !important;
   font-size: 75%;
