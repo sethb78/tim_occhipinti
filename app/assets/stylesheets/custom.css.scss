@@ -48,7 +48,7 @@ body {
   background-repeat: repeat;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto !important;
   font-size: 75%;
 }
@@ -111,7 +111,7 @@ body {
 
 .main-image {
   width: 100%;
-  max-height: 195px;
+  max-height: 196px;
   h4 {
     position: absolute;
     text-indent: 99999px;
@@ -223,11 +223,11 @@ body {
 .side_bar {
   background-color: #425968;
   color: black;
-  width: 98%;
+  width: 102.5641%;
   border: 8px solid #425968;
   overflow: hidden;
   height: 750px;
-  margin-left: 4%;
+  margin-left: 2.5641%;
   h4 {
     color: black
   }
@@ -298,7 +298,7 @@ footer {
   padding-top: 1%;
   color: lighten($gold, 10%);
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto -21px;
   li {
     list-style: none;
   }
@@ -682,7 +682,7 @@ h1 {
     position: relative;
   }
   .span12 {
-    width: 960px;   
+    width: 135%;   
   }
 }
 
