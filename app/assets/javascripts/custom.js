@@ -17,6 +17,8 @@ return false;
 
  document.cookie = "alert_shown=1;max-age=" + 60 * 60 * 24 * 365;
 }
+
+
 });
  
 

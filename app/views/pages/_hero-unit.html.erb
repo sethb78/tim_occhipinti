@@ -5,7 +5,7 @@
 <% end %>
 <div class="content">
   <h2 class="center"><%= @blog.title %></h2>
-  <% if @blog.tagline? %><p><%= @blog.tagline %></p><% end %>
+  <% if @blog.tagline? %><h3 class="center"><%= @blog.tagline %></h3><% end %>
   <p><%= raw truncate @blog.content, length: 600 %></p>
   <p><%= link_to("Read More", blog_path(@blog)) %>   |   <%= link_to("All Blogs", mediablog_path) %></p>
   <hr>
