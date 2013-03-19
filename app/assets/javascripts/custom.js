@@ -2,7 +2,7 @@ $(document).ready(function(){
   slideShow();
   $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
   var $parent=$('a[href="' + this.location.pathname + '"]').parent()
-
+  $('#overlay_form').hide();
 // if (!document.cookie.match(/(?:^|; *)alert_shown=1/)) {
 
 // $("#overlay_form").fadeIn(1000);
