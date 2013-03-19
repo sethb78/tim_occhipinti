@@ -6,7 +6,6 @@ $(document).ready(function(){
 // if (!document.cookie.match(/(?:^|; *)alert_shown=1/)) {
 
 // $("#overlay_form").fadeIn(1000);
-
  
 // //close popup
 // $("#close").click(function(){
