@@ -47,7 +47,7 @@ body {
   background-repeat: repeat;
   overflow-x: hidden;
   overflow-y: auto;
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto !important;
 }
 
@@ -67,25 +67,26 @@ body {
 #topline-block, {
   background-color: #2B2B2A;
   margin-bottom: 10px;
-  width: 960px;
+  width: 100%;
   margin: auto;
   text-align: right;
   line-height: 0;
   .topline {
     display: inline-block;
-    width: 50%;
-    span {
-      margin: 7px 300px 0 0;
-      a {
-        color: $gold;
-        font-size:20px;
-      }
-    }
+    width: 60%;
     label, input {
       float: left;
       margin-left:1px;
     }
+    input[type="text"] {
+      width: 40%;
+    }
+    input[type="submit"] {
+      width: 15%;
+    }
+
     label {
+      width: 40%;
       margin-top: 6px;
       color: #fec400;
       font-size: 15px;
@@ -107,9 +108,14 @@ body {
 }
 
 .main-image {
+  width: 100%;
+  max-height: 195px;
+  h4 {
+    position: absolute;
+    text-indent: 99999px;
+  }
   h1 {
     position: relative;
-    height: 205px;
     overflow: hidden;
     margin-bottom: 0;
     #bgimage {
@@ -288,7 +294,7 @@ footer {
   margin-top: 5%;
   padding-top: 1%;
   color: lighten($gold, 10%);
-  width: 960px;
+  width: 100%;
   margin: 0 auto;
   li {
     list-style: none;
