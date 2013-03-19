@@ -18,6 +18,8 @@ return false;
  document.cookie = "alert_shown=1;max-age=" + 60 * 60 * 24 * 365;
 }
 
+fitted_text();
+
 
 });
  
@@ -35,3 +37,12 @@ function slideShow() {
 
 
 }
+
+function fitted_text(){
+var line_height=parseInt($(".hero-unit .content h2").css('height'), 10);
+var font_size=24;
+if (line_height > 72){
+  font_size --;
+$(".hero-unit .content h2").css({"font-size": font_size+"px"})
+};
+};
