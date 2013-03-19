@@ -3,9 +3,9 @@ $(document).ready(function(){
   $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
   var $parent=$('a[href="' + this.location.pathname + '"]').parent()
 
-if (!document.cookie.match(/(?:^|; *)alert_shown=1/)) {
+// if (!document.cookie.match(/(?:^|; *)alert_shown=1/)) {
 
-$("#overlay_form").fadeIn(1000);
+// $("#overlay_form").fadeIn(1000);
 
  
 // //close popup
@@ -17,7 +17,7 @@ $("#overlay_form").fadeIn(1000);
 
 //  document.cookie = "alert_shown=1;max-age=" + 60 * 60 * 24 * 365;
 // }
-// });
+});
  
 
 function slideShow() {
