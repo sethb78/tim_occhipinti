@@ -29,12 +29,19 @@ $grey-font: #F2ECEC;
   border: 8px solid #425968;
 }
 
+    @media only screen and (max-width: 400px) {
+                    body { font-size:90%;}
+     }
+
 
 html, body {
   margin: 0;
   padding: 0;
 }
 html {
+  font-size:100.01%;
+  min-height: 100%;
+  min-width: 100%;
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#193e72', endColorstr='#BABCC4');/*For IE7-8-9*/ 
   // height: 1%;/*For IE7*/
 }
@@ -42,8 +49,8 @@ html {
 body {
   @include background-image($bottom_color: #F0F0EB, $middle_color: $light-blue, $top_color: $blue);
   background-repeat: repeat;
-  // overflow-x: hidden;
-  // overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   max-width: 960px;
   margin: 0 auto !important;
   font-size: 75%;
@@ -67,52 +74,61 @@ body {
   background-color: #2B2B2A;
   margin-bottom: 10px;
   width: 100%;
-  margin: auto;
   text-align: right;
   line-height: 0;
-  .topline {
-    display: inline-block;
-    width: 60%;
-    label, input {
-      float: left;
-      margin-left:1px;
-    }
+  // .topline {
+  //   display: inline-block;
+  //   width: 60%;
+    // label, input {
+    //   float: left;
+    //   margin-left:1px;
+    // }
     input[type="text"] {
-      width: 40%;
+      position: relative;
+      top: 2px;
+      width: 60%;
     }
     input[type="submit"] {
-      width: 15%;
+      width: 30%;
+      position: relative;
+      top: -2px;
     }
 
     label {
       width: 40%;
-      margin-top: 6px;
+      margin-top: 8px;
       color: #fec400;
-      font-size: 15px;
       margin-right:4px;
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 1.2em;
     }
-    .row {
-      padding-top: 5px;
-    }
-    #guest_name, #guest_email {
-      width: 150px;
-    }
-    .btn {
-      background-image: none;
-      background-color: $gold;
-      color: $blue;
-      margin-left: 5px;
-    }
+  //   .row {
+  //     padding-top: 5px;
+  //   }
+  //   #guest_name, #guest_email {
+  //     width: 150px;
+  //   }
+  //   .btn {
+  //     background-image: none;
+  //     background-color: $gold;
+  //     color: $blue;
+  //     margin-left: 5px;
+  //   }
+  // }
+  form {
+    display: inline-block;
+    float: right;
+    margin: 0;
+    width: 58%;
+    text-align: left
   }
 }
 
 .main-image {
   width: 100%;
   max-height: 196px;
-  h4 {
-    position: absolute;
-    text-indent: 99999px;
-  }
+
   h1 {
     position: relative;
     height: 205px;
@@ -182,7 +198,7 @@ body {
   }
   .navbar .nav > li > a {
     color: $blue;
-    font-size: 14px;
+    font-size: 1em;
     padding: 9px 2px;
     text-shadow: none;
   }
