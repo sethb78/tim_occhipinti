@@ -14,7 +14,7 @@
 		<%= render 'layouts/petition' %>
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="span12" id="topline-block">
+				<div class="span12 hidden-phone" id="topline-block">
 						<%= render'layouts/topline' %>	
 					</div>
 					<div class="span12">
@@ -34,7 +34,7 @@
       		<% end %>
 					<%= yield %>
 				</div>
-				<div class="span3 left_margin">
+				<div class="span3 left_margin hidden-phone">
 					<div class= "side_bar">
 						<div class="row-fluid">
 							<div class="span12">

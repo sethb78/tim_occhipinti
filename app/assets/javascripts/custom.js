@@ -21,6 +21,10 @@ return false;
 fitted_text();
 
 
+syze.sizes(320, 480, 768, 1024, 1920);
+
+
+
 });
  
 

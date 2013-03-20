@@ -1,6 +1,6 @@
 <footer class="fixed-bottom">
 	<div class="row-fluid">
-    <div class="span4" id="government-links">
+    <div class="span4 hidden-phone" id="government-links">
       <ul><h5>Government Links</h5>
         <li><%= link_to("City of Hoboken", 'http://www.hobokennj.org/', :target => 'blank')%></li>
         <li><%= link_to("Hoboken Housing Authority", 'http://www.myhhanj.com/', target: 'blank') %></li>
@@ -27,7 +27,7 @@
         <li>Hoboken Housing Authority PD–(201)222-7621</li>
       </ul>
     </div>
-    <div class="span4" id="service-organizations">
+    <div class="span4 hidden-phone" id="service-organizations">
       <ul><h5>Service Organizations</h5>
         <li><%= link_to("Hoboken Volunteers", ' http://www.hobokenvolunteers.com/', target: 'blank') %></li>
         <li><%= link_to("Hoboken Chamber of Commerce", 'http://hobokenchamber.com/', target: 'blank') %></li>
@@ -44,7 +44,7 @@
        </ul>
     </div>
   </div>
-		<ul id="bottom-line">
+		<ul id="bottom-line" class="hidden-phone">
 			<li> Paid for by Occhipinti for Council 79 Monroe Street Apt. 2RN Hoboken, NJ </li>
       <% if signed_in? %>
         <%= link_to "Sign Out", destroy_admin_user_session_path, :target => "'blank'" %>
