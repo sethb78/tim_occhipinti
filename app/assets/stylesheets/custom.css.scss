@@ -28,7 +28,14 @@ $grey-font: #F2ECEC;
 @mixin border{
   border: 8px solid #425968;
 }
-
+// @media (max-width: 480px) {
+//   // font-size: 50% !important;
+//   body {
+//     font-size: 50%;
+//     width: 300px !important;
+//     color: green !important;
+//   } 
+// }
 
 
 html, body {
