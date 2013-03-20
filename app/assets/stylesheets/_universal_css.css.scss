@@ -1,0 +1,193 @@
+@import "bootstrap";
+$gold: #fec400;
+$blue: #193e72;
+$light-blue: #BABCC4;
+$grey-font: #F2ECEC;
+@mixin background_image($bottom_color, $middle_color, $top_color) {
+    background-image: linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
+background-image: -o-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
+background-image: -moz-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
+background-image: -webkit-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
+background-image: -ms-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.43, $bottom_color), color-stop(0.6, $middle_color), color-stop(0.80, $top_color));
+}
+
+@mixin filter-gradient($outside-color, $middle-color) {
+background: -moz-linear-gradient(top, $outside-color 0%, $middle-color 52%, $outside-color 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$outside-color), color-stop(52%,$middle-color), color-stop(100%,$outside-color)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* IE10+ */
+background: linear-gradient(to bottom, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$outside-color', endColorstr='$middle-color',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin border{
+border: 8px solid #425968;
+}
+
+abbr[title] {
+border: none;
+}
+
+.underline {
+text-decoration: underline;
+}
+.bold {
+font-weight: 900;
+}
+
+.row-fluid [class*="span"] {
+margin-left: 0;
+}
+
+h1 {
+color: $gold;
+margin-bottom: 2%;
+text-align: center;
+}
+
+.closer-lines {
+line-height: 90%;
+}
+
+p {
+font-size: 15px;
+}
+
+.large-font {
+font-size: 18px;
+}
+
+
+.underline {
+   text-decoration: underline;
+}
+
+.alert {
+text-align: center;
+font-weight: bold;
+font-size: 18px;
+}
+
+#error_explanation {
+background-color: yellow;
+    color: #f00;
+}
+
+.field_with_errors {
+   @extend .control-group;
+   @extend .error;
+ }
+
+input[type="text"] {
+color: black;
+}
+
+.margin-5 {
+margin-bottom: 5%;
+}
+h1 {
+text-align: center;
+color: $gold;
+font-size: 40px;
+text-shadow: 2px 2px black;
+}
+
+.btn-primary {
+    background-color: $gold;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: 1px solid #193e72;
+    color: #193e72;
+}
+
+.row {
+margin: 0px;
+}
+
+.formtastic {
+width: 40%;
+margin: auto;
+width: 75%;
+letter-spacing:1px;
+.stringish input {
+width: 50%;
+padding: .5%;
+}
+li {
+list-style: none;
+}
+label {
+text-align: right;
+margin-right: 2%;
+margin-top: 2px;
+font-size: 13px;
+}
+.label, badge {
+text-shadow: none;
+}
+label, select {
+background-color: inherit;
+color: black;
+}
+input {
+margin-bottom: .5em;
+border: 1px solid gray;
+
+}
+.input .inline-hints {
+margin-top: -.5em;
+}
+.inline-errors {
+color: #F2F2F2;
+height: 0;
+margin: 0;
+}
+}
+.nav-tabs {
+background-color: inherit;
+border-bottom: 1px solid black;
+border-radius: 4px;
+margin-bottom: 0;
+padding-left: 2%;
+
+
+a {
+color: black
+}
+a:hover {
+background-color: white;
+color: black;
+outline: none;
+border-color: black;
+}
+.active > a, .nav-tabs > .active > a:hover {
+background-color: white;
+border-color: black black white;
+border-bottom: 2px solid white;
+border-width: 1px;
+      outline: none;
+     color: black;
+     border-radius: 8px 8px 0 0;
+}
+.active > a, .nav-tabs .nav-tabs > .active > a:hover {
+margin: 0;
+}
+li {
+border-bottom: 1px solid black;
+background-color: darken(white, 30%);
+margin-right:2%;
+border-radius: 8px 8px 0 0;
+padding: 0;
+a {
+margin-right: 0px
+} 
+a:hover {
+border-radius: 8px 8px 0 0;
+}
+}
+.active {
+border-bottom: 1px solid white;;
+}
+}
