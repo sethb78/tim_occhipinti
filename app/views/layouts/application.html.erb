@@ -14,20 +14,24 @@
 		<%= render 'layouts/petition' %>
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="span12">
+				<div class="span12" id="topline-block">
 						<%= render'layouts/topline' %>	
 					</div>
 					<div class="span12">
-					<%= render 'layouts/main_image' %>	
-				</div>
-				<div class="span12">
-					<%= render 'layouts/navigation-bar' %>
+						<%= render 'layouts/main_image' %>	
+					</div>
+					<div class="span12">
+						<%= render 'layouts/navigation-bar' %>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="container-fluid main-container">
 	    <div class="row-fluid">
 	     	<div class="span9">
+	     		<% flash.each do |key, msg| %>
+        		<%= content_tag :div, msg, :class => [key, " message"], :id => "notice_#{key}" %>
+      		<% end %>
 					<%= yield %>
 				</div>
 				<div class="span3">
@@ -49,7 +53,11 @@
 					</div>
 				</div>
 			</div>
+			<div class="container-fluid main-container">
+	    	<div class="row-fluid">
+					<%= render 'layouts/footer' %>
+				</div>
+			</div>
 		</div>
-	 		<%= render 'layouts/footer' %>
-		</body>
+	</body>
 </html>

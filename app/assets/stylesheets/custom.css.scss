@@ -11,6 +11,7 @@ $grey-font: #F2ECEC;
   background-image: -webkit-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
   background-image: -ms-linear-gradient( bottom, $bottom_color 43%, $middle_color 60%, $top_color 80%);
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.43, $bottom_color), color-stop(0.6, $middle_color), color-stop(0.80, $top_color));
+
 }
 
 @mixin filter-gradient($outside-color, $middle-color) {
@@ -20,7 +21,7 @@ $grey-font: #F2ECEC;
   background: -o-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* IE10+ */
   background: linear-gradient(to bottom, $outside-color 0%,$middle-color 52%,$outside-color 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$outside-color', endColorstr='$middle-color',GradientType=0 ); /* IE6-9 */
+
 }
 
 @mixin border{
@@ -29,18 +30,27 @@ $grey-font: #F2ECEC;
 
 
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
 html {
+  font-size:100.01%;
   min-height: 100%;
+  min-width: 100%;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#193e72', endColorstr='#BABCC4');/*For IE7-8-9*/ 
+  // height: 1%;/*For IE7*/
 }
 
 body {
-  background-color: #193e72;
   @include background-image($bottom_color: #F0F0EB, $middle_color: $light-blue, $top_color: $blue);
-  background-size: cover;
+  background-repeat: repeat;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 1000px;
+  max-width: 960px;
   margin: 0 auto !important;
+  font-size: 75%;
+  line-height: 1.5em
 }
 
 .back-to-galleries{
@@ -59,46 +69,62 @@ body {
 #topline-block, {
   background-color: #2B2B2A;
   margin-bottom: 10px;
-  width: 960px;
-  margin: auto;
+  width: 100%;
   text-align: right;
   line-height: 0;
-  .topline {
-    display: inline-block;
-    width: 50%;
-    span {
-      margin: 7px 300px 0 0;
-      a {
-        color: $gold;
-        font-size:20px;
-      }
+  // .topline {
+  //   display: inline-block;
+  //   width: 60%;
+    // label, input {
+    //   float: left;
+    //   margin-left:1px;
+    // }
+    input[type="text"] {
+      position: relative;
+      top: 2px;
+      width: 60%;
     }
-    label, input {
-      float: left;
-      margin-left:1px;
+    input[type="submit"] {
+      width: 30%;
+      position: relative;
+      top: -2px;
     }
+
     label {
-      margin-top: 6px;
+      width: 40%;
+      margin-top: 8px;
       color: #fec400;
-      font-size: 15px;
       margin-right:4px;
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 1.2em;
     }
-    .row {
-      padding-top: 5px;
-    }
-    #guest_name, #guest_email {
-      width: 150px;
-    }
-    .btn {
-      background-image: none;
-      background-color: $gold;
-      color: $blue;
-      margin-left: 5px;
-    }
+  //   .row {
+  //     padding-top: 5px;
+  //   }
+  //   #guest_name, #guest_email {
+  //     width: 150px;
+  //   }
+  //   .btn {
+  //     background-image: none;
+  //     background-color: $gold;
+  //     color: $blue;
+  //     margin-left: 5px;
+  //   }
+  // }
+  form {
+    display: inline-block;
+    float: right;
+    margin: 0;
+    width: 58%;
+    text-align: left
   }
 }
 
 .main-image {
+  width: 100%;
+  max-height: 196px;
+
   h1 {
     position: relative;
     height: 205px;
@@ -120,6 +146,7 @@ body {
 
 .navigation-bar{
   text-align: center;
+  background-color: $gold;
   .navbar .nav .active > a, .navbar .nav .active > a:hover {
     background-color: darken($gold, 5%);
     border: 1px inset #E5B000;
@@ -128,20 +155,21 @@ body {
     height: 16px;
   }
   .nav {
+    display: inline-block;
     float: none;
-    display:inline-block;
+    margin: 0 7%;
     width: 90%;
-    margin: 0 auto;
-  }
-  ul {
-    width: 88%;
   }
   .navbar-inner {
     @include filter-gradient($outside-color: #fce846, $middle-color:$gold);
-    background-color: $gold;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fce846', endColorstr='#fec400');/*For IE7-8-9*/ 
+    height: 1%;/*For IE7*/ 
     margin: 0 auto;
     border-radius: 0px 0px 5px 5px;
     height: 0px;
+    position: relative;
+    width: 100%;
+    padding: 0;
     ul {
       text-align: center;
     }
@@ -157,9 +185,8 @@ body {
   li#petition_button{
     background-color:red;
     border: 3px outset red;
-    margin-left:2px;
-    width: 20%;
-    overflow:hidden;
+    white-space: nowrap;
+    overflow: hidden;
     a {
       color: $gold;
       font-weight: bold;
@@ -167,7 +194,7 @@ body {
   }
   .navbar .nav > li > a {
     color: $blue;
-    font-size: 14px;
+    font-size: 1em;
     padding: 9px 2px;
     text-shadow: none;
   }
@@ -198,17 +225,18 @@ body {
 }
 
 .main-container {
-  margin-bottom:2%
+  margin-bottom:2%;
+  background-color: none;
 }
 
 .side_bar {
-  background-color: #425968;
-  color: black;
-  width: 98%;
-  border: 8px solid #425968;
-  overflow: hidden;
-  height: 750px;
-  margin-left: 4%;
+    background-color: #425968;
+    border: 8px solid #425968;
+    color: black;
+    height: 800px;
+    margin-left: 2.5641%;
+    overflow: hidden;
+    width: 102.564%;
   h4 {
     color: black
   }
@@ -278,8 +306,8 @@ footer {
   margin-top: 5%;
   padding-top: 1%;
   color: lighten($gold, 10%);
-  width: 960px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0 auto -21px;
   li {
     list-style: none;
   }
@@ -523,6 +551,7 @@ h1 {
 
 #home{
   margin-bottom: 3%;
+  line-height: 1.5em;
   .hero-unit {
     margin-bottom: 0;
     background-color: white;
@@ -530,6 +559,12 @@ h1 {
     min-height: 765px;
     border-radius: 0;
     @include border;
+    p {
+      line-height: 1.5em;
+    }
+    h4 {
+      font-style: italic;
+    }
     #blog-photo {
       float: right;
       margin-left: 1%;
@@ -544,7 +579,6 @@ h1 {
       p {
         font-size: 15px;
         text-align: justify;
-        line-height: 18px;
         margin-bottom: 10px;
       }
     }
@@ -583,13 +617,13 @@ h1 {
     text-align: justify;
     margin-bottom: 5%;
     font-size: 1em;
-    line-height: 1.5em;
   }
   .upcoming-events {
     height: 200px;
     @extend .in-the-news;
     border-right: none;
     padding-bottom: 5%;
+    line-height: 1.5em;
     h4 {
       color: black;
       margin-top: 2%;
@@ -598,7 +632,6 @@ h1 {
     }
     .event-date, .event-location, .event-link {
       font-size: .9em;
-      line-height: 1.35em;
       text-indent: -30px;
       padding-left: 30px;
     }
@@ -663,7 +696,7 @@ h1 {
     position: relative;
   }
   .span12 {
-    width: 960px;   
+    width: 135%;   
   }
 }
 
@@ -874,7 +907,6 @@ iframe {
         padding-top: 0.2em;
         width: 25%;
         font-weight: bold;
-        line-height: 14px;
         text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
         vertical-align: baseline;
         white-space: nowrap;
@@ -1288,4 +1320,21 @@ input.btn.btn-large[type="submit"] {
     color: $blue;
     text-shadow: none;
   }
+}
+
+#notice_error {
+  background: url("exclamation.png") no-repeat scroll 8px 50% #FFE3E3;
+  border: 1px solid #DD0000;
+  border-radius: 5px 5px 5px 5px;
+  color: #880000;
+  margin: 0 0 10px;
+  padding: 4px 4px 4px 30px;
+}
+#notice_notice {
+  background: url("true.png") no-repeat scroll 8px 50% #DFFFDF;
+  border: 1px solid #9FCF9F;
+  border-radius: 5px 5px 5px 5px;
+  color: #005F00;
+  margin: 0 0 10px;
+  padding: 4px 4px 4px 30px;
 }

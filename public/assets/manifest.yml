@@ -55,10 +55,17 @@ twitter.png: twitter-ff98e971830820bc4977d71ecda847c8.png
 twitter/index.png: twitter-ff98e971830820bc4977d71ecda847c8.png
 youtube.png: youtube-9192b6fe1dd9c3059dc95dabef836ce0.png
 youtube/index.png: youtube-9192b6fe1dd9c3059dc95dabef836ce0.png
+<<<<<<< HEAD
 application.js: application-906e58bb5f47ecd16991ecc4401b7829.js
 application/index.js: application-906e58bb5f47ecd16991ecc4401b7829.js
 application.css: application-a03fc529cc037131a8a275a146bdf1af.css
 application/index.css: application-a03fc529cc037131a8a275a146bdf1af.css
+=======
+application.js: application-c264b202bab79bf334b5ce0aede1aea8.js
+application/index.js: application-c264b202bab79bf334b5ce0aede1aea8.js
+application.css: application-ff98964bce27f69390385f1bed544e81.css
+application/index.css: application-ff98964bce27f69390385f1bed544e81.css
+>>>>>>> a3d6ef6a80802a08f18f8cd02a853cad2f3ae2f0
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings-white/index.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings.png: glyphicons-halflings-d63e747535b6b5c589a12cad5d16a401.png

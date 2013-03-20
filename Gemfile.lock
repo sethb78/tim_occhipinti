@@ -162,6 +162,10 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    launchy (2.1.2)
+      addressable (~> 2.3)
+    letter_opener (1.0.0)
+      launchy (>= 2.0.4)
     libnotify (0.5.9)
     libwebsocket (0.1.7.1)
       addressable
@@ -298,6 +302,7 @@ DEPENDENCIES
   guard-spork
   jquery-rails
   kaminari (~> 0.14.1)
+  letter_opener
   libnotify (= 0.5.9)
   pg
   rails (= 3.2.9)

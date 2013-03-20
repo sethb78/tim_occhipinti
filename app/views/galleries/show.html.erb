@@ -1,13 +1,15 @@
 <%= provide(:title, @gallery.name) %>
 <div class="span12" id="gallery-show">
 	<p>
-	  <%= link_to "Add a Photo", new_admin_photo_path(:gallery_id => @gallery) %> |
-	  <%= link_to "Remove Gallery", @gallery, :confirm => 'Removing the gallery will delete all the pictures in the gallery.  ARE YOU SURE?', :method => :delete %> |
+    <% if signed_in? %>
+	   <%= link_to "Add a Photo", new_admin_photo_path(:gallery_id => @gallery) %> |
+	   <%= link_to "Remove Gallery", @gallery, :confirm => 'Removing the gallery will delete all the pictures in the gallery.  ARE YOU SURE?', :method => :delete %> 
+    <% end %>|
 	  <%= link_to "View Galleries", galleries_path %>
 	</p>
 	<div id="galleria">
 		<% @gallery.photos.each do |photo| %>
-			<li><%= image_tag(photo.image_url.to_s, 'data-layer' => ("<div id='photo-overlay'>#{link_to 'remove', photo, :confirm => 'Are you sure you want to delete photo?', :method => :delete}  |  #{link_to 'edit', edit_admin_photo_path(photo)}</div><div id='description'>#{photo.description}</div>")) %>
+			<li><%= image_tag(photo.image_url.to_s, 'data-layer' => ("<div id='photo-overlay'>#{link_to 'remove', photo, :confirm => 'Are you sure you want to delete photo?', :method => :delete unless !signed_in?}  |  #{link_to 'edit', edit_admin_photo_path(photo) unless !signed_in?}</div><div id='description'>#{photo.description}</div>")) %>
 		<% end %>
 	</div>
 </div>
