@@ -1,8 +1,9 @@
 $(document).ready(function(){
   slideShow();
+  if($(window).width() > 760 ){
   $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
   var $parent=$('a[href="' + this.location.pathname + '"]').parent()
-
+}
 if (!document.cookie.match(/(?:^|; *)alert_shown=1/)) {
 
 $("#overlay_form").fadeIn(1000);
@@ -21,7 +22,6 @@ return false;
 fitted_text();
 
 
-syze.sizes(320, 480, 768, 1024, 1920);
 
 
 
@@ -45,7 +45,7 @@ function slideShow() {
 function fitted_text(){
 var line_height=parseInt($(".hero-unit .content h2").css('height'), 10);
 var font_size=24;
-if (line_height > 72){
+if (line_height > 60){
   font_size --;
 $(".hero-unit .content h2").css({"font-size": font_size+"px"})
 };

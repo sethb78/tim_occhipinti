@@ -3,8 +3,13 @@
     <%= f.input :email %>
     <%= f.input :address1, :label => "Address" %>
     <%= f.input :address2, :label => "Apt/Floor/Suite" %>
-    <div class="city-state-zip">
+    <div class="city-state-zip hidden-phone">
 	 	<%= f.input :city, :label => "City/State/Zip", :wrapper_html => { :class => 'fl' } %>
 		<%= f.select :state, options_for_select(us_states), :name => "state", :wrapper_html => { :class => 'fl' }%>
 		<%= f.input :zip, :label => false, :wrapper_html => { :class => 'fl' }%>
+</div>
+<div class="phone-visible">
+  <%= f.input :city, label: "City", :wrapper_html => { class: "fl" } %>
+  <%= f.select :state, options_for_select(us_states), :name => "state", :wrapper_html => { :class => 'fl' }%>
+  <%= f.input :zip, label: "Zip", wrapper_html: { class: "fl" } %>
 </div>

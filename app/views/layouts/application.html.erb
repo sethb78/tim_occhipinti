@@ -15,14 +15,17 @@
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span12 hidden-phone" id="topline-block">
-						<%= render'layouts/topline' %>	
-					</div>
-					<div class="span12">
-						<%= render 'layouts/main_image' %>	
-					</div>
-					<div class="span12">
-						<%= render 'layouts/navigation-bar' %>
-					</div>
+					<%= render'layouts/topline' %>	
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12">
+					<%= render 'layouts/main_image' %>	
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12">
+					<%= render 'layouts/navigation-bar' %>
 				</div>
 			</div>
 		</div>
@@ -34,7 +37,7 @@
       		<% end %>
 					<%= yield %>
 				</div>
-				<div class="span3 left_margin hidden-phone">
+				<div class="span3 hidden-phone">
 					<div class= "side_bar">
 						<div class="row-fluid">
 							<div class="span12">

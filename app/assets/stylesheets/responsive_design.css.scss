@@ -1,0 +1,334 @@
+@import "bootstrap";
+@import "bootstrap-responsive";
+$gold: #fec400;
+$blue: #193e72;
+$light-blue: #BABCC4;
+$grey-font: #F2ECEC;
+
+/**************************** CELL PHONE *********************************/
+@media (max-width: 600px){
+  
+  body {
+    background-image: none !important;
+    background-color: white;
+    line-height: 1.5em;
+    font-size: 100%;
+    font-size: 12px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+
+  .formtastic .inline-errors {
+    margin: 0;
+  }
+
+  #error_explanation {
+    margin: 0;
+    max-height: 5%;
+    width: 100%;
+    height: 110px;
+    .alert {
+      padding: 1px 0;
+      margin-bottom: 0;
+    }
+    li {
+      margin-left: 10;
+      display: inline-block;
+    }
+  } 
+  
+  #image_container {
+    background: $blue;
+    height: 1;
+    img {
+      width: 90%;
+      display: inline-block;
+      position: relative;
+      z-index: 99;
+    }
+  }
+  
+  hr {
+    border-bottom: 3px solid #193e72;
+    margin: 1%;
+  }
+  
+  h1 {
+    font-size: 14px;
+  }
+  
+  h2, h3, h4, h5 {
+    font-size: 12px;
+    line-height:1.5em;
+    padding: 1px;
+    text-align: center;
+  }
+  
+  .navigation-bar {
+    position: relative;
+    top: -59px;
+    height: 100%;
+    .navbar {
+      margin: 0;
+      min-height: 61px;
+    }
+    .navbar-inner {
+      background-image: none;
+      background-color: transparent;
+      padding: 0;
+      min-height: 59px;
+      box-shadow: none;
+      .container {
+        min-height: 59px;
+      }
+    }
+    .icon-bar {
+      width: 3px;
+      margin: auto;
+      background-color: $blue !important;
+      box-shadow: none;
+    }
+    .nav {
+      margin: 0;
+    }
+    .btn {
+      margin: 0;
+      padding: 20px 0;
+      float: right;
+      width: 30px;
+      background-image: none;
+      background-color: lighten($gold, 20%);
+      border: none;
+      border-radius: 0;
+    }
+    .btn-navbar:hover {
+      background-color: $gold !important;
+    }
+    li {
+      border: 1px inset $blue;
+      background-color: $gold;
+      text-align: center;
+    }
+    li#petition_button {
+      background-color: red;
+      border: none;
+      a {
+        color: yellow;
+        text-shadow: none !important;
+        font-size: 1.4em;
+      }
+    }
+    .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+      color: $blue;
+      font-size: 1.4em;
+      font-weight: none;
+      text-shadow: none;
+    }
+    a:hover {
+      color: $gold !important;
+      background-color: $blue !important;
+      text-shadow: none !important;
+    }
+  }
+
+  #home {
+    padding: 0;
+  }
+
+  .hero-unit {
+    background-color: white;
+    margin-top: -50px !important;
+    padding: 0;
+    p {
+      font-size: 12px;
+      line-height: 1.5em;
+      padding: 0 10px;
+    }
+  }
+
+  .upcoming-events, .in-the-news {
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    h3 {
+      background-color: lightgray;
+      padding: 4px 0;
+    }
+    #event {
+      margin-bottom: 4px;
+    }
+    p {
+      margin: 0;
+      padding: 0 10px;
+    }
+    .news-articles {
+      margin-bottom: 10px;
+      padding: 0 10px;
+    }
+    .news-title{
+      a {
+        color: black;
+      }
+    }
+  }
+
+  footer {
+    margin-bottom: 10px;
+    color: black;
+    .navbar {
+      margin:0;
+    }
+    .navbar-inner {
+      background-image: none;
+      background-color: lightgray !important;
+      padding: 0;
+      min-height: 0;
+      border-top: 1px solid darkgray;
+      border-bottom: 1px solid darkgray;
+      box-shadow: none;
+      border-radius: 0;
+      .brand {
+        background-color: lightgrey !important;
+        background-image: none;
+        border-bottom: 1px solid darkgrey;
+        border-top: 1px solid darkgrey;
+        color: black !important;
+        min-height: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        font-size: 15px;
+        line-height: 2.6em;
+        border: none;
+      }
+    }
+    li {
+      border-top: 1px solid darkgray;
+      border-bottom: 1px solid darkgray;
+      background-color: white;
+      text-align: center;
+    }
+    .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+      color: black;
+      font-size: 1.4em;
+      font-weight: none;
+      text-shadow: none;
+    }
+    a:hover {
+      color: white !important;
+      background-color: black !important;
+      text-shadow: none !important;
+    }
+    .btn-navbar {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  #tim-content, #mail, .media-page, #contact-page {
+    padding: 0 10px;
+    margin-top: -53px !important;
+  }
+
+  .media-page, .contribute {
+    ul {
+      height: 36px;
+    }
+    #news-tab, #blog-tab {
+      margin-bottom: 5px;
+      a {
+        color: black;
+        outline: none;
+      }
+      .media_title{
+        font-weight: bold;
+      }
+    }
+  }
+  .contribute {
+    padding: 0 10px;
+    .nav-tabs {
+      margin-top: -30px;
+    }
+    .nav-tabs > li > a, .nav-pills > li > a {
+      padding: 3px 6px;
+    }
+    ul {
+      height: 26px;
+    }
+    #contribution_state, #contribution_zip_input, #contribution_employer_state, #contribution_employer_zip_input {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+    .formtastic .boolean label {
+      padding: 0;
+    }
+    .formtastic .actions {
+      padding: 0;
+    }
+    .formtastic input {
+      float: left;
+    }
+  }
+  #contact-page, .contribute {
+    margin-bottom: 10px;
+    li {
+      list-style: none;
+    }
+    .formtastic .input .label {
+      background-color: transparent;
+      color: black;
+      text-shadow: none;
+    }
+    .formtastic .text textarea {
+      width: 75%;
+      height: 100px;
+    }
+    .formtastic input {
+    padding: 5px;
+    line-height: 1.5em;
+    font-size: 12px;
+    margin-bottom: 10px;
+    }
+    .formtastic .input .inline-hints {
+      margin: 0;
+      clear: both;
+    }
+  }
+
+}
+/******************************* END OF CELL PHONE ******************************************/
+
+@media (min-width: 330px) and(max-width: 650px) { 
+  .navigation-bar {
+    top: -90px;
+    .btn {
+      padding: 30px 0;
+      margin: 6px;
+    }
+    .icon-bar {
+      height: 3px;
+    }
+  }
+  footer {
+  .nav {
+    margin-bottom: 0 !important;
+    }
+    .brand {
+      width: 90%;
+    }
+  }
+  .contribute {
+    #contribution_state, #contribution_zip_input, #contribution_employer_state, #contribution_employer_zip_input {
+      width: 17%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// @media (max-width: 770px) { 
+//   body {
+//     width: 100%;
+//     margin: 0 auto;
+//   }
+// }

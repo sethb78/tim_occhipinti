@@ -2,8 +2,13 @@
 	<%= f.input :employer_name, :label => "Employer" %>
 	<%= f.input :occupation, :label => "Occupation", :hint => "If not employed, enter home address below." %>
 	<%= f.input :employer_address1, :label => "Address" %>
-    <div class="city-state-zip">
+    <div class="city-state-zip hidden-phone">
 	 	<%= f.input :employer_city, :label => "City/State/Zip", :wrapper_html => { :class => 'fl' } %>
 		<%= f.select :employer_state, options_for_select(us_states), :wrapper_html => { :class => 'fl' }%>
 		<%= f.input :employer_zip, :label => false, :wrapper_html => { :class => 'fl' }%>
+</div>
+<div class="visible-phone">
+  <%= f.input :employer_city, :label => "City", :wrapper_html => { :class => 'fl' } %>
+    <%= f.select :employer_state, options_for_select(us_states), :wrapper_html => { :class => 'fl' }%>
+    <%= f.input :employer_zip, :label => "Zip", :wrapper_html => { :class => 'fl' }%>
 </div>

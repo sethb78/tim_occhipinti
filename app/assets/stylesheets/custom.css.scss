@@ -1,5 +1,4 @@
 @import "bootstrap";
-@import "bootstrap-responsive";
 $gold: #fec400;
 $blue: #193e72;
 $light-blue: #BABCC4;
@@ -30,92 +29,11 @@ $grey-font: #F2ECEC;
 @mixin border{
   border: 8px solid #425968;
 }
-
-
-@media( max-width: 350px){
-  body {
-    background-image: none !important;
-    background-color: $blue;
-    width: 320px !important;
-    line-height: 1.5em;
-    font-size: 100%;
-    font-size: 8px;
-  }
-  hr {
-    border-bottom: 3px solid #193e72;
-    margin: 1%;
-  }
-  h1 {
-    font-size: 14px;
-
-  }
-  h2, h3, h4, h5 {
-    font-size: 12px;
-    line-height:1.5em;
-    padding: 1px;
-    text-align: center;
-  }
-  .navbar {
-    margin-bottom: 4px;
-    .nav {
-      margin: 0;
-      width: 100%;
-      li {
-        width: 30%;
-        text-align: center;
-      }
-      a {
-        font-size: 10px;
-        color: $blue !important;
-        line-height: 1.5em;
-        padding: 1px !important;
-        text-shadow: none !important;
-      }
-    }
-    .navbar-inner {
-      background-color: $gold;
-      background-image: none;
-      padding: 0;
-      height: 20px;
-      min-height: 0;
-
-    }
-    #petition_button {
-      background-color: red;
-      a {
-        color: black !important;
-      }
-    }
-  }
-  .hero-unit {
-    margin: 0;
-    padding: 0 10px;
-    p {
-      font-size: 10px;
-      line-height: 1.5em;
-    }
-  }
-  .upcoming-events {
-    line-height: 1.5em;
-    #event {
-      margin-bottom: 4px;
-      
-    }
-    p {
-      margin: 0;
-    }
-  }
-  footer {
-    margin-top: 10px;
-    background-color: #EEEEEE;
-    padding: 2px;
-  }
-  li {
-    text-align: center;
-  }
+.row-fluid [class*="span"] {
+  margin-left: 0;
 }
 
-
+@media (min-width: 768px){
 html, body {
   margin: 0;
   padding: 0;
@@ -138,7 +56,6 @@ body {
   line-height: 1.5em
 }
 
-@media (min-width: 480px) {
 .back-to-galleries{
   a {
     color: white;
@@ -783,7 +700,7 @@ h1 {
     position: relative;
   }
   .span12 {
-    width: 135%;   
+    width: 132% !important;   
   }
 }
 
@@ -853,6 +770,7 @@ iframe {
   .nav {
     background-color: #425968;
     border-top: 8px solid #425968;
+    margin-bottom: 0;
   }
   .nav-tabs {
     border-radius: 4px 4px 0 0;
@@ -1320,7 +1238,8 @@ iframe {
 }
 
 #galleria { 
-  width: 720px; height: 480px; background: #000 
+
+  height: 480px; background: #000 
 }
 
 .upload-image-fields {
