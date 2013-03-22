@@ -1204,28 +1204,28 @@ iframe {
 }
 
 #gallery-show {
-  @include border;
-  overflow: hidden;
-  p {
-    background-color: black;
-    margin: 0;
-  }
-  a {
-    margin-left: 10px;
-  }
-  #photo-overlay{
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
-    display: inline-block;
-    padding-right: 8px;
-    a {
-      color: lighten(#0088CC, 25%)
-    }
-  }
- .actions {
-    position:absolute;
-    top:10px; left: 10px;
-    background-color: red;
-  }
+ //  @include border;
+ //  overflow: hidden;
+ //  p {
+ //    background-color: black;
+ //    margin: 0;
+ //  }
+ //  a {
+ //    margin-left: 10px;
+ //  }
+ //  #photo-overlay{
+ //    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+ //    display: inline-block;
+ //    padding-right: 8px;
+ //    a {
+ //      color: lighten(#0088CC, 25%)
+ //    }
+ //  }
+ // .actions {
+ //    position:absolute;
+ //    top:10px; left: 10px;
+ //    background-color: red;
+ //  }
   #description {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
     bottom: 0;
@@ -1237,7 +1237,7 @@ iframe {
   }
 }
 
-#galleria{ width: 620px; height: 400px; background: #000; }
+#galleria{ width: 670px; height: 400px; background: #000; }
 
 .upload-image-fields {
   background: white;
