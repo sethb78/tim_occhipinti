@@ -1204,6 +1204,7 @@ iframe {
 }
 
 #gallery-show {
+  background-color: black;
  //  @include border;
  //  overflow: hidden;
  //  p {
@@ -1239,6 +1240,9 @@ iframe {
 
 #galleria{ width: 670px; height: 400px; background: #000; }
 
+.galleria-image-nav {
+  width: 95%;
+}
 .upload-image-fields {
   background: white;
 }
