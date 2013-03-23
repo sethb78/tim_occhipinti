@@ -2,7 +2,8 @@ $(document).ready(function(){
   slideShow();
   if($(window).width() > 760 ){
   $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
-  var $parent=$('a[href="' + this.location.pathname + '"]').parent()
+  var $parent=$('a[href="' + this.location.pathname + '"]').parent();
+  fitted_text();
 }
 if (!document.cookie.match(/(?:^|; *)alert_shown=1/)) {
 
@@ -19,7 +20,7 @@ return false;
  document.cookie = "alert_shown=1;max-age=" + 60 * 60 * 24 * 365;
 }
 
-fitted_text();
+
 
 
 

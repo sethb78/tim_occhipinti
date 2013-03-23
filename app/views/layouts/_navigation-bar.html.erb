@@ -2,23 +2,17 @@
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container">
-				 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
+				 <a class="btn btn-navbar visible-phone" data-toggle="collapse" data-target=".nav-collapse_top">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 										<span class="icon-bar"></span>
 
 				</a>
-				<div class="nav-collapse">
-					<ul class="nav">
-			    	<li> <%= link_to "About Tim", about_tim_path %></li>
-			    	<li><%= link_to "Contributions",contribute_path %></li>
-	<!-- 				 <li> <%= link_to "Status Reports", status_reports_path %></li> -->
-					 	<li> <%= link_to "In The News", media_path %></li>
-					 	<li class="hidden-phone"> <%= link_to "Photo Galleries", galleries_path %></li>
-					 	<li> <%= link_to "Contact", contact_path %></li>	
-					 	<li id="petition_button">	<%= link_to "Sign Parks Petition", 'http://www.change.org/petitions/city-of-hoboken-acquire-property-at-1st-and-jackson-streets-for-public-open-space-2', target: "blank" %></li>			    
-					</ul>
+				<div class="visible-tablet">
+					<%= render 'layouts/navigation_tabs' %>
+				</div>
+				<div class="nav-collapse_top nav-collapse">
+					<%= render 'layouts/navigation_tabs' %>
 				</div>
 			</div>
 		</div>

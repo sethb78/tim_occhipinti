@@ -1,5 +1,6 @@
 <div class="span12" id="contact-page">
 	<% provide(:title, "Contact Me") %>
+  <h2 class="center">Contact Me</h2>
 	<p class="center"> ***If you have any questions or comments, please feel free to email me, and I will respond as quickly as possible.***</p>
 	<%= semantic_form_for @contact, :url => contacts_path do |f| %>
 		<%= f.input :name, :label => t('.name') if ContactUs.require_name %>

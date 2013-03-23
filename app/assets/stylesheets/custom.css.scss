@@ -33,13 +33,24 @@ $grey-font: #F2ECEC;
   margin-left: 0;
 }
 
+html {
+  font-size: 100%;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: 900;
+}
+
 @media (min-width: 768px){
 html, body {
   margin: 0;
   padding: 0;
 }
 html {
-  font-size:100.01%;
+  font-size:1em;
   min-height: 100%;
   min-width: 100%;
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#193e72', endColorstr='#BABCC4');/*For IE7-8-9*/ 
@@ -50,10 +61,11 @@ body {
   background-repeat: repeat;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto !important;
-  font-size: 75%;
-  line-height: 1.5em
+  font-size: 100%;
+  line-height: 1.5em;
 }
 
 .back-to-galleries{
@@ -75,32 +87,30 @@ body {
   width: 100%;
   text-align: right;
   line-height: 0;
-  // .topline {
-  //   display: inline-block;
-  //   width: 60%;
-    // label, input {
-    //   float: left;
-    //   margin-left:1px;
-    // }
+  .topline {
+    text-align: left
+  }
     input[type="text"] {
       position: relative;
-      top: 2px;
       width: 60%;
+      margin: 2px 0;
     }
     input[type="submit"] {
       width: 30%;
       position: relative;
-      top: -2px;
+      padding: 3px 1px;
+      font-size: 1rem
     }
 
     label {
-      width: 40%;
+      width: 38%;
       margin-top: 8px;
       color: #fec400;
-      margin-right:4px;
       display: inline-block;
       white-space: nowrap;
-      font-size: 1.2em;
+      font-size: 1rem;
+      text-align: right;
+
     }
   //   .row {
   //     padding-top: 5px;
@@ -119,7 +129,7 @@ body {
     display: inline-block;
     float: right;
     margin: 0;
-    width: 58%;
+    width: 60%;
     text-align: left
   }
 }
@@ -157,16 +167,15 @@ body {
     color: #193E72;
     height: 16px;
   }
-  .nav {
+  .navbar .nav {
     display: inline-block;
     float: none;
-    margin: 0 7%;
-    width: 90%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
   .navbar-inner {
-    @include filter-gradient($outside-color: #fce846, $middle-color:$gold);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fce846', endColorstr='#fec400');/*For IE7-8-9*/ 
-    height: 1%;/*For IE7*/ 
+    background-color: $gold;
     margin: 0 auto;
     border-radius: 0px 0px 5px 5px;
     height: 0px;
@@ -175,21 +184,29 @@ body {
     padding: 0;
     ul {
       text-align: center;
+      white-space: nowrap;
     }
     a {
       text-align: center;
     }
   }
   li {
-    width: 15.5%;
-    border: 1px outset $gold;
+    width: 15%;
+    border: .2rem outset $gold;
     border-radius: 5px;
+    margin: 0 -.2rem;
+    @include filter-gradient($outside-color: #fce846, $middle-color:$gold);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fce846', endColorstr='#fec400');/*For IE7-8-9*/ 
+    height: 1%;/*For IE7*/ 
   }
   li#petition_button{
+    background-image: none;
     background-color:red;
-    border: 3px outset red;
+    border: .2rem outset red;
     white-space: nowrap;
     overflow: hidden;
+    width: 25%;
+    margin: 0 -.2rem;
     a {
       color: $gold;
       font-weight: bold;
@@ -360,13 +377,6 @@ abbr[title] {
   border: none;
 }
 
-.underline {
-  text-decoration: underline;
-}
-
-.bold {
-  font-weight: 900;
-}
 
 .row-fluid [class*="span"] {
   margin-left: 0;
