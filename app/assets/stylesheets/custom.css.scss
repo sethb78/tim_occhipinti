@@ -170,12 +170,14 @@ body {
   .navbar .nav {
     display: inline-block;
     float: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    width: 100%;
+    width: 90%;
   }
   .navbar-inner {
-    background-color: $gold;
+    @include filter-gradient($outside-color: #fce846, $middle-color:$gold);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fce846', endColorstr='#fec400');/*For IE7-8-9*/ 
+    height: 1%;/*For IE7*/ 
     margin: 0 auto;
     border-radius: 0px 0px 5px 5px;
     height: 0px;
@@ -191,10 +193,9 @@ body {
     }
   }
   li {
-    width: 15%;
-    border: .2rem outset $gold;
+    width: 16%;
+    border:2px outset $gold;
     border-radius: 5px;
-    margin: 0 -.2rem;
     @include filter-gradient($outside-color: #fce846, $middle-color:$gold);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fce846', endColorstr='#fec400');/*For IE7-8-9*/ 
     height: 1%;/*For IE7*/ 
@@ -202,11 +203,9 @@ body {
   li#petition_button{
     background-image: none;
     background-color:red;
-    border: .2rem outset red;
+    border: 2px outset red;
     white-space: nowrap;
     overflow: hidden;
-    width: 25%;
-    margin: 0 -.2rem;
     a {
       color: $gold;
       font-weight: bold;
