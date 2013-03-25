@@ -159,8 +159,9 @@ body {
 
 .navigation-bar{
   text-align: center;
-  background-color: $gold;
-  .navbar .nav .active > a, .navbar .nav .active > a:hover {
+  @include filter-gradient($outside-color: #fce846, $middle-color:$gold);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fce846', endColorstr='#fec400');/*For IE7-8-9*/ 
+    .navbar .nav .active > a, .navbar .nav .active > a:hover {
     background-color: darken($gold, 5%);
     border: 1px inset #E5B000;
     border-radius: 5px 5px 5px 5px;
@@ -172,40 +173,37 @@ body {
     float: none;
     margin: 0 auto;
     padding: 0;
-    width: 90%;
   }
   .navbar-inner {
-    @include filter-gradient($outside-color: #fce846, $middle-color:$gold);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fce846', endColorstr='#fec400');/*For IE7-8-9*/ 
+    background-image: none;
+    background-color: transparent;
     height: 1%;/*For IE7*/ 
     margin: 0 auto;
     border-radius: 0px 0px 5px 5px;
     height: 0px;
     position: relative;
-    width: 100%;
     padding: 0;
+    // overflow: hidden;
+    box-shadow: none;
     ul {
       text-align: center;
       white-space: nowrap;
     }
-    a {
-      text-align: center;
-    }
+
   }
   li {
-    width: 16%;
     border:2px outset $gold;
     border-radius: 5px;
-    @include filter-gradient($outside-color: #fce846, $middle-color:$gold);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fce846', endColorstr='#fec400');/*For IE7-8-9*/ 
     height: 1%;/*For IE7*/ 
+        a {
+      text-align: center;
+      padding: 9px 1.5rem !important;
+    }
   }
   li#petition_button{
     background-image: none;
     background-color:red;
     border: 2px outset red;
-    white-space: nowrap;
-    overflow: hidden;
     a {
       color: $gold;
       font-weight: bold;
@@ -214,7 +212,7 @@ body {
   .navbar .nav > li > a {
     color: $blue;
     font-size: 1em;
-    padding: 9px 2px;
+    padding: 9px 0;
     text-shadow: none;
   }
   .navbar .nav > li > a:hover {
@@ -256,8 +254,10 @@ body {
     background-color: #425968;
     border: 8px solid #425968;
     color: black;
-    height: 770px;
     overflow: hidden;
+  .row-fluid [class*="span"] {
+    margin: 0 !important;
+  }
   h4 {
     color: black
   }
@@ -310,6 +310,7 @@ body {
 .twitter-box {
   overflow:hidden;
   position: relative;
+  margin-left: 0 !important;
 }
 #twitter_feed {
   border-radius: 0 0 10px 0;
@@ -521,9 +522,14 @@ h1 {
       border-radius: 8px 8px 0 0;
     }
   }
-  .active {
-    border-bottom: 1px solid white;;
-  }
+}
+
+.navigation-bar .navbar .nav .active > a, .navigation-bar .navbar .nav .active > a:hover {
+  background-color: #E5B000;
+  border: 1px inset #E5B000;
+  border-radius: 5px 5px 5px 5px;
+  color: #193E72;
+  height: 16px;
 }
 
 #about-tim {
@@ -1014,7 +1020,7 @@ iframe {
   @include border;
   background-color: white;
   padding:5% 0;
-  height: 600px;
+  min-height: 600px;
   li {
     width: 100%;
     list-style: none;

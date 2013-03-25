@@ -359,7 +359,8 @@ $grey-font: #F2ECEC;
   }
   body {
     padding: 0;
-    overflow-y: hidden
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
    #topline-block, {
     input[type="text"] {
@@ -374,11 +375,11 @@ $grey-font: #F2ECEC;
   }
   .navigation-bar {
     .navbar .nav > li > a {
-      font-size: .7rem;
+      font-size: .65rem;
     }
   }
   .side_bar {
-    height: 210px;
+    // height: 250px;
     #in-touch {
       img {
         height: 20px;
@@ -389,14 +390,21 @@ $grey-font: #F2ECEC;
     width: 97%
   }
 
-  .twitter-box {
-    position: absolute;
-    height: 600px;
-    right: -36.5;
-    top: 500px;
+  // .twitter-box {
+  //   position: absolute;
+  //   height: 600px;
+  //   right: -36.5;
+  //   top: 500px;
 
+  // }
+  // #twitter_feed {
+  //   width: 25%;
+  // }
+  footer #bottom-line {
+    font-size: .75rem;
   }
-  #twitter_feed {
-    width: 25%;
+
+  #galleries .thumbnail {
+    padding: 20px 0;
   }
 }
