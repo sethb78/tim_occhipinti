@@ -21,10 +21,37 @@ return false;
 }
 
 
+$("iframe").contents().find(".timeline").css("font-size",'4px');
 
 
-
-
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 5,
+  interval: 6000,
+  width: '100%',
+  height: 750,
+  theme: {
+    shell: {
+      background: 'transparent',
+      color: '#2c458f'
+    },
+    tweets: {
+      background: 'transparent',
+      color: 'white',
+      links: '$gold'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    behavior: 'all'
+  },
+}).render().setUser('TimOcchipinti').start();
 
 });
  
