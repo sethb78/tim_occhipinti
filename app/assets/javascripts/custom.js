@@ -5,6 +5,9 @@ $(document).ready(function(){
   var $parent=$('a[href="' + this.location.pathname + '"]').parent();
   fitted_text();
 }
+
+twitter_box_height();
+
 if (!document.cookie.match(/(?:^|; *)alert_shown=1/)) {
 
 $("#overlay_form").fadeIn(1000);
@@ -19,7 +22,6 @@ return false;
 
  document.cookie = "alert_shown=1;max-age=" + 60 * 60 * 24 * 365;
 }
-
 
 
 
@@ -51,3 +53,11 @@ if (line_height > 60){
 $(".hero-unit .content h2").css({"font-size": font_size+"px"})
 };
 };
+
+function twitter_box_height(){
+  var hero_unit_height=(parseInt($(".main-container .span9").css('height'), 10))- 290;
+  if(hero_unit_height > 700) {
+    hero_unit_height=700
+  }
+$('.twitter_feed').css("max-height", hero_unit_height);
+}

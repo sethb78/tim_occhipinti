@@ -325,6 +325,8 @@ body {
 
 .twitter_feed {
   margin-top: 10px;
+  overflow-y: auto;
+  max-height: 700px;
   .twtr-hd {
     display: none;
   }
