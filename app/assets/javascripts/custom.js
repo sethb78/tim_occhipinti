@@ -1,10 +1,10 @@
 $(document).ready(function(){
   slideShow();
   if($(window).width() > 760 ){
-  $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
-  var $parent=$('a[href="' + this.location.pathname + '"]').parent();
-  fitted_text();
-}
+    $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
+    fitted_text();
+    galleries_nav_tab();  
+  }
 
 twitter_box_height();
 
@@ -60,4 +60,10 @@ function twitter_box_height(){
     hero_unit_height=700
   }
 $('.twitter_feed').css("max-height", hero_unit_height);
+}
+
+function galleries_nav_tab(){
+  if(window.location.toString().contains("galleries")){
+    $('.photo_galleries_nav').addClass('active')
+  }
 }
