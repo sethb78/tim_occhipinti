@@ -726,7 +726,7 @@ h1 {
 .media-page {
   background-color: white;
   border: 8px solid #425968;
-  min-height: 600px;
+  min-height: 600px !important;
   h3 {
     margin-bottom: 3%;
   }
