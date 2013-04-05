@@ -19,7 +19,7 @@ TimOcchipinti::Application.routes.draw do
   match '/contribute',              to: 'contributions#new'
   match '/contribute/check',        to: 'contributions#check'
   match '/media',                   to: 'pages#media'
-  match '/mediablog',                   to: 'pages#media'
+  match '/mediablog',               to: 'pages#media'
   match '/status_reports',          to: 'pages#status_reports'
   match '/contact',		              to: 'contact_us/contacts#new'
   match '/admin',                   to: 'pages#admin'

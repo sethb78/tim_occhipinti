@@ -726,13 +726,20 @@ h1 {
 .media-page {
   background-color: white;
   border: 8px solid #425968;
-  min-height: 600px !important;
+  min-height: 690px !important;
+  .pagination {
+    bottom: 0;
+    text-align: center;
+  }
   h3 {
     margin-bottom: 3%;
   }
   .news-archive {
-    padding: 5%;
+    padding: 2% 5%;
   }   
+  #news-tab {
+    height: 100%;
+  }
   .nav-tabs {
     border: none;
     background-color: #425968;

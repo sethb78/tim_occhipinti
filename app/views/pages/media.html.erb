@@ -2,17 +2,18 @@
 <div class=" span12 media-page">
 	<div class="tabbable tab-set">
 		<ul class= "nav nav-tabs">
-			<li <% if @link =="/media" %> class="active" <% end %>><a href="#news-tab" data-toggle="tab">Past Articles</a></li>
+			<li <% if @link !="/mediablog" %> class="active" <% end %>><a href="#news-tab" data-toggle="tab">Past Articles</a></li>
 			<li <% if @link =="/mediablog" %> class="active" <% end %>><a href="#blog-tab" data-toggle="tab">Past Blogs</a></li>
 		</ul>
 		<div class="news-archive">
 			<div class="tab-content">
-				<div id="news-tab" class="tab-pane<% if @link =="/media" %> active <% end %>">
+				<div id="news-tab" class="tab-pane<% if @link !="/mediablog" %> active <% end %>">
 					<h3 class="center"> Past Articles</h3>
 					<% @archive_news.each do |article| %>
 						<p><%= link_to(article.title, article.link, target: "blank", class: "media_title") %> <br />
 						<%= article.source %>--<%= article.date.strftime("%b %d, %Y") %></p>
 					<% end %>
+				  <%= will_paginate(@archive_news) %>
 				</div>
 				<div id="blog-tab" class="tab-pane<% if @link =="/mediablog" %> active <% end %>">
 					<h3 class="center"> All Blogs</h3>

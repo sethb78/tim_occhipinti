@@ -12,7 +12,7 @@ class PagesController < ApplicationController
     end
 
     def media
-    	@archive_news = NewsArticle.all(:order => "date DESC")
+        @archive_news = NewsArticle.reorder("date DESC").page(params[:page]).per_page(10)
         @blogs = Blog.find(:all, :order => "created_at DESC")
         @link=request.fullpath
     end
