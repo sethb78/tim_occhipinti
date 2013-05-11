@@ -10,14 +10,6 @@ twitter_box_height();
 
 if (!document.cookie.match(/(?:^|; *)alert_shown=1/)) {
 
-$("#overlay_form").fadeIn(1000);
-
- 
-//close popup
-$("#close").click(function(){
-$("#overlay_form").fadeOut(500);
-return false;
-});
 
 
  document.cookie = "alert_shown=1;max-age=" + 60 * 60 * 24 * 365;
