@@ -2,7 +2,11 @@
   <div class="row-fluid">
     <div class="span4" id="government-links">
       <ul><h5>Government Links</h5>
-        <li><%= link_to("City of Hoboken", 'http://www.hobokennj.org/', :target => 'blank')%></li>
+        <li> <%= link_to'http://www.hobokennj.org/docs/clerk/Fourth_Ward_4.pdf', target: "blank" do %>
+          4<sup>th</sup>&nbsp;Ward&nbsp;Map
+          <% end %>
+        </li>
+       <li><%= link_to("City of Hoboken", 'http://www.hobokennj.org/', :target => 'blank')%></li>
         <li><%= link_to("Hoboken Housing Authority", 'http://www.myhhanj.com/', target: 'blank') %></li>
         <li><%= link_to("Hoboken Police Department", 'http://www.hobokenpd.com/', target: 'blank') %></li>
         <li><%= link_to("Hudson County", 'http://www.hudsoncountynj.org/', target: 'blank') %></li>
