@@ -1,10 +1,38 @@
 <div id="in-touch">
-	<h4>STAY IN TOUCH</h4>
-		<%= link_to image_tag('facebook.png'), 'https://www.facebook.com/tim.occhipinti', target: 'blank' %>
-		<%= link_to image_tag('twitter.png'), 'https://twitter.com/TimOcchipinti', target: 'blank' %>
-		<%= link_to image_tag('youtube.png'), 'http://www.youtube.com/user/occhipinti4hoboken?feature=watch', target: 'blank' %>
-		<%= mail_to("timothy.occhipinti@gmail.com", image_tag('email.png'), :subject => "This is an example email") %>
+	<h4 class="text-center">STAY IN TOUCH</h4>
+  <div class="row-fluid">
+ 
+ <ul class="inline text-center">
+  <li class="facebook-button">
+    <%= link_to('https://www.facebook.com/tim.occhipinti') do %>
+      <i class="icon-facebook"></i>
+    <% end %>
+  </li>
+
+  <li class="twitter-button">
+    <%= link_to("https://twitter.com/TimOcchipinti") do %>
+      <i class="icon-twitter"></i>
+    <% end %>
+  </li> 
+
+  <li class="youtube-button">
+    <%= link_to('http://www.youtube.com/user/occhipinti4hoboken?feature=watch') do %>
+      <i class="icon-youtube"></i>
+    <% end %>
+  </li>
+ <li class="email-button">
+<% mail_content = capture do %>
+          <i class="icon-envelope-alt "></i>
+<% end %>
+
+<%= mail_to ("tim.occhipinti@gmail.com") , mail_content %>
+        </li>
+
+
+      </ul>
+  </div>
 </div>
+
 
 
 

@@ -6,7 +6,8 @@
       <% if event.image? %>
         <div class="event-image"><%= image_tag(event.image_url.to_s) %></div>
       <% end %>
-      <p><h4 class="center"><%= event.title %></h4></p>
+              <div class="event-title">
+<%= event.title %></div>
       <p class="event-date"> <span class="bold">When:  </span><%= event.event_start.strftime("%A %b %d at %I:%M %p") %></p>
       <p class="event-location">
         <span class="bold">Location:  </span><%= event.location %>

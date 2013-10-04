@@ -6,7 +6,7 @@ $(document).ready(function(){
     galleries_nav_tab();  
   }
 
-// twitter_box_height();
+twitter_box_height();
 
 if (!document.cookie.match(/(?:^|; *)alert_shown=1/)) {
 
@@ -46,13 +46,13 @@ $(".hero-unit .content h2").css({"font-size": font_size+"px"})
 };
 };
 
-// function twitter_box_height(){
-//   var hero_unit_height=(parseInt($(".main-container .span9").css('height'), 10))- 290;
-//   if(hero_unit_height > 700) {
-//     hero_unit_height=700
-//   }
-// $('.twitter_feed').css("max-height", hero_unit_height);
-// }
+function twitter_box_height(){
+  var hero_unit_height=(parseInt($(".main-container .span9").css('height'), 10))- 290;
+  if(hero_unit_height > 700) {
+    hero_unit_height=700
+  }
+$('.twitter_feed').css("max-height", hero_unit_height);
+}
 
 function galleries_nav_tab(){
   if(window.location.toString().contains("galleries")){

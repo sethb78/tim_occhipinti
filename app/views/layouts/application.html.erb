@@ -10,15 +10,18 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<%= render 'layouts/scripts' %>
 	  <%= render 'layouts/shim' %>
+	  <link href='http://fonts.googleapis.com/css?family=Donegal+One|Vollkorn' rel='stylesheet' type='text/css'>
+	        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
 	</head>	
 	<body>	
 		<%= render 'layouts/petition' %>
 		<div class="container-fluid">
-			<div class="row-fluid">
+			<!-- <div class="row-fluid">
 				<div class="span12 hidden-phone" id="topline-block">
 					<%= render'layouts/topline' %>	
 				</div>
-			</div>
+			</div> -->
 			<div class="row-fluid">
 				<div class="span12" id="image_container">
 					<%= render 'layouts/main_image' %>	
@@ -29,39 +32,41 @@
 					<%= render 'layouts/navigation-bar' %>
 				</div>
 			</div>
-		</div>
-		<div class="container-fluid main-container">
-	    <div class="row-fluid">
-	     	<div class="span9">
-	     		<% flash.each do |key, msg| %>
-        		<%= content_tag :div, msg, :class => [key, " message"], :id => "notice_#{key}" %>
-      		<% end %>
-					<%= yield %>
-				</div>
-				<div class="span3 hidden-phone">
-					<div class= "side_bar">
-						<div class="row-fluid">
-							<div class="span12">
-								<%= render 'layouts/intouch' %>
+			<div class="main-container">
+		    <div class="row-fluid">
+		     	<div class="span9">
+		     		<% flash.each do |key, msg| %>
+	        		<%= content_tag :div, msg, :class => [key, " message"], :id => "notice_#{key}" %>
+	      		<% end %>
+						<%= yield %>
+					</div>
+					<div class="span3 hidden-phone">
+						<div class= "side_bar">
+							<div class="row-fluid">
+								<div class="span12">
+									<%= render 'layouts/intouch' %>
+								</div>
+								<div class="span12">
+													<%= render'layouts/topline' %>	
+								</div>
+								<div class="span12">
+									<%= render 'layouts/voter_registration' %>
+								</div>
+								<div class="span12">
+									<%= render 'layouts/contribute_button' %>
+								</div>
 							</div>
-							<div class="span12">
-								<%= render 'layouts/voter_registration' %>
-							</div>
-							<div class="span12">
-								<%= render 'layouts/contribute_button' %>
-							</div>
-						</div>
-						<div class="row-fluid">
-							<div class="span12 twitter_feed">
-								<%= render 'layouts/twitter' %>
+							<div class="row-fluid">
+								<div class="span12 twitter_feed">
+									<%= render 'layouts/twitter' %>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="container-fluid main-container">
-	    	<div class="row-fluid">
-					<%= render 'layouts/footer' %>
+		    	<div class="row-fluid">
+						<%= render 'layouts/footer' %>
+				
 				</div>
 			</div>
 		</div>

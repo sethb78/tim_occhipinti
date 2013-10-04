@@ -1,4 +1,3 @@
-@import "bootstrap";
 @import "bootstrap-responsive";
 $gold: #fec400;
 $blue: #193e72;
@@ -406,5 +405,25 @@ $grey-font: #F2ECEC;
 
   #galleries .thumbnail {
     padding: 20px 0;
+  }
+}
+
+
+
+@media (min-width: 1200px){
+  .container-fluid {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-fluid {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    max-width: 970px;
   }
 }
