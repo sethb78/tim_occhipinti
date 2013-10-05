@@ -53,9 +53,7 @@ h1, h2, h3, h4, h5 {
 }
 
 
-.row-fluid [class*="span"] {
-  margin-left: 0;
-}
+
 
 body {
   font-size: 100%;
@@ -177,7 +175,6 @@ body {
 .side_bar {
     color: black;
     overflow: hidden;
-
 
 
   h4 {
@@ -365,9 +362,7 @@ abbr[title] {
 }
 
 
-.row-fluid [class*="span"] {
-  margin-left: 0;
-}
+
 
 h1 {
   color: $gold;
@@ -556,7 +551,6 @@ h1 {
   .hero-unit {
     margin-bottom: 0;
     background-color: white;
-    min-height: 765px;
     border-radius: 0;
     padding: 0;
     h2 {
@@ -605,14 +599,14 @@ h1 {
     margin: 1%;
   }
   .news-title {
-    font-size: 1em;
+    font-size: 14px;
     line-height: 1.2em;
     a {
       color: black;;
     }
   }
   .news-date-source {
-    font-size: .5em;
+    font-size: .6em;
     color: lighten(black, 50%);
     line-height: .75em;
     padding-left: 2%;
@@ -621,12 +615,16 @@ h1 {
   .snippet {
     padding: 0 5%;
     text-align: justify;
-    margin-bottom: 5%;
+    margin-bottom: 0;
     font-size: .8em;
     line-height: 1.2em;
     color: lighten(black, 25%);
+    p {
+      font-size: .8em;
+    }
     a {
-      font-size: .9em;
+      font-size: .8em;
+      line-height: 1em;
     }
 
   }
@@ -677,6 +675,9 @@ h1 {
     line-height: 1.2em
   }
 }
+.news-articles {
+  margin-bottom: 1em;
+}
 
 .media-page {
   background-color: white;
@@ -688,6 +689,7 @@ h1 {
   h3 {
     margin-bottom: 3%;
   }
+
   .news-archive {
     padding: 2% 5%;
   }   
@@ -724,19 +726,11 @@ h1 {
   }
 }
 
-.video-photos {
-  .row-fluid {
-    position: relative;
-  }
-  .span12 {
-    width: 132% !important;   
-  }
-}
+
 
 #photo-carousel-wheel, #video{
-  background-color: #363b3f;
-  height: 340px;
-  width: 100%;
+  height: auto;
+  max-width: 100%;
   margin-top: 10px;
   overflow: hidden;
   .box-text {
@@ -766,20 +760,16 @@ h1 {
   }
 }
 
-iframe {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
+
 
 .videos-photos{
   margin-top: 5%;
 }
 
-#photo-carousel-container, #video-container {
+#photo-carousel-container{
   border: 1px solid white;
   width: 100%;
-  height: 100%;
+  height: 200px;
   background-color: black;
   overflow: hidden;
 }
@@ -1387,6 +1377,7 @@ input.btn.btn-large[type="submit"] {
 }
 
 #mailing-list {
+  margin: 0 auto;
   h5 {
     margin-bottom: 0;
   }
@@ -1400,5 +1391,5 @@ input.btn.btn-large[type="submit"] {
   }
 }
 .side_bar > .row-fluid > .span12 {
-  margin: 1em 0 !important;
+  margin: 1em 0 
 }
