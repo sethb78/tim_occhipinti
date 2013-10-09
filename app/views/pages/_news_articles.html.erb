@@ -10,7 +10,7 @@
         <div class="news-date-source">
           --<%= latest_news.date.strftime("%b %d, %Y") %> - <%= latest_news.source %>
         </div> 
-        <div class="snippet"> <%= simple_format truncate latest_news.snippet, length: 100 %> <%= link_to "full article", latest_news.link, target: "blank" %>
+        <div class="snippet"> <%= simple_format truncate latest_news.snippet, length: 200 %> <%= link_to "full article", latest_news.link, target: "blank" %>
         </div>
       </p>
     </div>
