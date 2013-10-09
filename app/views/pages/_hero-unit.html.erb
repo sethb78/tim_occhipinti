@@ -6,10 +6,8 @@
 <div class="content">
   <h2 class="center"><%= @blog.title %></h2>
   <% if @blog.tagline? %><h4 class="center hidden-phone"><%= @blog.tagline %></h4><% end %>
-  <p><%= simple_format truncate @blog.content, length: 1000 %></p>
+  <p><%= simple_format @blog.content %></p>
   <p>
-    <% if @blog.content.length > 1000 %>
-      <%= link_to("Read More", blog_path(@blog)) %>   |   
-    <% end %>
+   
     <%= link_to("All Blogs", mediablog_path) %></p>
 </div>
