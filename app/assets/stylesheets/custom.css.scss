@@ -727,11 +727,12 @@ h1 {
 
 
 
-#photo-carousel-wheel, #video{
+#photo-carousel-wheel{
   height: auto;
   max-width: 100%;
   margin-top: 10px;
   overflow: hidden;
+
   .box-text {
     padding-top: 1%;
     margin: 2% 2%;
@@ -758,7 +759,6 @@ h1 {
     min-height: 100%;
   }
 }
-
 
 
 .videos-photos{
@@ -1391,4 +1391,28 @@ input.btn.btn-large[type="submit"] {
 }
 .side_bar > .row-fluid > .span12 {
   margin: 1em 0 
+}
+
+@media (min-width:600px){
+  #video   iframe {
+    width: 560px;
+    height: 315px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 599px){
+  #video   iframe {
+width: 300px;
+height: 169px;
+display: block;
+ margin: 0 auto;
+  }
+}
+
+@media (max-width: 300px){
+  #video   iframe { 
+    display: none;
+  }
 }
