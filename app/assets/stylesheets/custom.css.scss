@@ -261,6 +261,11 @@ body {
   max-height: 700px;
   height: 700px;
   overflow: hidden;
+    iframe {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
 
   .twtr-hd {
     display: none;
@@ -511,13 +516,13 @@ h1 {
 }
 
 #about-tim {
-  
+      background-color: white;
+
   h2 {
     margin: 2% 0;
   }
   #tim-content {
 
-    background-color: white;
     font-size:14px;
     word-spacing: 1px;
     padding: 0 40px 40px;
@@ -630,7 +635,6 @@ h1 {
   .upcoming-events {
     height: 200px;
     @extend .in-the-news;
-    border-right: none;
     padding-bottom: 5%;
     line-height: 1.5em;
     .event-title{
@@ -681,6 +685,9 @@ h1 {
 .media-page {
   background-color: white;
   min-height: 690px !important;
+  .nav-tabs {
+    overflow: hidden;
+  }
   .pagination {
     bottom: 0;
     text-align: center;
@@ -774,7 +781,6 @@ h1 {
 }
 
 #photo-carousel-wheel {
-  left: 3.4%;
   position: relative
 }
 
@@ -790,6 +796,7 @@ h1 {
   .nav-tabs {
     border-radius: 4px 4px 0 0;
     border-bottom: none;
+    overflow: hidden;
 
     li {
       border-top: 1px solid gray;
@@ -1019,7 +1026,7 @@ h1 {
 }
 
 #contact-page {
-  
+  h2 { margin-bottom: 0;}
   background-color: white;
   padding:5% 0;
   min-height: 600px;
@@ -1033,6 +1040,7 @@ h1 {
     width: 10%;
     display: inline;
     text-shadow: none;
+    margin-right: 0;
   }
   form.formtastic li textarea {
     height: 200px;
@@ -1046,11 +1054,15 @@ h1 {
     color: black;
   }
   input[type="submit"] {
-    padding: 10px;
+    padding: 4px;
+    box-shadow: 1px 1px 2px grey;
   }
   p {
     padding: 0 15%;
     text-align: justify;
+    line-height: 1.2em;
+    font-size: .8em;
+    margin-bottom:2em;
   }
 }
 
@@ -1393,6 +1405,15 @@ input.btn.btn-large[type="submit"] {
   margin: 1em 0 
 }
 
+#video {
+margin: 2% 0;
+  iframe {
+  box-shadow: 1px 1px 3px black;
+  -webkit-box-shadow: 1px 1px 3px black;
+  -moz-box-shadow: 1px 1px 3px black;
+  }
+}
+
 @media (min-width:600px){
   #video   iframe {
     width: 560px;
@@ -1416,3 +1437,16 @@ display: block;
     display: none;
   }
 }
+
+.hero-unit, .in-the-news, .upcoming-events, #about-tim, .full-blog, #galleries, #contact-page {
+  border: 1px solid #e5e5e5;
+        box-sizing:border-box;
+      -moz-box-sizing:border-box; /* Firefox */
+}
+
+.contribute .tab-content, .media-page .news-archive  {
+  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
