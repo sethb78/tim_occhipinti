@@ -1408,7 +1408,8 @@ input.btn.btn-large[type="submit"] {
 }
 
 #video {
-margin: 2% 0;
+margin: 2% auto;
+max-width: 560px;
   iframe {
   box-shadow: 1px 1px 3px black;
   -webkit-box-shadow: 1px 1px 3px black;
@@ -1416,29 +1417,8 @@ margin: 2% 0;
   }
 }
 
-@media (min-width:600px){
-  #video   iframe {
-    width: 560px;
-    height: 315px;
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 599px){
-  #video   iframe {
-width: 300px;
-height: 169px;
-display: block;
- margin: 0 auto;
-  }
-}
 
-@media (max-width: 300px){
-  #video   iframe { 
-    display: none;
-  }
-}
+
 
 .hero-unit, .in-the-news, .upcoming-events, #about-tim, .full-blog, #galleries, #contact-page {
   border: 1px solid #e5e5e5;

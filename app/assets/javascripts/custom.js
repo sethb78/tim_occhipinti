@@ -1,4 +1,5 @@
 $(document).ready(function(){
+        $("#video").fitVids();
   slideShow();
   if($(window).width() > 760 ){
     $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
@@ -14,6 +15,7 @@ if (!document.cookie.match(/(?:^|; *)alert_shown=1/)) {
 
  document.cookie = "alert_shown=1;max-age=" + 60 * 60 * 24 * 365;
 }
+
 
 
 
@@ -59,3 +61,5 @@ function galleries_nav_tab(){
     $('.photo_galleries_nav').addClass('active')
   }
 }
+
+
