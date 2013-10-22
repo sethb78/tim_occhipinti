@@ -29,8 +29,8 @@ function slideShow() {
   var current = $('#photo-carousel-container .show');
   var next = current.next().length ? current.next() : current.parent().children(':first');
   
-  current.fadeOut('slow').removeClass('show');
-  next.fadeIn('slow').addClass('show');
+  current.fadeTo(1000,0).removeClass('show');
+  next.fadeTo(1000, 1).addClass('show');
   
   setTimeout(slideShow, 7000);
   $('#twitter-widget-0').css({width: "208px"})
