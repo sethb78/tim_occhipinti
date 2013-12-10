@@ -9,9 +9,9 @@
         <% end %>
                 <div class="event-title">
   <%= event.title %></div>
-        <p class="event-date"> <span class="bold">When:  </span><%= event.event_start.strftime("%A %b %d at %I:%M %p") %></p>
+        <p class="event-date"> <span class="bold grey">When:  </span><small><%= event.event_start.strftime("%A %b %d at %I:%M %p") %></small></p>
         <p class="event-location">
-          <span class="bold">Location:  </span><%= event.location %>
+          <span class="bold grey">Location:  </span><small><%= event.location %></small>
         </p>
         <% if event.link? %>
           <p class="event-link"><%= link_to "further details", event.link, target: "blank" %>

@@ -10,8 +10,8 @@
         <div class="news-date-source">
           --<%= latest_news.date.strftime("%b %d, %Y") %> - <%= latest_news.source %>
         </div> 
-        <div class="snippet"> <%= simple_format truncate latest_news.snippet, length: 200 %> <%= link_to "full article", latest_news.link, target: "blank" %>
-        </div>
+        <div class="snippet"><p> <%=truncate(latest_news.snippet, length: 200, :separator => '...') %>  <%=  link_to("Read More", latest_news.link, target: "blank", class: "no-wrap" ) %>
+        </p></div>
       </p>
     </div>
   <% end %>
