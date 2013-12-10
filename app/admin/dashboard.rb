@@ -7,6 +7,14 @@ ActiveAdmin::Dashboards.build do
     strong { link_to "View All Blogs", admin_blogs_path }
   end
 
+  section "Carousel Pictures" do
+    table_for CarouselPicture.order("created_at desc").limit(5) do
+      column :name
+      column :image
+    end
+    strong { link_to "Edit Pictures", admin_carousel_pictures_path }
+  end
+
     section "Photo Galleries" do
     table_for Gallery.order("created_at desc").limit(5) do
       column :name

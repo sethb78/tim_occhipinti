@@ -12,5 +12,5 @@ end
 
 def set_layout_variables
         @first_carousel_picture=CarouselPicture.order("RANDOM()").first
-        @carousel_pictures = CarouselPicture.find(:all, :conditions => ["id != #{@first_carousel_picture.id}"])  
+        @all_carousel_pictures = CarouselPicture.find(:all, :conditions => ["id != #{@first_carousel_picture.id}"])  
       end

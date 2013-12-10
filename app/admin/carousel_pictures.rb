@@ -1,7 +1,8 @@
 ActiveAdmin.register CarouselPicture do
+      controller do
+      skip_before_filter :getActiveProjects
+    end
          index do
-                 column :id
-                 column :name
                  column :image
                  column :remote_image_url
                  default_actions
