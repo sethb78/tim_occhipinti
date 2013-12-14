@@ -17,4 +17,12 @@
 public/**
 taps-*.gem
 
-/config/application.yml
+# Ignore other unneeded files.
+database.yml
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
