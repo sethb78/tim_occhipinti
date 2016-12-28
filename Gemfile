@@ -16,8 +16,8 @@ gem "activemerchant", "~> 1.29.3"
 gem 'fitvidsjs_rails'
 
 group :development, :test do
-   gem 'sqlite3', '1.3.5'
-    gem 'rspec-rails', '2.10.0' # Uses rspec to run Test Driven Development Tests.
+   gem 'sqlite3'
+    gem 'rspec-rails', '2.10.0' # Uses rspec to run Test Driven Development Tesgts.
     gem 'guard-rspec', '0.5.5'  # Rspec automatically runs Spec.
 end
 
